@@ -1,0 +1,723 @@
+<!DOCTYPE html><html lang="ko" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The바른교회 - 말씀 위에 굳게 서는 따뜻한 믿음의 공동체</title><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YjZjMjI0NjA2YWQwMzkyY2FiMjk1MjZjZmQxEgsSBxD737z8-g0YAZIBJAoKcHJvamVjdF9pZBIWQhQxMjYzNDIxMDE3OTY1OTk1MDc4OA%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link rel="icon" type="image/svg+xml" href="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb"><link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Pretendard & RIDIBatang Fonts -->
+<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+    @font-face {
+      font-family: 'RIDIBatang';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    }
+    .font-serif-kr {
+      font-family: 'RIDIBatang', Georgia, serif;
+    }
+    /* Smooth Dropdown Animation */
+    .dropdown-menu {
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+    .group:hover .dropdown-menu {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#1E3A8A',
+              navyDark: '#172554',
+              amber: '#D97706',
+              amberLight: '#FBBF24',
+              bgLight: '#F9FAFB',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-bgLight text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900 flex flex-col min-h-screen">
+<!-- ================================================================= -->
+<!-- [FRAGMENT START] :: Header Fragment (th:fragment="header")         -->
+<!-- ================================================================= -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-200">
+<!-- Top Utility Bar (온라인 예배 안내 & 소셜/유튜브 바로가기) -->
+<div class="bg-slate-900 text-slate-300 text-xs py-1.5 px-4 sm:px-8">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<div class="flex items-center space-x-2">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="font-medium text-slate-200">주일 예배 실시간 생중계: 매주 주일 오전 11:00</span>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a class="hover:text-amber-400 transition-colors flex items-center gap-1" href="https://www.youtube.com/@barunch" rel="noopener noreferrer" target="_blank">
+<i class="ri-youtube-fill text-red-500 text-sm"></i> @barunch 유튜브 채널
+          </a>
+<span class="text-slate-700">|</span>
+<a class="hover:text-white transition-colors" href="#quick-menu">예배시간표</a>
+<span class="text-slate-700">|</span>
+<a class="hover:text-white transition-colors" href="#offering">온라인 헌금안내</a>
+</div>
+</div>
+</div>
+<!-- Main Navigation Bar -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Brand Logo Area (@barunch 유튜브 스타일 엠블럼 + 워드마크) -->
+<a class="flex items-center gap-3 group focus:outline-none" href="/">
+<div class="w-11 h-11 rounded-full overflow-hidden shadow-md group-hover:scale-105 transition-transform duration-200 shrink-0 border border-slate-150"><img src="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb" alt="The바른교회 로고" class="w-full h-full object-cover"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-serif-kr text-2xl font-bold tracking-tight text-brand-navy group-hover:text-blue-900 transition-colors" style="color: rgb(30, 58, 138);">The바른교회</span>
+<span class="text-[10px] px-1.5 py-0.5 rounded font-semibold bg-amber-50 text-brand-amber border border-amber-200">BARUN CH</span>
+</div>
+<span class="text-[11px] tracking-widest text-slate-400 font-medium uppercase">The Barun Presbyterian Church</span>
+</div>
+</a>
+<!-- Desktop GNB (사귐의교회 기준 5대 대메뉴) -->
+<nav aria-label="메인 메뉴" class="hidden lg:flex items-center space-x-1">
+<!-- 1. 교회소개 -->
+<div class="relative group">
+<button class="flex items-center gap-1.5 px-4 py-2 text-slate-700 hover:text-brand-navy font-semibold text-[15px] rounded-lg transition-colors group-hover:bg-slate-50">
+              교회소개
+              <i class="ri-arrow-down-s-line text-slate-400 group-hover:text-brand-navy text-xs transition-transform group-hover:rotate-180"></i>
+</button>
+<div class="dropdown-menu absolute left-0 top-full w-48 pt-2 opacity-0 -translate-y-2 pointer-events-none group-hover:pointer-events-auto">
+<div class="bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 px-1.5">
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#welcome">환영인사</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#people">섬기는 사람들</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#worship-info">예배 안내</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#location">오시는 길</a>
+</div>
+</div>
+</div>
+<!-- 2. 말씀·찬양 -->
+<div class="relative group">
+<button class="flex items-center gap-1.5 px-4 py-2 text-slate-700 hover:text-brand-navy font-semibold text-[15px] rounded-lg transition-colors group-hover:bg-slate-50">
+              말씀·찬양
+              <i class="ri-arrow-down-s-line text-slate-400 group-hover:text-brand-navy text-xs transition-transform group-hover:rotate-180"></i>
+</button>
+<div class="dropdown-menu absolute left-0 top-full w-48 pt-2 opacity-0 -translate-y-2 pointer-events-none group-hover:pointer-events-auto">
+<div class="bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 px-1.5">
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#sermon-section">주일 예배 말씀</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#choir">찬양대 &amp; 특송</a>
+</div>
+</div>
+</div>
+<!-- 3. 공동체 -->
+<div class="relative group">
+<button class="flex items-center gap-1.5 px-4 py-2 text-slate-700 hover:text-brand-navy font-semibold text-[15px] rounded-lg transition-colors group-hover:bg-slate-50">
+              공동체
+              <i class="ri-arrow-down-s-line text-slate-400 group-hover:text-brand-navy text-xs transition-transform group-hover:rotate-180"></i>
+</button>
+<div class="dropdown-menu absolute left-0 top-full w-48 pt-2 opacity-0 -translate-y-2 pointer-events-none group-hover:pointer-events-auto">
+<div class="bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 px-1.5">
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#groups">소그룹 (목장/순)</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#next-gen">다음세대 (주일학교)</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#ministry">사역 및 선교</a>
+</div>
+</div>
+</div>
+<!-- 4. 교회소식 -->
+<div class="relative group">
+<button class="flex items-center gap-1.5 px-4 py-2 text-slate-700 hover:text-brand-navy font-semibold text-[15px] rounded-lg transition-colors group-hover:bg-slate-50">
+              교회소식
+              <i class="ri-arrow-down-s-line text-slate-400 group-hover:text-brand-navy text-xs transition-transform group-hover:rotate-180"></i>
+</button>
+<div class="dropdown-menu absolute left-0 top-full w-48 pt-2 opacity-0 -translate-y-2 pointer-events-none group-hover:pointer-events-auto">
+<div class="bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 px-1.5">
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#church-news">공지사항</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#bulletin">온라인 주보</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#gallery">교회 갤러리</a>
+</div>
+</div>
+</div>
+<!-- 5. 온라인행정 -->
+<div class="relative group">
+<button class="flex items-center gap-1.5 px-4 py-2 text-slate-700 hover:text-brand-navy font-semibold text-[15px] rounded-lg transition-colors group-hover:bg-slate-50">
+              온라인행정
+              <i class="ri-arrow-down-s-line text-slate-400 group-hover:text-brand-navy text-xs transition-transform group-hover:rotate-180"></i>
+</button>
+<div class="dropdown-menu absolute right-0 top-full w-48 pt-2 opacity-0 -translate-y-2 pointer-events-none group-hover:pointer-events-auto">
+<div class="bg-white rounded-xl shadow-xl border border-slate-100 py-2.5 px-1.5">
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#offering">온라인 헌금</a>
+<a class="block px-3.5 py-2 text-sm text-slate-600 hover:text-brand-navy hover:bg-slate-50 rounded-lg transition-colors font-medium" href="#newcomer">새가족 등록 안내</a>
+</div>
+</div>
+</div>
+</nav>
+<!-- Right Quick Action (새가족 등록 & 모바일 토글 버튼) -->
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-full text-xs font-semibold bg-brand-navy text-white hover:bg-blue-900 transition-colors shadow-sm" href="#newcomer" style="background-color: rgb(14, 132, 158);">
+<i class="ri-user-heart-line text-amber-300"></i> 새가족 등록
+          </a>
+<!-- Mobile Hamburger Toggle -->
+<button aria-label="메뉴 열기" class="lg:hidden p-2.5 rounded-lg text-slate-600 hover:text-brand-navy hover:bg-slate-100 transition-colors" id="mobile-menu-btn" type="button">
+<i class="ri-menu-3-line text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+<!-- Mobile Drawer Navigation -->
+<div class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-4 shadow-lg" id="mobile-menu">
+<div class="space-y-1">
+<details class="group py-1 border-b border-slate-100">
+<summary class="flex justify-between items-center font-semibold text-slate-800 cursor-pointer list-none py-2 text-base">
+            교회소개 <i class="ri-arrow-down-s-line transition-transform group-open:rotate-180"></i>
+</summary>
+<div class="pl-4 pb-2 space-y-2 text-sm text-slate-600">
+<a class="block py-1" href="#welcome">환영인사</a>
+<a class="block py-1" href="#people">섬기는 사람들</a>
+<a class="block py-1" href="#worship-info">예배 안내</a>
+<a class="block py-1" href="#location">오시는 길</a>
+</div>
+</details>
+<details class="group py-1 border-b border-slate-100">
+<summary class="flex justify-between items-center font-semibold text-slate-800 cursor-pointer list-none py-2 text-base">
+            말씀·찬양 <i class="ri-arrow-down-s-line transition-transform group-open:rotate-180"></i>
+</summary>
+<div class="pl-4 pb-2 space-y-2 text-sm text-slate-600">
+<a class="block py-1" href="#sermon-section">주일 예배 말씀</a>
+<a class="block py-1" href="#choir">찬양대 &amp; 특송</a>
+</div>
+</details>
+<details class="group py-1 border-b border-slate-100">
+<summary class="flex justify-between items-center font-semibold text-slate-800 cursor-pointer list-none py-2 text-base">
+            공동체 <i class="ri-arrow-down-s-line transition-transform group-open:rotate-180"></i>
+</summary>
+<div class="pl-4 pb-2 space-y-2 text-sm text-slate-600">
+<a class="block py-1" href="#groups">소그룹</a>
+<a class="block py-1" href="#next-gen">다음세대</a>
+<a class="block py-1" href="#ministry">사역 및 선교</a>
+</div>
+</details>
+<details class="group py-1 border-b border-slate-100">
+<summary class="flex justify-between items-center font-semibold text-slate-800 cursor-pointer list-none py-2 text-base">
+            교회소식 <i class="ri-arrow-down-s-line transition-transform group-open:rotate-180"></i>
+</summary>
+<div class="pl-4 pb-2 space-y-2 text-sm text-slate-600">
+<a class="block py-1" href="#church-news">공지사항</a>
+<a class="block py-1" href="#bulletin">온라인 주보</a>
+<a class="block py-1" href="#gallery">교회 갤러리</a>
+</div>
+</details>
+<details class="group py-1">
+<summary class="flex justify-between items-center font-semibold text-slate-800 cursor-pointer list-none py-2 text-base">
+            온라인행정 <i class="ri-arrow-down-s-line transition-transform group-open:rotate-180"></i>
+</summary>
+<div class="pl-4 pb-2 space-y-2 text-sm text-slate-600">
+<a class="block py-1" href="#offering">온라인 헌금</a>
+<a class="block py-1" href="#newcomer">새가족 등록</a>
+</div>
+</details>
+</div>
+<div class="pt-2 flex flex-col gap-2">
+<a class="w-full text-center py-2.5 rounded-lg bg-brand-navy text-white text-sm font-semibold" href="#newcomer">새가족 등록 바로가기</a>
+<a class="w-full text-center py-2.5 rounded-lg bg-red-600 text-white text-sm font-semibold flex items-center justify-center gap-2" href="https://www.youtube.com/@barunch" target="_blank">
+<i class="ri-youtube-fill"></i> @barunch 유튜브 채널
+        </a>
+</div>
+</div>
+</header>
+<!-- [FRAGMENT END] :: Header Fragment -->
+<!-- ================================================================= -->
+<!-- [FRAGMENT START] :: Main Content (th:fragment="content")          -->
+<!-- ================================================================= -->
+<main class="flex-grow">
+<!-- 1. Hero Section (헤로 영역) -->
+<section class="relative bg-slate-900 text-white min-h-[580px] lg:min-h-[640px] flex items-center overflow-hidden" style="background: linear-gradient(135deg, rgb(7, 39, 48) 0%, rgb(10, 61, 74) 45%, rgb(5, 27, 34) 100%);">
+<!-- Background Image with Gradient Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="더바른교회 예배당 풍경" class="w-full h-full object-cover object-center opacity-30 transform scale-105 transition-transform duration-1000 ease-out" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/80 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
+<div class="max-w-3xl">
+<!-- Tag badge -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
+<span class="w-2 h-2 rounded-full bg-amber-400"></span>
+            2025년 표어 | 바른 복음, 참된 제자
+          </div>
+<!-- Main Hero Copy -->
+<h1 class="font-serif-kr text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight sm:leading-snug mb-6 text-white drop-shadow-sm">
+            말씀 위에 굳게 서는<br>
+<span class="text-amber-400 font-serif-kr">따뜻한 믿음의 공동체</span>
+</h1>
+<!-- Body Description -->
+<p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal mb-10 max-w-2xl">The바른교회는 성경 중심의 바른 신학 위에 서서, 그리스도의 사랑으로 이웃을 섬기고 다음 세대를 세워가는 은혜의 안식처입니다. 주님의 이름으로 여러분을 진심으로 환영합니다.</p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-navy hover:bg-blue-900 text-white font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-blue-950/40 hover:-translate-y-0.5 border border-blue-400/30" href="#worship-info" style="background-color: rgb(14, 132, 158); border-color: rgb(23, 162, 184);">
+<i class="ri-time-line text-amber-400"></i> 예배 안내 보기
+            </a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-brand-amber hover:bg-amber-600 text-slate-950 font-semibold text-sm sm:text-base transition-all duration-200 shadow-lg shadow-amber-900/30 hover:-translate-y-0.5" href="#newcomer">
+<i class="ri-user-add-line"></i> 새가족 등록하기
+            </a>
+<a class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm font-medium text-sm sm:text-base transition-all duration-200 border border-white/20" href="https://www.youtube.com/@barunch" rel="noopener noreferrer" target="_blank">
+<i class="ri-youtube-line text-red-400 text-lg"></i> 유튜브 실시간
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Quick Menu Section (핵심 바로가기 4개 카드 UI) -->
+<section class="relative -mt-10 lg:-mt-12 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="quick-menu">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<!-- Card 1: 주일예배 시간 -->
+<div class="bg-white rounded-2xl p-6 shadow-xl shadow-slate-200/60 border border-slate-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-blue-50 text-brand-navy flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-navy group-hover:text-white transition-colors">
+<i class="ri-time-fill"></i>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Worship Time</span>
+<h3 class="font-serif-kr text-lg font-bold text-slate-900 mt-1 mb-2">주일 예배 시간</h3>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">
+            1부 예배: 주일 오전 09:00<br>
+            2부(본예배): 주일 오전 11:00<br>
+            수요기도회: 수요일 저녁 07:30
+          </p>
+<a class="text-xs font-semibold text-brand-navy flex items-center gap-1 group-hover:text-brand-amber transition-colors" href="#worship-info">
+            상세 안내 바로가기 <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+<!-- Card 2: 오시는 길 -->
+<div class="bg-white rounded-2xl p-6 shadow-xl shadow-slate-200/60 border border-slate-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-amber-50 text-brand-amber flex items-center justify-center text-2xl mb-4 group-hover:bg-brand-amber group-hover:text-white transition-colors">
+<i class="ri-map-pin-2-fill"></i>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Location</span>
+<h3 class="font-serif-kr text-lg font-bold text-slate-900 mt-1 mb-2">교회 오시는 길</h3>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">The바른교회 본당 및 교육관<br>
+            지하철 및 버스 대중교통 노선<br>
+            주차 공간 및 셔틀 안내</p>
+<a class="text-xs font-semibold text-brand-navy flex items-center gap-1 group-hover:text-brand-amber transition-colors" href="#location">
+            오시는 길 지도 확인 <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+<!-- Card 3: 온라인 주보 -->
+<div class="bg-white rounded-2xl p-6 shadow-xl shadow-slate-200/60 border border-slate-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl mb-4 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
+<i class="ri-book-open-fill"></i>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Weekly Bulletin</span>
+<h3 class="font-serif-kr text-lg font-bold text-slate-900 mt-1 mb-2">온라인 주보</h3>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">
+            이번 주 예배 순서, 찬송가,<br>
+            교회 행사 및 목회 소식을<br>
+            모바일 주보로 편리하게 확인하세요.
+          </p>
+<a class="text-xs font-semibold text-brand-navy flex items-center gap-1 group-hover:text-brand-amber transition-colors" href="#bulletin">
+            이번 주 주보 열람 <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+<!-- Card 4: 온라인 헌금 -->
+<div class="bg-white rounded-2xl p-6 shadow-xl shadow-slate-200/60 border border-slate-100 hover:shadow-2xl hover:border-amber-200 transition-all duration-300 group">
+<div class="w-12 h-12 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center text-2xl mb-4 group-hover:bg-purple-700 group-hover:text-white transition-colors">
+<i class="ri-hand-heart-fill"></i>
+</div>
+<span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Offering</span>
+<h3 class="font-serif-kr text-lg font-bold text-slate-900 mt-1 mb-2">온라인 헌금 안내</h3>
+<p class="text-xs text-slate-500 mb-4 leading-relaxed">
+            마음과 정성을 담은 감사와 헌금<br>
+            십일조, 감사헌금, 선교헌금<br>
+            지정 계좌 및 영수증 신청
+          </p>
+<a class="text-xs font-semibold text-brand-navy flex items-center gap-1 group-hover:text-brand-amber transition-colors" href="#offering">
+            헌금 계좌 보기 <i class="ri-arrow-right-line"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. Recent Sermon Section (@barunch 유튜브 채널 임베드 및 설교) -->
+<section class="py-20 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="sermon-section">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="flex items-center gap-2 text-brand-amber font-semibold text-xs tracking-wider uppercase mb-2">
+<i class="ri-video-fill"></i> Recent Sermon
+          </div>
+<h2 class="font-serif-kr text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">
+            주일 강단 말씀
+          </h2>
+<p class="text-sm sm:text-base text-slate-500 mt-2 font-normal">The바른교회 유튜브 공식 채널(<span class="text-brand-navy font-semibold">@barunch</span>)의 최신 설교 영상을 시청하실 수 있습니다.</p>
+</div>
+<div class="mt-4 md:mt-0 flex gap-2">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-red-50 text-red-700 hover:bg-red-100 text-xs sm:text-sm font-semibold transition-colors" href="https://www.youtube.com/@barunch" rel="noopener noreferrer" target="_blank">
+<i class="ri-youtube-fill text-lg text-red-600"></i> 유튜브 채널 구독하기
+          </a>
+</div>
+</div>
+<!-- Main Sermon Card Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-xl shadow-slate-100 border border-slate-150">
+<!-- Left: Responsive YouTube Video Iframe Container (16:9 Aspect Ratio) -->
+<div class="lg:col-span-7 w-full">
+<div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md bg-slate-900 border border-slate-200">
+<!-- Responsive Iframe (더바른교회 @barunch 최신 설교 영상 플레이어) -->
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" class="absolute inset-0 w-full h-full" frameborder="0" src="https://www.youtube-nocookie.com/embed?listType=user_uploads&amp;list=barunch" title="The바른교회 최신 설교 영상 (@barunch)">
+</iframe>
+</div>
+<div class="mt-3 flex items-center justify-between text-xs text-slate-400 px-1">
+<span class="">* 영상 재생이 안 될 경우 직접 유튜브에서 시청 가능합니다.</span>
+<span class="inline-flex items-center gap-1 text-slate-500 font-medium">
+<i class="ri-shield-check-line text-emerald-600"></i> 공식 미디어 사역팀
+            </span>
+</div>
+</div>
+<!-- Right: Sermon Details & Preacher Info -->
+<div class="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="px-2.5 py-1 rounded bg-blue-50 text-brand-navy font-semibold text-xs border border-blue-100">주일 오전 2부 예배</span>
+<span class="text-xs text-slate-400">2025년 2월 23일 (주일)</span>
+</div>
+<!-- Sermon Title in Serif -->
+<h3 class="font-serif-kr text-xl sm:text-2xl font-bold text-slate-900 leading-snug mb-3">
+              "견고한 터 위에 지어지는 진리의 공동체"
+            </h3>
+<!-- Bible Verse & Speaker -->
+<div class="bg-amber-50/60 border border-amber-200/70 rounded-xl p-4 mb-4">
+<div class="text-xs font-semibold text-brand-amber mb-1 flex items-center gap-1">
+<i class="ri-book-3-line"></i> 오늘의 본문 말씀
+              </div>
+<p class="font-serif-kr text-sm text-slate-800 font-medium">
+                에베소서 2장 19절 ~ 22절 (신약 312면)
+              </p>
+</div>
+<!-- Summary text -->
+<p class="text-sm text-slate-600 leading-relaxed">우리는 이제 외인도 나그네도 아니요, 오직 성도들과 동일한 시민이며 하나님의 권속입니다. 사도들과 선지자들의 터 위에 그리스도 예수께서 친히 모퉁잇돌이 되셨음을 기억하며, 바른 복음 안에서 서로 연결되어 주 안에서 성전으로 자라가는 The바른교회가 되기를 소망합니다.</p>
+</div>
+<!-- Preacher Profile & Action Buttons -->
+<div class="pt-6 border-t border-slate-100 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-slate-100 border border-slate-200 overflow-hidden flex items-center justify-center text-slate-600 font-bold font-serif-kr">
+                담임
+              </div>
+<div><p class="text-sm font-bold text-slate-900">안민주 담임목사</p><p class="text-xs text-slate-500">The바른교회 목양실</p></div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 text-sm transition-colors" title="설교 요약문 다운로드" type="button">
+<i class="ri-file-text-line"></i>
+</button>
+<a class="px-3.5 py-2 rounded-lg bg-brand-navy hover:bg-blue-900 text-white text-xs font-semibold transition-colors flex items-center gap-1" href="https://www.youtube.com/@barunch" rel="noopener noreferrer" target="_blank">
+                전체 설교 목록 <i class="ri-arrow-right-s-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Church News & Gallery Section (공지사항 & 갤러리 혼합 그리드) -->
+<section class="py-16 lg:py-20 bg-slate-100/70 border-y border-slate-200/60" id="church-news">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+<div>
+<div class="text-brand-amber font-semibold text-xs tracking-wider uppercase mb-1">
+              Community &amp; News
+            </div>
+<h2 class="font-serif-kr text-2xl sm:text-3xl font-bold text-slate-900">
+              교회 소식 및 나눔
+            </h2>
+</div>
+<p class="text-xs sm:text-sm text-slate-500 mt-2 md:mt-0">The바른교회의 새로운 소식과 은혜로운 사역 현장을 전해드립니다.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left: 공지사항 리스트 (7 Cols) -->
+<div class="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
+<div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+<div class="flex items-center gap-2">
+<i class="ri-notification-3-line text-brand-navy text-lg"></i>
+<h3 class="font-serif-kr text-lg font-bold text-slate-900">공지사항</h3>
+</div>
+<a class="text-xs font-semibold text-slate-400 hover:text-brand-navy flex items-center gap-0.5" href="#notice-more">
+                더보기 <i class="ri-arrow-right-s-line"></i>
+</a>
+</div>
+<ul class="divide-y divide-slate-100">
+<!-- Notice Item 1 -->
+<li class="py-3.5 group">
+<a class="flex flex-col sm:flex-row sm:items-center justify-between gap-2" href="#notice-1">
+<div class="flex items-center gap-3">
+<span class="shrink-0 px-2 py-0.5 rounded text-[11px] font-semibold bg-red-50 text-red-600 border border-red-100">주요</span>
+<h4 class="text-sm font-medium text-slate-800 group-hover:text-brand-navy transition-colors line-clamp-1">
+                      2025년 상반기 세례 및 입교 신청 안내 (3월 9일까지)
+                    </h4>
+</div>
+<span class="text-xs text-slate-400 shrink-0 font-normal">2025.02.23</span>
+</a>
+</li>
+<!-- Notice Item 2 -->
+<li class="py-3.5 group">
+<a class="flex flex-col sm:flex-row sm:items-center justify-between gap-2" href="#notice-2">
+<div class="flex items-center gap-3">
+<span class="shrink-0 px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-50 text-brand-navy border border-blue-100">목장</span>
+<h4 class="text-sm font-medium text-slate-800 group-hover:text-brand-navy transition-colors line-clamp-1">
+                      2025년 봄학기 소그룹 목장 편성 및 개강 예배 일정 안내
+                    </h4>
+</div>
+<span class="text-xs text-slate-400 shrink-0 font-normal">2025.02.20</span>
+</a>
+</li>
+<!-- Notice Item 3 -->
+<li class="py-3.5 group">
+<a class="flex flex-col sm:flex-row sm:items-center justify-between gap-2" href="#notice-3">
+<div class="flex items-center gap-3">
+<span class="shrink-0 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">행정</span>
+<h4 class="text-sm font-medium text-slate-800 group-hover:text-brand-navy transition-colors line-clamp-1">
+                      연말정산용 2024년도 기부금 영수증 온라인 발급 신청 안내
+                    </h4>
+</div>
+<span class="text-xs text-slate-400 shrink-0 font-normal">2025.02.15</span>
+</a>
+</li>
+<!-- Notice Item 4 -->
+<li class="py-3.5 group">
+<a class="flex flex-col sm:flex-row sm:items-center justify-between gap-2" href="#notice-4">
+<div class="flex items-center gap-3">
+<span class="shrink-0 px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-50 text-brand-amber border border-amber-100">찬양</span>
+<h4 class="text-sm font-medium text-slate-800 group-hover:text-brand-navy transition-colors line-clamp-1">
+                      주일 2부 시온찬양대 신규 대원(소프라노/테너/베이스) 모집
+                    </h4>
+</div>
+<span class="text-xs text-slate-400 shrink-0 font-normal">2025.02.10</span>
+</a>
+</li>
+<!-- Notice Item 5 -->
+<li class="py-3.5 group">
+<a class="flex flex-col sm:flex-row sm:items-center justify-between gap-2" href="#notice-5">
+<div class="flex items-center gap-3">
+<span class="shrink-0 px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 text-slate-600">안내</span>
+<h4 class="text-sm font-medium text-slate-800 group-hover:text-brand-navy transition-colors line-clamp-1">
+                      주일 예배 차량 운행 코스 및 주차장 이용 안내 수칙
+                    </h4>
+</div>
+<span class="text-xs text-slate-400 shrink-0 font-normal">2025.02.02</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Right: 교회 갤러리 (교회 앨범 썸네일 그리드) (5 Cols) -->
+<div class="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-4">
+<div class="flex items-center gap-2">
+<i class="ri-gallery-line text-brand-navy text-lg"></i>
+<h3 class="font-serif-kr text-lg font-bold text-slate-900">교회 앨범</h3>
+</div>
+<a class="text-xs font-semibold text-slate-400 hover:text-brand-navy flex items-center gap-0.5" href="#gallery-more">
+                  전체보기 <i class="ri-arrow-right-s-line"></i>
+</a>
+</div>
+<!-- 2x2 Thumbnail Grid -->
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Gallery 1 -->
+<a class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-inner" href="#photo-1">
+<img alt="주일 찬양의 은혜" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<p class="absolute bottom-2 left-2.5 right-2.5 text-white text-xs font-medium truncate">주일 예배 찬양 사역</p>
+</a>
+<!-- Gallery 2 -->
+<a class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-inner" href="#photo-2">
+<img alt="목장 교제 및 나눔" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<p class="absolute bottom-2 left-2.5 right-2.5 text-white text-xs font-medium truncate">소그룹 목장 봄 심방</p>
+</a>
+<!-- Gallery 3 -->
+<a class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-inner" href="#photo-3">
+<img alt="어린이 주일학교 수련회" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<p class="absolute bottom-2 left-2.5 right-2.5 text-white text-xs font-medium truncate">어린이 주일학교 활동</p>
+</a>
+<!-- Gallery 4 -->
+<a class="group relative rounded-xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-inner" href="#photo-4">
+<img alt="이웃 사랑 나눔 봉사" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-90 group-hover:opacity-100 transition-opacity"></div>
+<p class="absolute bottom-2 left-2.5 right-2.5 text-white text-xs font-medium truncate">지역사회 섬김과 봉사</p>
+</a>
+</div>
+</div>
+<!-- Online Bulletin Banner -->
+<div class="mt-4 pt-3 border-t border-slate-100" id="bulletin">
+<a class="flex items-center justify-between p-3.5 rounded-xl bg-amber-50/80 hover:bg-amber-100/70 border border-amber-200 text-amber-900 transition-colors" href="#bulletin-view">
+<div class="flex items-center gap-3">
+<i class="ri-file-pdf-fill text-xl text-brand-amber"></i>
+<div>
+<p class="text-xs font-bold font-serif-kr">이번 주 모바일 주보 보기</p>
+<p class="text-[11px] text-amber-700">제 2025-08호 (2월 23일 발행)</p>
+</div>
+</div>
+<i class="ri-arrow-right-line text-sm text-brand-amber"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Newcomer & Welcome Banner (새가족 등록 & 환영 CTA) -->
+<section class="py-16 bg-gradient-to-r from-brand-navy to-brand-navyDark text-white relative overflow-hidden" id="newcomer" style="background: linear-gradient(135deg, rgb(7, 80, 96) 0%, rgb(4, 50, 61) 100%);">
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="max-w-2xl text-center lg:text-left">
+<span class="inline-block px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 text-xs font-semibold mb-3 border border-amber-300/30">
+              환영합니다
+            </span>
+<h2 class="font-serif-kr text-2xl sm:text-3xl font-bold mb-3">The바른교회에 처음 오셨나요?</h2>
+<p class="text-slate-200 text-sm sm:text-base leading-relaxed">등록 여부와 관계없이 누구나 편안하게 예배에 참석하실 수 있습니다. 온라인으로 새가족 등록 및 안내를 신청해 주시면 The바른교회 담임목사가 직접 친절히 안내해 드립니다.</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4 shrink-0">
+<a class="px-6 py-3.5 rounded-xl bg-brand-amber hover:bg-amber-600 text-slate-950 font-bold text-sm transition-all duration-200 shadow-lg shadow-black/20" href="#newcomer-form">
+              온라인 새가족 등록카드 작성
+            </a>
+<a class="px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-sm transition-all border border-white/20" href="#worship-info">
+              예배 및 모임 안내
+            </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Online Offering Modal/Section (온라인 헌금 안내) -->
+<section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" id="offering">
+<div class="bg-white rounded-3xl p-8 lg:p-12 border border-slate-200 shadow-sm">
+<div class="max-w-3xl mx-auto text-center">
+<div class="w-12 h-12 rounded-full bg-amber-100 text-brand-amber flex items-center justify-center text-2xl mx-auto mb-4">
+<i class="ri-hand-heart-line"></i>
+</div>
+<h3 class="font-serif-kr text-2xl font-bold text-slate-900 mb-2">온라인 헌금 안내</h3>
+<p class="text-xs sm:text-sm text-slate-500 mb-8">
+            "각각 그 마음에 정한 대로 할 것이요 인색함으로나 억지로 하지 말지니 하나님은 즐겨 내는 자를 사랑하시느니라" (고후 9:7)
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+<span class="text-xs font-semibold text-brand-navy">십일조</span>
+<p class="text-sm font-bold text-slate-900 mt-1">국민은행 123-456-789012</p>
+<p class="text-xs text-slate-500 mt-0.5">예금주: The바른교회</p>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+<span class="text-xs font-semibold text-brand-amber">감사헌금</span>
+<p class="text-sm font-bold text-slate-900 mt-1">국민은행 123-456-789034</p>
+<p class="text-xs text-slate-500 mt-0.5">예금주: The바른교회</p>
+</div>
+<div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+<span class="text-xs font-semibold text-emerald-700">선교/장학헌금</span>
+<p class="text-sm font-bold text-slate-900 mt-1">국민은행 123-456-789056</p>
+<p class="text-xs text-slate-500 mt-0.5">예금주: The바른교회</p>
+</div>
+</div>
+<p class="text-[11px] text-slate-400 mt-4">
+            * 입금자명 입력 시: [성명 + 생년월일 + 헌금구분] (예: 홍길동85십일조)로 기재해 주시기 바랍니다.
+          </p>
+</div>
+</div>
+</section>
+</main>
+<!-- [FRAGMENT END] :: Main Content -->
+<!-- ================================================================= -->
+<!-- [FRAGMENT START] :: Footer Fragment (th:fragment="footer")        -->
+<!-- ================================================================= -->
+<footer class="bg-slate-950 text-slate-400 text-xs border-t border-slate-800" style="background-color: rgb(8, 27, 34); border-color: rgb(18, 49, 60);">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+<!-- Col 1: Church Info & Logo (2 Cols) -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full overflow-hidden shrink-0 border border-slate-700 shadow-sm"><img src="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb" alt="The바른교회 로고" class="w-full h-full object-cover"></div>
+<div>
+<span class="font-serif-kr text-xl font-bold text-white tracking-tight">The바른교회</span>
+<span class="text-[10px] ml-1 text-slate-400">THE BARUN CHURCH</span>
+</div>
+</div>
+<p class="text-slate-400 text-xs leading-relaxed max-w-sm">The바른교회는 대한예수교장로회(합신) 소속으로 말씀 중심의 신앙과 은혜 넘치는 공동체를 지향합니다.</p>
+<!-- Social Badges -->
+<div class="flex items-center gap-3 pt-2">
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-red-600 text-white flex items-center justify-center text-sm transition-colors" href="https://www.youtube.com/@barunch" rel="noopener noreferrer" target="_blank" title="YouTube @barunch">
+<i class="ri-youtube-fill"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-pink-600 text-white flex items-center justify-center text-sm transition-colors" href="#instagram" title="Instagram">
+<i class="ri-instagram-line"></i>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 hover:bg-amber-400 hover:text-slate-950 text-white flex items-center justify-center text-sm transition-colors" href="#kakaotalk" title="KakaoTalk">
+<i class="ri-chat-3-fill"></i>
+</a>
+</div>
+</div>
+<!-- Col 2: Navigation Links (사귐의교회 메뉴 매핑) -->
+<div>
+<h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-3">교회 안내</h4>
+<ul class="space-y-2">
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#welcome">환영인사</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#people">섬기는 사람들</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#worship-info">예배 시간표</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#location">오시는 길 &amp; 주차</a></li>
+</ul>
+</div>
+<!-- Col 3: 말씀/소식 -->
+<div>
+<h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-3">말씀 &amp; 공동체</h4>
+<ul class="space-y-2">
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#sermon-section">주일 설교 영상</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#bulletin">온라인 주보</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#groups">소그룹 목장</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#next-gen">다음세대 사역</a></li>
+</ul>
+</div>
+<!-- Col 4: 행정 및 문의 -->
+<div>
+<h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-3">온라인 행정</h4>
+<ul class="space-y-2">
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#newcomer">새가족 등록</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#offering">온라인 헌금 계좌</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#prayer">중보기도 요청</a></li>
+<li class=""><a class="hover:text-amber-400 transition-colors" href="#privacy">개인정보처리방침</a></li>
+</ul>
+</div>
+</div>
+<!-- Address & Contact Information (시맨틱 address 태그) -->
+<div class="border-t border-slate-800/80 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-[11px] text-slate-500">
+<address class="not-italic space-y-1"><p class="">교회 주소: 부산광역시 서구 대영로38번길 47, 2층 (서대신동2가 / 서대신1동) | 목양실 (담임목사: 안민주): 02-1234-5678</p><p class="">이메일: contact@barunchurch.org | 유튜브 채널: @barunch | 고유번호: 123-82-00000</p></address>
+<p class="shrink-0">© 2025 The바른교회 (The Barun Church). All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<!-- [FRAGMENT END] :: Footer Fragment -->
+<!-- Simple Vanilla JS for Mobile Navigation & Interactive UX -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

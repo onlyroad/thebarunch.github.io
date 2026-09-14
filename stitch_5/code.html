@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>더바른교회 - 말씀·찬양 | 시리즈 설교</title>
+<!-- Material Symbols Outlined -->
+<script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YjZiMDNlY2RlMWUwMzM4NTI1MjVjMDQxYzdlEgsSBxD737z8-g0YAZIBJAoKcHJvamVjdF9pZBIWQhQxMjYzNDIxMDE3OTY1OTk1MDc4OA%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Serif KR & Source Sans 3 (Pretendard-aligned sans reading) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with container queries & forms -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#b6c4ff",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#eff1f3",
+            "secondary": "#904d00",
+            "on-secondary-container": "#663500",
+            "on-surface": "#191c1e",
+            "outline-variant": "#c5c5d3",
+            "on-primary-container": "#90a8ff",
+            "tertiary": "#222a3e",
+            "surface-bright": "#f7f9fb",
+            "primary-container": "#1e3a8a",
+            "inverse-primary": "#b6c4ff",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#6e3900",
+            "surface-container-highest": "#e0e3e5",
+            "inverse-surface": "#2d3133",
+            "on-primary-fixed": "#00164e",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "surface-dim": "#d8dadc",
+            "background": "#f7f9fb",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "outline": "#757682",
+            "error-container": "#ffdad6",
+            "secondary-container": "#fe932c",
+            "on-tertiary-container": "#a4acc5",
+            "tertiary-fixed-dim": "#bec6e0",
+            "tertiary-fixed": "#dae2fd",
+            "on-secondary-fixed": "#2f1500",
+            "on-surface-variant": "#444651",
+            "surface": "#f7f9fb",
+            "on-background": "#191c1e",
+            "on-primary": "#ffffff",
+            "surface-container": "#eceef0",
+            "secondary-fixed": "#ffdcc3",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed": "#131b2e",
+            "secondary-fixed-dim": "#ffb77d",
+            "surface-container-high": "#e6e8ea",
+            "tertiary-container": "#384055",
+            "surface-tint": "#4059aa",
+            "primary": "#00236f",
+            "primary-fixed": "#dce1ff",
+            "on-primary-fixed-variant": "#264191"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Noto Serif", "serif"],
+            "display-lg-mobile": ["Noto Serif", "serif"],
+            "headline-sm": ["Noto Serif", "serif"],
+            "scripture-quote": ["Noto Serif", "serif"],
+            "label-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "body-lg": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-md": ["Noto Serif", "serif"],
+            "body-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-lg-mobile": ["Noto Serif", "serif"],
+            "body-md": ["\"Source Sans 3\"", "sans-serif"],
+            "label-md": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-lg": ["Noto Serif", "serif"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #c5c5d3;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen flex flex-col justify-between">
+<!-- TopNavBar (Shared Component from JSON) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="w-full px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto h-20">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary flex items-center gap-2 hover:opacity-90 transition-opacity" href="#">
+<span class="material-symbols-outlined text-secondary text-2xl" style="font-variation-settings: 'FILL' 1;">church</span>
+<span>더바른교회</span>
+</a>
+<!-- Desktop Navigation Links (말씀·찬양 is active) -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center gap-8 h-full">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 font-label-md text-label-md" href="#">교회소개</a>
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary py-2 font-label-md text-label-md flex items-center gap-1" href="#">
+          말씀·찬양
+        </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 font-label-md text-label-md" href="#">공동체</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 font-label-md text-label-md" href="#">교회소식</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 font-label-md text-label-md" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-4">
+<button aria-label="실시간 예배 방송" class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-200" title="실시간 예배 방송">
+<span class="material-symbols-outlined text-2xl">smart_display</span>
+</button>
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-label-md font-label-md bg-secondary text-on-secondary rounded-lg hover:bg-on-secondary-container transition-colors duration-200 shadow-sm" href="#">
+          새가족 등록 안내
+        </a>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow max-w-7xl mx-auto w-full px-6 md:px-12 py-8 space-y-10">
+<!-- Section: Breadcrumbs & Header Hero Bar -->
+<section class="space-y-4">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">home</span>
+<span>홈</span>
+</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">말씀·찬양</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">시리즈 설교</span>
+</nav>
+<!-- Editorial Title & Sacred Scripture Card -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch pt-2">
+<div class="lg:col-span-7 flex flex-col justify-center space-y-2">
+<span class="text-secondary font-label-md text-label-md tracking-wider">SERMON SERIES EXPOSITION</span>
+<h1 class="text-headline-lg font-headline-lg text-primary text-balance">
+            하나님의 말씀과 연속강해: 시리즈 설교
+          </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-xl">
+            성경 본문을 깊이 파고들어 하나님의 마음과 성품을 총체적으로 밝히 드러내는 강해 설교의 여정에 성도 여러분을 초대합니다.
+          </p>
+</div>
+<!-- Scripture Quote Callout Card -->
+<div class="lg:col-span-5 bg-surface-container-low border border-outline-variant/60 rounded-xl p-6 relative overflow-hidden flex flex-col justify-between shadow-sm">
+<div class="absolute -right-4 -bottom-6 text-primary-fixed/25 pointer-events-none select-none">
+<span class="material-symbols-outlined" style="font-size: 130px;">menu_book</span>
+</div>
+<div class="relative z-10 space-y-3">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<span class="text-label-sm font-label-sm uppercase tracking-widest">Scripture of the Week</span>
+</div>
+<p class="font-scripture-quote text-scripture-quote text-on-surface leading-relaxed italic">
+              “풀은 마르고 꽃은 시드나 우리 하나님의 말씀은 영원히 서리라 하라”
+            </p>
+</div>
+<div class="relative z-10 pt-4 flex justify-end">
+<span class="text-label-md font-label-md text-primary font-semibold bg-surface-container-lowest px-3 py-1 rounded-full border border-outline-variant/40 shadow-xs">
+              이사야 40장 8절
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sub-Category Tab Navigation (은혜로운 단아한 탭) -->
+<section class="border-b border-outline-variant">
+<nav aria-label="Sub Categories" class="flex space-x-8 overflow-x-auto custom-scrollbar">
+<a class="text-on-surface-variant hover:text-primary py-4 px-1 text-body-md font-body-md transition-colors whitespace-nowrap" href="#">
+          전체 설교
+        </a>
+<a aria-current="page" class="text-primary font-semibold border-b-2 border-primary py-4 px-2 text-body-md font-body-md whitespace-nowrap bg-primary-fixed/15 -mb-px rounded-t-md flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">library_books</span>
+<span>시리즈 설교</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary py-4 px-1 text-body-md font-body-md transition-colors whitespace-nowrap" href="#">
+          특별집회/부흥회
+        </a>
+<a class="text-on-surface-variant hover:text-primary py-4 px-1 text-body-md font-body-md transition-colors whitespace-nowrap" href="#">
+          찬양 영상
+        </a>
+<a class="text-on-surface-variant hover:text-primary py-4 px-1 text-body-md font-body-md transition-colors whitespace-nowrap" href="#">
+          온라인 주보 모아보기
+        </a>
+</nav>
+</section>
+<!-- Main Section 1: Featured Series Banner (현재 진행 중인 대표 시리즈) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm transition-all hover:shadow-md">
+<div class="grid grid-cols-1 lg:grid-cols-12">
+<!-- Series Graphic Cover -->
+<div class="lg:col-span-5 relative min-h-[300px] lg:min-h-full overflow-hidden bg-tertiary">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-700 hover:scale-105" data-alt="A dignified and contemplative church sermon series cover design representing the Epistle to the Romans. In the center, warm golden rays of candle-like dawn light illuminate an antique open leather-bound Bible resting on a dark walnut pulpit. The composition uses deep contemplative navy tones contrasted against radiant warm amber glow, conveying reverent spiritual depth and quiet sacred dignity. Soft atmospheric dust motes float peacefully through the golden beam in an editorial minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJVorYvhuGwMcEBHUZW1LHyMwaLBaEwwveFkD4YvgdlsAtmjzfrm7BxVVQ0V6aImDKwtvbaXXgwflaWKdkBsjrcrNZBAv89o8UTIKaxfM-7RG7UPjIsaFe4ZpJnnkXRQBlLixrA5yVC2OvK9b_dwB8rrBkORuzD-d1UhdekfmCNOl5ZUKcvr4NOjoYQx7f2ztgH46vJ8g-CqVE-Qg9WBeY0dndVXMW5HVUe4-uIvPHLQuEj8JhzkaEOg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-tertiary"></div>
+<div class="absolute top-4 left-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-secondary text-on-secondary text-label-sm font-label-sm rounded-full tracking-wide shadow-md">
+<span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+              ONGOING SERIES
+            </span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 text-on-tertiary">
+<span class="text-label-sm font-label-sm text-on-tertiary-container block">말씀 증거</span>
+<span class="text-headline-sm font-headline-sm text-on-tertiary">김바른 담임목사</span>
+</div>
+</div>
+<!-- Series Information & Controls -->
+<div class="lg:col-span-7 p-6 md:p-10 flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded bg-primary-fixed text-primary font-semibold text-label-sm font-label-sm">
+                신약 강해
+              </span>
+<span class="text-outline-variant">•</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">본문: 로마서 1장 - 16장 전편</span>
+<span class="text-outline-variant">•</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">기간: 2024.01 ~ 진행중</span>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md text-primary tracking-tight">
+                로마서 강해: 오직 의인은 믿음으로 살리라
+              </h2>
+<p class="mt-2 text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                복음의 정수이자 은혜의 불길인 로마서를 통해 기독교 신앙의 핵심 토대와 삶의 실천적 거룩함을 심층적으로 고찰합니다. 구원의 확신과 하나님 나라의 소망을 재확인하는 시간입니다.
+              </p>
+</div>
+<!-- Progress Bar Section -->
+<div class="bg-surface-container-low p-4 rounded-lg border border-outline-variant/40 space-y-2">
+<div class="flex justify-between items-center text-label-md font-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-base">timelapse</span>
+                  강해 진행 현황
+                </span>
+<span class="text-primary font-semibold">12편 진행중 <span class="text-outline font-normal">/ 총 24부작 예정 (50%)</span></span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden">
+<div class="bg-primary h-2 rounded-full transition-all duration-1000 ease-out" style="width: 50%;"></div>
+</div>
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline pt-1">
+<span>제1강: 복음의 능력 (롬 1:16-17)</span>
+<span class="text-secondary font-semibold">최신: 제12강 거룩한 산 제물 (롬 12:1-2)</span>
+</div>
+</div>
+</div>
+<!-- Actions Strip -->
+<div class="flex flex-wrap items-center gap-3 pt-4 border-t border-outline-variant/50">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-container text-on-primary rounded-lg text-label-md font-label-md hover:bg-primary transition-colors shadow-sm active:scale-95" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+<span>최신 설교 바로보기</span>
+</a>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container-lowest border border-outline-variant text-on-surface rounded-lg text-label-md font-label-md hover:bg-surface-container-low transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined text-xl">format_list_numbered</span>
+<span>전체 시리즈 목록 (12편)</span>
+</button>
+<a class="inline-flex items-center gap-2 px-4 py-2.5 bg-secondary-fixed text-on-secondary-fixed rounded-lg text-label-md font-label-md hover:bg-secondary-fixed-dim transition-colors ml-auto active:scale-95" href="#" title="강해 설교 요약 및 나눔 교재">
+<span class="material-symbols-outlined text-xl">download</span>
+<span>강해노트 PDF</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Section 2: Filters & Search Bar (성경별 / 주제별 시리즈 필터 바) -->
+<section class="space-y-4 pt-2">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<!-- Category Filter Chips -->
+<div aria-label="Series Filter" class="flex items-center gap-2 overflow-x-auto custom-scrollbar pb-1" role="group">
+<button class="px-4 py-2 rounded-full bg-primary text-on-primary text-label-md font-label-md shadow-sm whitespace-nowrap transition-colors" type="button">
+            전체 보기 (18)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary text-label-md font-label-md whitespace-nowrap transition-colors" type="button">
+            구약 강해 (6)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary text-label-md font-label-md whitespace-nowrap transition-colors" type="button">
+            신약 강해 (7)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary text-label-md font-label-md whitespace-nowrap transition-colors" type="button">
+            주제별 시리즈 (3)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-lowest border border-outline-variant text-on-surface-variant hover:text-primary hover:border-primary text-label-md font-label-md whitespace-nowrap transition-colors" type="button">
+            인물 강해 (2)
+          </button>
+</div>
+<!-- Search Bar with Input Styling -->
+<div class="relative w-full md:w-80">
+<label class="sr-only" for="series-search">시리즈 설교 검색</label>
+<input class="w-full pl-10 pr-4 py-2 text-body-sm font-body-sm bg-surface-container-lowest border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all placeholder:text-outline" id="series-search" placeholder="시리즈명, 본문 구절 검색..." type="search"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-xl">
+            search
+          </span>
+</div>
+</div>
+</section>
+<!-- Main Section 3: Series Card Grid (시리즈 카드 그리드) -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-headline-sm font-headline-sm text-primary flex items-center gap-2">
+<span>지난 강해 시리즈 아카이브</span>
+<span class="text-label-sm font-label-sm font-normal text-outline">총 4개 시리즈</span>
+</h3>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>정렬:</span>
+<button class="font-semibold text-primary underline underline-offset-4">최신순</button>
+<span class="text-outline-variant">|</span>
+<button class="text-outline hover:text-primary transition-colors">성경순</button>
+</div>
+</div>
+<!-- Bento-style Asymmetric 4-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: 창세기 강해 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all duration-300 group">
+<div>
+<!-- Poster Art Aspect Ratio -->
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An editorial minimalist spiritual book cover artwork representing the Book of Genesis. The graphic depicts an early morning cosmic horizon where vast deep navy heavens break into warm amber dawn light, symbolizing the creation of light and the origin of divine covenant. Elegant biblical motifs are presented with reverent clarity, subtle golden textures, and generous serene negative space matching a modern liturgical design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbqVNub2gnGaTnrhyvJNTVi_PgllyXaXb2cDb1jsztJV3tvbV3dznfFjoyl9J6HL_-J-_tStnIFsyAUNGa8K8D81fWh3gSOl0Fhd5YhqcXNJGQg2Tsi2CeO2RdPflpNZPaNVEUcOkBENOeLIixEuLbm8D3OXN6xUdwlewCUzQpUeQjtX9ZZq0EY1gve4rDQqUvuf9QBX5UYEc-brNsOhfGFD1_TvfFrqYTb0fb0ai9GaqzIiCzVWljbA"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-primary font-semibold text-label-sm font-label-sm shadow-xs">
+                구약 강해
+              </span>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-primary-container text-on-primary text-label-sm font-label-sm">
+                36편 완결
+              </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 space-y-3">
+<div class="text-label-sm font-label-sm text-secondary font-semibold">창세기 1장 - 50장</div>
+<h4 class="text-headline-sm font-headline-sm text-primary line-clamp-1 group-hover:text-secondary transition-colors">
+                창세기 강해: 태초의 부르심과 언약
+              </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                창조와 인간의 타락, 그리고 아브라함, 이삭, 야곱, 요셉으로 이어지는 하나님의 신실하신 언약의 섭리를 배웁니다.
+              </p>
+</div>
+</div>
+<!-- Card Meta & Footer -->
+<div class="px-5 pb-5 pt-3 border-t border-outline-variant/40 space-y-3">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>김바른 담임목사</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>2023 전반기</span>
+</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">headphones</span>
+<span>음원 듣기</span>
+</a>
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">videocam</span>
+<span>영상 보기</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2: 에베소서 강해 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all duration-300 group">
+<div>
+<!-- Poster Art Aspect Ratio -->
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant and peaceful theological series graphic representing the Epistle to the Ephesians. The image features a stately church sanctuary viewed through soft architectural pillars, where heavenly morning light pours through tall clear glass windows onto a quiet communion table. Deep navy shadows frame the sides, while warm amber and candlelit accents bring warmth and sacred unity to the scene in an editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZmsWz35xxxU5W9CM7gZbwgZLyy4tcJA2pyeosQzTa1RDrF_6BdpLwGxIkFHfYS6xUUYmcsx--LFzmMwiNjFZRkaej6tcbcBxkD-Ps7j5hdtBc_vPXjHomxgj0pcOIXyWaRDo7KD_zhnKJeRuZ3D2MFwlonJtbAv7VmVH91Nz5sdS8xEjtqVtG33hAb2N1DgL2jmc9qZIBYeNjCjKQuTy5vALH3FDpqDCdj3qfOlFvRITtHvD0Xso4XA"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-primary font-semibold text-label-sm font-label-sm shadow-xs">
+                신약 강해
+              </span>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-primary-container text-on-primary text-label-sm font-label-sm">
+                18편 완결
+              </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 space-y-3">
+<div class="text-label-sm font-label-sm text-secondary font-semibold">에베소서 1장 - 6장</div>
+<h4 class="text-headline-sm font-headline-sm text-primary line-clamp-1 group-hover:text-secondary transition-colors">
+                에베소서 강해: 교회, 영광의 풍성함
+              </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                그리스도의 몸 된 교회의 비밀과 하늘에 속한 모든 신령한 복, 그리고 거룩한 성도의 영적 무장을 살펴봅니다.
+              </p>
+</div>
+</div>
+<!-- Card Meta & Footer -->
+<div class="px-5 pb-5 pt-3 border-t border-outline-variant/40 space-y-3">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>김바른 담임목사</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>2023 하반기</span>
+</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">headphones</span>
+<span>음원 듣기</span>
+</a>
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">videocam</span>
+<span>영상 보기</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3: 시편 기도 강해 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all duration-300 group">
+<div>
+<!-- Poster Art Aspect Ratio -->
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sacred and atmospheric editorial graphic portraying the Psalms of prayer and praise. A lone figure stands in prayer in a quiet stone chapel beside an ancient harp, bathed in a soft stream of warm amber light breaking through deep twilight navy shadows. The composition conveys profound inner solace, repentance, and triumphant adoration with tranquil minimalism and painterly reverence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr9orn4JkDXZ_42UnWT0fM5e1NgFtBvcXN0R5ccWlKPPAQtuxaMVBqPoXdk3TWlf3fvbAbSbVQqwPMrXSpF3RzF3FPI14v-wIpUyakbN896-fjVDuyIK0UisG8qEs0uTVbBSKc-WYsXGFx3gcz-KQ7WQ8IV6JVIfFsJf5qy5LQHjSypmd5YRkwuuW3OhL97c5Eh-FltJVUw-28I_CU3v1A4E8cE83PhnShHLlVoXFVCHXoDqO8LK8B-w"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-primary font-semibold text-label-sm font-label-sm shadow-xs">
+                구약 강해
+              </span>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-primary-container text-on-primary text-label-sm font-label-sm">
+                20편 완결
+              </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 space-y-3">
+<div class="text-label-sm font-label-sm text-secondary font-semibold">시편 주요 기도 시</div>
+<h4 class="text-headline-sm font-headline-sm text-primary line-clamp-1 group-hover:text-secondary transition-colors">
+                시편 기도 강해: 영혼의 탄식과 찬양
+              </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                인생의 깊은 골짜기에서의 탄식과 기쁨의 산꼭대기에서의 송축을 통해 정직하게 하나님과 마주하는 기도를 배웁니다.
+              </p>
+</div>
+</div>
+<!-- Card Meta & Footer -->
+<div class="px-5 pb-5 pt-3 border-t border-outline-variant/40 space-y-3">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>김바른 담임목사</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>2022 하반기</span>
+</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">headphones</span>
+<span>음원 듣기</span>
+</a>
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">videocam</span>
+<span>영상 보기</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 4: 산상수훈 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col justify-between shadow-xs hover:shadow-lg transition-all duration-300 group">
+<div>
+<!-- Poster Art Aspect Ratio -->
+<div class="relative aspect-[16/10] overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil and poetic sermon series illustration symbolizing the Sermon on the Mount. A serene rolling green hillside under an expansive early sunrise sky, where soft amber warmth illuminates wild lilies and wheat fields. A modest wooden bench rests quietly under an olive tree, embodying divine peace, righteousness, and simplicity. The visual style uses dignified deep blue undertones with warm golden light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOEN9EpC39-_6BYu0Hu5cv3RRrVXkqCWQ6XUKNt-9RWyM5o5m0zqV4g0eBZF5S_vnmBSke41CplzZ8fWTPq81XFwKqCRnJIDbojAynkS2HtT_Pep-gUoY6lpN3hUbQXz4C4xOKyJsfrHqsw_z2xSqUYOFzYwagNjhWQxwZmTCbRC6MTmRW6QEkgVLLaMyj19k3RuaXTLTzVhNJwy0fmBQsMlR9HW8cUu2lahNoc_PRPYziT1FeC_094A"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-xs text-primary font-semibold text-label-sm font-label-sm shadow-xs">
+                주제별 시리즈
+              </span>
+<span class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-primary-container text-on-primary text-label-sm font-label-sm">
+                15편 완결
+              </span>
+</div>
+<!-- Content Body -->
+<div class="p-5 space-y-3">
+<div class="text-label-sm font-label-sm text-secondary font-semibold">마태복음 5장 - 7장</div>
+<h4 class="text-headline-sm font-headline-sm text-primary line-clamp-1 group-hover:text-secondary transition-colors">
+                산상수훈: 하나님 나라 백성의 삶
+              </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-2">
+                세상의 가치관을 뒤엎는 팔복의 선포와 소금과 빛으로서 이 땅을 살아가는 그리스도인의 참된 윤리를 선포합니다.
+              </p>
+</div>
+</div>
+<!-- Card Meta & Footer -->
+<div class="px-5 pb-5 pt-3 border-t border-outline-variant/40 space-y-3">
+<div class="flex justify-between items-center text-label-sm font-label-sm text-outline">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>김바른 담임목사</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>2022 전반기</span>
+</span>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">headphones</span>
+<span>음원 듣기</span>
+</a>
+<a class="inline-flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-sm text-label-sm transition-colors text-center" href="#">
+<span class="material-symbols-outlined text-base">videocam</span>
+<span>영상 보기</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Main Section 4: Study Material & Devotional Request Banner (교재 및 묵상집 신청 안내 배너) -->
+<section class="bg-secondary-fixed/40 border border-secondary/30 rounded-xl p-6 md:p-8 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+<div class="lg:col-span-8 space-y-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-base">menu_book</span>
+<span>공동체 소그룹 &amp; 개인 묵상 가이드</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-secondary-fixed">
+            시리즈 강해 교재 및 묵상집 우편/현장 신청
+          </h3>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+            설교의 은혜를 삶의 자리로 이어가도록 돕는 주차별 묵상 질문지와 소그룹 나눔 교재를 무료로 신청하실 수 있습니다. (PDF 파일 즉시 다운로드 가능)
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center items-stretch">
+<a class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-secondary text-on-secondary text-label-md font-label-md hover:bg-on-secondary-container transition-colors shadow-sm text-center active:scale-95" href="#">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+<span>실물 묵상집 우편 신청하기</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-on-surface text-label-md font-label-md hover:bg-surface-container-low transition-colors text-center active:scale-95" href="#">
+<span class="material-symbols-outlined text-xl">folder_zip</span>
+<span>전체 강의안 모음 ZIP</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Media Subscription & Alert Section -->
+<section class="bg-surface-container-low border border-outline-variant/60 rounded-xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-3xl">podcasts</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm text-primary">더바른교회 미디어 채널 구독</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">유튜브, 팟캐스트, 스포티파이에서 매주 업데이트되는 시리즈 강해를 가장 먼저 만나보세요.</p>
+</div>
+</div>
+<div class="flex items-center gap-3 flex-wrap">
+<a class="px-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-label-md font-label-md text-on-surface hover:text-primary hover:border-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-red-600">smart_display</span>
+<span>YouTube 구독</span>
+</a>
+<a class="px-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-label-md font-label-md text-on-surface hover:text-primary hover:border-primary transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-purple-600">podcasts</span>
+<span>Apple Podcasts</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component from JSON) -->
+<footer class="bg-tertiary dark:bg-inverse-surface border-t border-outline dark:border-outline-variant docked full-width bottom mt-16">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Brand & Information -->
+<div class="space-y-4 max-w-md">
+<div class="text-headline-md font-headline-md text-on-tertiary dark:text-inverse-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">church</span>
+<span>더바른교회</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container dark:text-surface-variant leading-relaxed">
+          대한예수교장로회 더바른교회는 성경 말씀 중심의 바른 신학 위에 그리스도의 따뜻한 사랑을 실천하며 세상을 섬기는 신앙 공동체입니다.
+        </p>
+<p class="text-label-sm font-label-sm text-on-tertiary-container dark:text-surface-variant">
+          서울특별시 서초구 바른로 124 더바른교회 비전센터 | Tel: 02-555-0191
+        </p>
+<p class="text-body-sm font-body-sm text-on-tertiary-container dark:text-surface-variant pt-2">
+          © 2024 더바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.
+        </p>
+</div>
+<!-- Quick Links Hierarchy -->
+<div class="flex flex-col sm:flex-row gap-8 sm:gap-16">
+<div class="space-y-3">
+<div class="text-label-md font-label-md text-on-tertiary font-semibold">바로가기</div>
+<ul class="space-y-2 text-label-sm font-label-sm">
+<li>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">개인정보처리방침</a>
+</li>
+<li>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">이용약관</a>
+</li>
+<li>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">교회행정문의</a>
+</li>
+</ul>
+</div>
+<div class="space-y-3">
+<div class="text-label-md font-label-md text-on-tertiary font-semibold">예배 및 안내</div>
+<ul class="space-y-2 text-label-sm font-label-sm">
+<li>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">오시는 길</a>
+</li>
+<li>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">유튜브 방송 안내</a>
+</li>
+<li>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">온라인 헌금 안내</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- Optional Micro-interaction JS for series search/filter active toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterButtons = document.querySelectorAll('[role="group"] button');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach(b => {
+            b.classList.remove('bg-primary', 'text-on-primary');
+            b.classList.add('bg-surface-container-lowest', 'border', 'border-outline-variant', 'text-on-surface-variant');
+          });
+          btn.classList.remove('bg-surface-container-lowest', 'border', 'border-outline-variant', 'text-on-surface-variant');
+          btn.classList.add('bg-primary', 'text-on-primary');
+        });
+      });
+    });
+  </script>
+</body></html>

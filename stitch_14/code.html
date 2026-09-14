@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>더바른교회 공동체 | 소그룹 다락방</title>
+<!-- Material Symbols Outlined -->
+<script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YjZiNTUxYmNlZjEwNTc2MDJiNjMzMGJiMGIyEgsSBxD737z8-g0YAZIBJAoKcHJvamVjdF9pZBIWQhQxMjYzNDIxMDE3OTY1OTk1MDc4OA%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Serif KR & Source Sans 3 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Verbatim Tailwind Config -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#dae2fd",
+            "surface-container-highest": "#e0e3e5",
+            "on-surface": "#191c1e",
+            "surface-tint": "#4059aa",
+            "on-primary-container": "#90a8ff",
+            "inverse-surface": "#2d3133",
+            "error": "#ba1a1a",
+            "secondary-fixed-dim": "#ffb77d",
+            "primary-fixed-dim": "#b6c4ff",
+            "error-container": "#ffdad6",
+            "surface-container": "#eceef0",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed": "#131b2e",
+            "tertiary": "#222a3e",
+            "surface": "#f7f9fb",
+            "on-error": "#ffffff",
+            "background": "#f7f9fb",
+            "on-primary": "#ffffff",
+            "surface-dim": "#d8dadc",
+            "inverse-primary": "#b6c4ff",
+            "primary": "#00236f",
+            "tertiary-fixed-dim": "#bec6e0",
+            "secondary": "#904d00",
+            "on-secondary-container": "#663500",
+            "surface-container-high": "#e6e8ea",
+            "outline-variant": "#c5c5d3",
+            "on-primary-fixed": "#00164e",
+            "on-secondary-fixed-variant": "#6e3900",
+            "secondary-container": "#fe932c",
+            "inverse-on-surface": "#eff1f3",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "secondary-fixed": "#ffdcc3",
+            "on-tertiary-container": "#a4acc5",
+            "on-surface-variant": "#444651",
+            "primary-fixed": "#dce1ff",
+            "on-secondary-fixed": "#2f1500",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-background": "#191c1e",
+            "primary-container": "#1e3a8a",
+            "tertiary-container": "#384055",
+            "surface-bright": "#f7f9fb",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#264191",
+            "surface-container-low": "#f2f4f6",
+            "outline": "#757682"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-lg": ["\"Source Sans 3\""],
+            "display-lg": ["\"Noto Serif KR\"", "serif"],
+            "body-md": ["\"Source Sans 3\""],
+            "headline-md": ["\"Noto Serif KR\"", "serif"],
+            "headline-lg-mobile": ["\"Noto Serif KR\"", "serif"],
+            "label-md": ["\"Source Sans 3\""],
+            "scripture-quote": ["\"Noto Serif KR\"", "serif"],
+            "display-lg-mobile": ["\"Noto Serif KR\"", "serif"],
+            "headline-sm": ["\"Noto Serif KR\"", "serif"],
+            "label-sm": ["\"Source Sans 3\""],
+            "headline-lg": ["\"Noto Serif KR\"", "serif"],
+            "body-sm": ["\"Source Sans 3\""]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- 1. TopNavBar (Executed strictly from Shared Components JSON) -->
+<header class="w-full sticky top-0 z-50 bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+<div class="w-full px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto h-20">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary" style="font-size: 26px;">church</span>
+<span class="tracking-tight">더바른교회</span>
+</a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소개</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">말씀·찬양</a>
+<!-- ACTIVE STATE: 공동체 -->
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary py-2 text-label-md font-label-md" href="#">공동체</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소식</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Action Strip -->
+<div class="flex items-center gap-4">
+<a class="p-2 text-on-surface-variant hover:text-primary transition-colors duration-200" href="#" title="실시간 방송">
+<span class="material-symbols-outlined" data-icon="smart_display">smart_display</span>
+</a>
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-on-primary text-label-md font-label-md transition-colors duration-200 hover:bg-primary-container active:scale-95 shadow-sm" href="#">
+          새가족 등록 안내
+        </a>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- 2. Sub-Navigation & Breadcrumbs -->
+<div class="bg-surface-container-lowest border-b border-surface-container-high">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">홈</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">공동체</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">소그룹 다락방</span>
+</nav>
+<!-- Sub Tabs -->
+<div class="flex items-center gap-2">
+<a class="px-4 py-2 rounded-lg bg-primary-fixed text-primary font-semibold text-label-md font-label-md shadow-sm border border-primary-fixed-dim" href="#">
+            소그룹 다락방 소개
+          </a>
+<a class="px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors text-label-md font-label-md" href="#">
+            양육 및 성경공부
+          </a>
+<a class="px-4 py-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors text-label-md font-label-md" href="#">
+            다음세대(아이들·청소년)
+          </a>
+</div>
+</div>
+</div>
+<!-- 3. Page Hero & Scripture Quote Callout -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm">
+<span class="material-symbols-outlined" style="font-size: 16px;">diversity_1</span>
+<span>삶을 나누고 함께 우는 작은 가족</span>
+</div>
+<h1 class="text-display-lg font-display-lg text-primary tracking-tight">
+            삶의 기쁨과 슬픔을<br/>함께 나누는 영적 가족:<br/><span class="text-secondary">소그룹 다락방</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            더바른교회 다락방은 거대한 조직이나 형식적인 프로그램이 아닙니다. 담임목사와 성도가 한 식탁에 둘러앉아 한 주간의 땀방울과 눈물을 있는 그대로 털어놓고, 예수 그리스도의 사랑으로 서로를 품어 안는 따뜻한 보금자리입니다.
+          </p>
+<!-- Scripture Callout Card -->
+<div class="p-6 rounded-xl bg-surface-container-low border-l-4 border-secondary border-t border-r border-b border-surface-container-high relative">
+<span class="material-symbols-outlined text-secondary opacity-30 absolute top-4 right-4 text-4xl">format_quote</span>
+<p class="text-scripture-quote font-scripture-quote text-on-surface italic leading-relaxed mb-2">
+              “그들이 사도의 가르침을 받아 서로 교제하고 떡을 떼며 오로지 기도하기를 힘쓰니라”
+            </p>
+<p class="text-label-sm font-label-sm text-on-surface-variant text-right">
+              — 사도행전 2장 42절
+            </p>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative rounded-2xl overflow-hidden shadow-lg border border-surface-container-high bg-surface-container-lowest p-2">
+<div class="aspect-[4/3] rounded-xl overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A warm, intimate house church gathering in a sunlit Korean living room with people sitting around a wooden dining table enjoying a shared meal and warm tea. The scene has serene morning natural light filtering through sheer curtains, candid smiles, open Bibles, and soft contemplative tones with deep navy and warm amber accents in a minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwEBPsKlj-IZ8RhMhDQojnqBj_XpLHSG7iZf56pgmMe7Hp7r7VoEjiK1pPnUIDdXKSG1iyEJMKDmTM5tQLqUO_NmLG2vfOJpD5JPv8rck65vSDGx1cAW2gvSbNueU9WdqNRNaiBfCUy-7h2JwA9q8dRarCBnEK2ycxy5s3O3A69wo_oFSnaj1qNs22lopjmdLD3lDoUPF6k5ZkGt9-IoXGSg4G2wP7u8Ky2FR9-srFG9eRvzLNieEAg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-tertiary/70 via-transparent to-transparent flex items-end p-6">
+<div class="text-on-tertiary">
+<div class="text-label-sm font-label-sm tracking-wide text-secondary-fixed uppercase">Weekly Fellowship</div>
+<div class="text-headline-sm font-headline-sm mt-0.5">매주 정성스레 차려진 식탁에서 피어나는 은혜</div>
+</div>
+</div>
+</div>
+<!-- Small pastoral callout badge -->
+<div class="p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 22px;">favorite</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                김바른 담임목사가 매주 모든 다락방의 나눔을 살피고 각 가정을 위해 중보합니다.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Core Values of the Small Group (다락방의 4대 은혜) -->
+<section class="bg-surface-container-lowest border-y border-surface-container-high py-20">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="text-label-md font-label-md text-secondary font-semibold uppercase tracking-wider">Our Core Pillars</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">더바른교회 다락방이 누리는 4대 은혜</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            소박하지만 정직하게, 거창한 구호보다 한 영혼의 아픔에 귀 기울이는 네 가지 기초 위에 세워집니다.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="p-6 rounded-xl bg-surface border border-surface-container-high hover:border-primary-fixed-dim hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">restaurant</span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary font-bold">01. KOINONIA</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mt-1 mb-3">따뜻한 식탁 교제</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                격식 없는 소박한 식사와 차 한 잔 속에 가면을 벗고 한 주간의 고단함과 기쁨을 털어놓는 안식의 자리입니다.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high text-label-sm font-label-sm text-primary font-medium flex items-center gap-1">
+<span>서로의 일상을 묻다</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="p-6 rounded-xl bg-surface border border-surface-container-high hover:border-primary-fixed-dim hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed text-primary flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">menu_book</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary font-bold">02. THE WORD</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mt-1 mb-3">삶에 뿌리내리는 말씀</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                성경 지식을 시험하는 것이 아닌, 주일 강단에서 들은 말씀을 내 일터와 가정에서 어떻게 살아낼지 정직하게 고백합니다.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high text-label-sm font-label-sm text-primary font-medium flex items-center gap-1">
+<span>적용 중심의 나눔</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="p-6 rounded-xl bg-surface border border-surface-container-high hover:border-primary-fixed-dim hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">volunteer_activism</span>
+</div>
+<span class="text-label-sm font-label-sm text-tertiary font-bold">03. PRAYER</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mt-1 mb-3">눈물로 품는 중보기도</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                혼자 짊어지기에는 너무 버거운 질병, 재정, 자녀, 진로의 짐을 공동체의 식구들이 함께 부둥켜안고 하나님께 간구합니다.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high text-label-sm font-label-sm text-primary font-medium flex items-center gap-1">
+<span>깊은 비밀 보장과 위로</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="p-6 rounded-xl bg-surface border border-surface-container-high hover:border-primary-fixed-dim hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-5">
+<span class="material-symbols-outlined text-2xl">handshake</span>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant font-bold">04. MISSION</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mt-1 mb-3">이웃을 향한 작은 섬김</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                우리만의 친교에 갇히지 않고, 동네의 홀몸 어르신과 소외된 이웃, 캠퍼스 청년들을 조용히 돕는 작은 사랑의 손길을 뺍니다.
+              </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container-high text-label-sm font-label-sm text-primary font-medium flex items-center gap-1">
+<span>마을 속의 작은 등대</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. How the Small Group Operates (다락방 모임 안내 & 진행 순서) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left: Summary Info Card -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-8 rounded-2xl border border-surface-container-high space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-primary-fixed text-primary text-label-sm font-label-sm">
+<span class="material-symbols-outlined" style="font-size: 16px;">schedule</span>
+<span>정기 모임 일정</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface">
+            언제, 어디서 모이나요?
+          </h3>
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">calendar_month</span>
+<div>
+<strong class="block text-label-md font-label-md text-on-surface">모임 주기</strong>
+<p class="text-body-sm font-body-sm text-on-surface-variant">매월 격주 주일 오후(예배 후) 또는 주중 1회(다락방별 자율)</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">home_pin</span>
+<div>
+<strong class="block text-label-md font-label-md text-on-surface">모임 장소</strong>
+<p class="text-body-sm font-body-sm text-on-surface-variant">교회 2층 애찬실, 성도 가정, 또는 조용한 인근 북카페</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">timer</span>
+<div>
+<strong class="block text-label-md font-label-md text-on-surface">총 소요 시간</strong>
+<p class="text-body-sm font-body-sm text-on-surface-variant">약 2시간 (식사와 차 교제 포함)</p>
+</div>
+</div>
+</div>
+<div class="p-4 rounded-xl bg-secondary-fixed/40 border border-secondary/20 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5">info</span>
+<p class="text-body-sm font-body-sm text-on-surface">
+              처음 참석하시는 분은 나눔이나 기도를 강요받지 않습니다. 편안하게 식사하시고 다른 분들의 은혜를 듣는 것만으로도 충분합니다.
+            </p>
+</div>
+</div>
+<!-- Right: Stepper Timeline -->
+<div class="lg:col-span-7 space-y-6">
+<div class="mb-4">
+<span class="text-label-md font-label-md text-primary font-semibold uppercase">Step-by-Step</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mt-1">다락방 모임의 4단계 순서</h3>
+</div>
+<div class="relative pl-6 border-l-2 border-primary-fixed space-y-8">
+<!-- Step 1 -->
+<div class="relative group">
+<div class="absolute -left-[33px] top-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-label-sm font-label-sm font-bold ring-4 ring-surface">
+                1
+              </div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-surface-container-high transition-shadow group-hover:shadow-sm">
+<div class="flex items-center justify-between">
+<h4 class="text-headline-sm font-headline-sm text-on-surface">환영 및 애찬 (Icebreak &amp; Table Fellowship)</h4>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-label-sm">40분</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                  직접 준비한 집밥이나 소박한 샌드위치, 차를 나누며 서로의 한 주간 안부를 묻고 굳었던 마음의 문을 엽니다.
+                </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative group">
+<div class="absolute -left-[33px] top-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-label-sm font-label-sm font-bold ring-4 ring-surface">
+                2
+              </div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-surface-container-high transition-shadow group-hover:shadow-sm">
+<div class="flex items-center justify-between">
+<h4 class="text-headline-sm font-headline-sm text-on-surface">찬양과 감사 나눔 (Praise &amp; Gratitude)</h4>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-label-sm">15분</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                  마음을 울리는 찬송가나 복음성가 1-2곡을 부르고, 지난 주간 삶에서 발견한 아주 작지만 소중한 감사의 고백을 나눕니다.
+                </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative group">
+<div class="absolute -left-[33px] top-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-label-sm font-label-sm font-bold ring-4 ring-surface">
+                3
+              </div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-surface-container-high transition-shadow group-hover:shadow-sm">
+<div class="flex items-center justify-between">
+<h4 class="text-headline-sm font-headline-sm text-on-surface">주일 설교 말씀 묵상 나눔 (Word Application)</h4>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-label-sm">40분</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                  담임목사의 주일 설교 질문지를 바탕으로, 말씀을 들을 때 마음에 찔렸던 점이나 일터에서 부딪힌 고민을 솔직하게 꺼내놓습니다.
+                </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative group">
+<div class="absolute -left-[33px] top-0 w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-label-sm font-label-sm font-bold ring-4 ring-surface">
+                4
+              </div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-surface-container-high transition-shadow group-hover:shadow-sm">
+<div class="flex items-center justify-between">
+<h4 class="text-headline-sm font-headline-sm text-on-surface">기도제목 나눔 및 합심 중보 (Intercession &amp; Benediction)</h4>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-label-sm font-label-sm">25분</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                  각 지체의 구체적인 기도제목을 기록하고, 손을 맞잡거나 조용히 마음을 모아 간절히 기도한 뒤 순장/다락방의 마침 기도로 모임을 마칩니다.
+                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Frequently Asked Questions (새가족을 위한 다락방 FAQ) -->
+<section class="max-w-4xl mx-auto px-6 md:px-12 py-20">
+<div class="text-center mb-12">
+<span class="text-label-md font-label-md text-secondary font-semibold uppercase">Frequently Asked Questions</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mt-1">새가족이 가장 자주 묻는 질문</h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+          소그룹 참여에 대해 궁금하거나 망설여지는 점들을 명쾌히 안내해 드립니다.
+        </p>
+</div>
+<div class="space-y-4">
+<!-- Q1 -->
+<details class="group bg-surface-container-lowest p-6 rounded-xl border border-surface-container-high [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer open:border-primary-fixed-dim">
+<summary class="flex items-center justify-between text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+<span>교회에 등록한 지 얼마 안 되었는데 바로 다락방에 참여할 수 있나요?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-outline">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-surface-container text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            네, 물론입니다! 더바른교회는 새가족 등록 직후 원하시는 분에 한해 즉시 다락방 참관 및 참여가 가능합니다. 만약 아직 모임이 낯설다면 몇 주간 주일 예배만 드리시다가 마음이 편안해지실 때 참여 신청을 하셔도 좋습니다. 어떠한 부담도 드리지 않습니다.
+          </div>
+</details>
+<!-- Q2 -->
+<details class="group bg-surface-container-lowest p-6 rounded-xl border border-surface-container-high [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer open:border-primary-fixed-dim">
+<summary class="flex items-center justify-between text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+<span>신앙이 깊지 않거나 성경을 잘 몰라도 나눔에 참여할 수 있나요?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-outline">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-surface-container text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            더바른교회 다락방은 성경 지식을 외우거나 토론하는 자리가 아닙니다. 나의 한 주간 삶의 희로애락을 있는 그대로 털어놓고 함께 울고 웃는 자리입니다. 성경을 처음 접하시는 분도 자연스럽게 식사하며 이야기 듣는 것만으로 큰 위로를 얻고 계십니다.
+          </div>
+</details>
+<!-- Q3 -->
+<details class="group bg-surface-container-lowest p-6 rounded-xl border border-surface-container-high [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer open:border-primary-fixed-dim">
+<summary class="flex items-center justify-between text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+<span>아이가 어려서 모임 참여가 조심스러운데 괜찮을까요?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-outline">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-surface-container text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            저희 교회는 작은 개척교회 특성상 아이들을 공동체 전체가 함께 돌봅니다. 3040 세대를 위한 다락방의 경우 유아유치실에서 아이들이 장난감을 갖고 놀거나 쉬는 동안 부모님들이 곁에서 편안히 교제할 수 있도록 배려하고 있습니다.
+          </div>
+</details>
+<!-- Q4 -->
+<details class="group bg-surface-container-lowest p-6 rounded-xl border border-surface-container-high [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer open:border-primary-fixed-dim">
+<summary class="flex items-center justify-between text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">
+<span>다락방 배정은 어떤 방식으로 진행되나요?</span>
+<span class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-outline">expand_more</span>
+</summary>
+<div class="mt-4 pt-4 border-t border-surface-container text-body-md font-body-md text-on-surface-variant leading-relaxed">
+            기계적으로 구역을 나누지 않습니다. 김바른 담임목사가 새가족과의 일대일 심방 교제를 통해 연령, 직업, 주거지, 현재 처한 영적 상황과 필요를 면밀히 헤아려 가장 편안하게 융화될 수 있는 다락방으로 섬세하게 안내해 드립니다.
+          </div>
+</details>
+</div>
+</section>
+<!-- 8. CTA / Application Banner -->
+<section class="bg-surface-container-lowest py-16 border-t border-surface-container-high">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="rounded-3xl bg-gradient-to-br from-primary via-primary-container to-tertiary text-on-primary p-10 md:p-14 relative overflow-hidden shadow-xl">
+<!-- Background Subtle Cross/Glow -->
+<div class="absolute -right-10 -bottom-10 w-80 h-80 bg-secondary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl space-y-6">
+<span class="inline-block px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm font-semibold">
+              언제나 당신의 자리가 비어 있습니다
+            </span>
+<h2 class="text-display-lg-mobile md:text-headline-lg font-display-lg text-on-primary tracking-tight">
+              “나를 진심으로 알아주고 품어주는<br/>작은 가족이 기다립니다”
+            </h2>
+<p class="text-body-lg font-body-lg text-primary-fixed max-w-2xl leading-relaxed">
+              교회 문턱이 낯설게 느껴지시나요? 주저하지 마시고 목양실의 문을 두드려주세요. 차 한 잔 나누며 여러분의 이야기를 귀 기울여 듣겠습니다.
+            </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-6 py-3.5 rounded-lg bg-secondary text-on-secondary text-label-md font-label-md font-semibold hover:bg-on-secondary-container transition-colors duration-200 shadow-md inline-flex items-center gap-2 active:scale-95" href="#">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+<span>온라인 다락방 참여 신청하기</span>
+</a>
+<a class="px-6 py-3.5 rounded-lg bg-surface-container-lowest text-primary text-label-md font-label-md font-semibold hover:bg-surface-bright transition-colors duration-200 shadow-sm inline-flex items-center gap-2 border border-surface-container-highest" href="tel:02-588-7000">
+<span class="material-symbols-outlined text-lg">call</span>
+<span>담임목사 직통 상담 (02-588-7000)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 9. Footer (Executed strictly from Shared Components JSON) -->
+<footer class="bg-tertiary dark:bg-inverse-surface border-t border-outline dark:border-outline-variant text-on-tertiary">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Brand & Small Church Pastoral Information -->
+<div class="space-y-4 max-w-md">
+<div class="text-headline-md font-headline-md text-on-tertiary dark:text-inverse-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 24px;">church</span>
+<span>더바른교회</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container">
+          말씀의 깊이와 따뜻한 식탁 교제가 있는 작은 개척교회 공동체입니다.
+        </p>
+<div class="text-body-sm font-body-sm text-on-tertiary-container space-y-1 pt-1">
+<p>담임목사: 김바른 | 목양실 직통: 02-588-7000</p>
+<p>주소: 서울특별시 서초구 반포대로 120 (서초동, 2층)</p>
+<p>헌금계좌: 신한은행 100-034-588700 (예금주: 더바른교회)</p>
+</div>
+</div>
+<!-- Quick Links (Strict Strings from JSON) -->
+<div class="flex flex-col space-y-3">
+<span class="text-label-sm font-label-sm text-tertiary-fixed font-semibold uppercase tracking-wider">주요 바로가기</span>
+<div class="flex flex-col space-y-2">
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors text-body-sm font-body-sm" href="#">개인정보처리방침</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors text-body-sm font-body-sm" href="#">이용약관</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors text-body-sm font-body-sm" href="#">교회행정문의</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors text-body-sm font-body-sm" href="#">오시는 길</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors text-body-sm font-body-sm" href="#">유튜브 방송 안내</a>
+</div>
+</div>
+<!-- Copyright Statement (Strict String from JSON) -->
+<div class="flex flex-col justify-between self-stretch md:self-auto text-left md:text-right space-y-4">
+<div class="flex md:justify-end gap-3 text-on-tertiary-container">
+<a class="w-9 h-9 rounded-full bg-tertiary-container flex items-center justify-center hover:text-on-tertiary transition-colors" href="#" title="YouTube">
+<span class="material-symbols-outlined text-lg">smart_display</span>
+</a>
+<a class="w-9 h-9 rounded-full bg-tertiary-container flex items-center justify-center hover:text-on-tertiary transition-colors" href="#" title="Location">
+<span class="material-symbols-outlined text-lg">map</span>
+</a>
+</div>
+<p class="text-label-sm font-label-sm text-on-tertiary-container">
+          © 2024 더바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.
+        </p>
+</div>
+</div>
+</footer>
+</body></html>

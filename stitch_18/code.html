@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="ko"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>The바른교회 - 온라인 헌금 &amp; 기부금영수증 신청</title>
+<script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YjZjMThhZjdmNTcwMWI0ZWM5ZTQ5MWM0MDE4EgsSBxD737z8-g0YAZIBJAoKcHJvamVjdF9pZBIWQhQxMjYzNDIxMDE3OTY1OTk1MDc4OA%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#4059aa",
+            "inverse-surface": "#2d3133",
+            "on-error-container": "#93000a",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#dae2fd",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "on-secondary-fixed": "#2f1500",
+            "inverse-primary": "#b6c4ff",
+            "tertiary": "#222a3e",
+            "secondary-fixed-dim": "#ffb77d",
+            "on-error": "#ffffff",
+            "on-background": "#191c1e",
+            "on-tertiary-fixed": "#131b2e",
+            "error": "#ba1a1a",
+            "secondary-container": "#fe932c",
+            "surface-bright": "#f7f9fb",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#eceef0",
+            "on-secondary-container": "#663500",
+            "primary-container": "#1e3a8a",
+            "on-primary": "#ffffff",
+            "on-primary-fixed": "#00164e",
+            "secondary-fixed": "#ffdcc3",
+            "on-tertiary-container": "#a4acc5",
+            "surface-variant": "#e0e3e5",
+            "on-secondary-fixed-variant": "#6e3900",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#191c1e",
+            "tertiary-fixed-dim": "#bec6e0",
+            "on-primary-fixed-variant": "#264191",
+            "primary-fixed-dim": "#b6c4ff",
+            "surface": "#f7f9fb",
+            "inverse-on-surface": "#eff1f3",
+            "surface-container-highest": "#e0e3e5",
+            "on-surface-variant": "#444651",
+            "secondary": "#904d00",
+            "on-primary-container": "#90a8ff",
+            "background": "#f7f9fb",
+            "surface-container-high": "#e6e8ea",
+            "primary-fixed": "#dce1ff",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#d8dadc",
+            "primary": "#00236f",
+            "outline": "#757682",
+            "tertiary-container": "#384055",
+            "outline-variant": "#c5c5d3",
+            "surface-container-low": "#f2f4f6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin": "2rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Noto Serif KR", "Noto Serif", "serif"],
+            "headline-md": ["Noto Serif KR", "Noto Serif", "serif"],
+            "body-md": ["\"Source Sans 3\"", "sans-serif"],
+            "body-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "body-lg": ["\"Source Sans 3\"", "sans-serif"],
+            "label-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "display-lg-mobile": ["Noto Serif KR", "Noto Serif", "serif"],
+            "headline-lg-mobile": ["Noto Serif KR", "Noto Serif", "serif"],
+            "headline-lg": ["Noto Serif KR", "Noto Serif", "serif"],
+            "scripture-quote": ["Noto Serif KR", "Noto Serif", "serif"],
+            "label-md": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-sm": ["Noto Serif KR", "Noto Serif", "serif"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<link rel="icon" type="image/svg+xml" href="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb"></head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none docked full-width top-0 sticky z-50">
+<div class="w-full px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto h-20">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary flex items-center gap-2 tracking-tight transition-colors duration-200 active:scale-95" href="#"><img src="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb" alt="The바른교회 로고" class="w-9 h-9 object-contain rounded-full"><span class="font-bold tracking-tight text-[#1E3A8A]">The바른교회</span></a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소개</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">말씀·찬양</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">공동체</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소식</a>
+<!-- Active Intent: 온라인행정 -->
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary py-2 text-label-md font-label-md" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<a class="p-2 text-on-surface-variant hover:text-primary transition-colors" href="#" title="온라인 실시간 방송">
+<span class="material-symbols-outlined" data-icon="smart_display">smart_display</span>
+</a>
+<a class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-on-primary text-label-md font-label-md hover:bg-primary-container transition-colors duration-200 shadow-sm" href="#">
+          새가족 등록 안내
+        </a>
+</div>
+</div>
+</header>
+<!-- Sub-Header & Breadcrumb Bar -->
+<div class="bg-surface-container-lowest border-b border-surface-variant">
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-3 flex flex-wrap items-center justify-between gap-2">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center space-x-2 text-label-sm font-label-sm text-on-surface-variant">
+<a class="hover:text-primary flex items-center gap-1 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="home">home</span>
+<span class="">홈</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">온라인행정</a>
+<span class="text-outline-variant">/</span>
+<span aria-current="page" class="text-primary font-semibold">온라인 헌금 &amp; 기부금영수증</span>
+</nav>
+<!-- Ministerial Identity Pill -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-label-sm font-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary-container inline-block animate-pulse"></span>
+<span class="">서초동 맑은 샘터 같은 작고 바른 공동체</span>
+</div>
+</div>
+<!-- Graceful Tab Navigation (은혜로운 단아한 탭) -->
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="flex space-x-8 border-b border-surface-container overflow-x-auto no-scrollbar" role="tablist">
+<a aria-selected="true" class="py-4 border-b-2 border-primary-container text-primary font-headline-sm text-headline-sm flex items-center gap-2 whitespace-nowrap bg-surface-container-low px-3 rounded-t-lg" href="#offering-section" role="tab">
+<span class="material-symbols-outlined text-xl text-primary" data-icon="volunteer_activism">volunteer_activism</span>
+<span class="">온라인 헌금 &amp; 기부금영수증</span>
+</a>
+<a aria-selected="false" class="py-4 border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md flex items-center gap-2 whitespace-nowrap px-3" href="#prayer-request" role="tab">
+<span class="material-symbols-outlined text-xl text-outline" data-icon="favorite">favorite</span>
+<span class="">중보기도 요청</span>
+</a>
+<a aria-selected="false" class="py-4 border-b-2 border-transparent text-on-surface-variant hover:text-primary transition-colors text-label-md font-label-md flex items-center gap-2 whitespace-nowrap px-3" href="#certificates" role="tab">
+<span class="material-symbols-outlined text-xl text-outline" data-icon="article">article</span>
+<span class="">온라인 증명서 신청</span>
+</a>
+</div>
+</div>
+</div>
+<main class="max-w-7xl mx-auto px-6 md:px-12 py-10 md:py-16 space-y-16">
+<!-- 1. Editorial Header & Scripture Callout Section -->
+<section class="max-w-4xl mx-auto text-center space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant text-label-sm font-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-base text-secondary" data-icon="verified_user">verified_user</span><span class="">The바른교회 투명재정 원칙</span></div>
+<h1 class="text-headline-lg md:text-display-lg font-display-lg text-primary tracking-tight">
+        마음과 정성을 담아 하나님께 드리는 믿음의 고백
+      </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">하나님께서 허락하신 소중한 물질을 감사함으로 드리며, The바른교회는 목회자와 온 성도가 함께 정직하고 순결하게 복음 사역을 섬깁니다.</p>
+<!-- Scripture Quote Card (Tinted Amber Paper Style) -->
+<div class="mt-8 p-6 md:p-8 rounded-xl bg-[#FEF3C7] border border-secondary-fixed text-left md:text-center relative overflow-hidden shadow-sm">
+<div class="absolute -right-6 -bottom-6 text-[#FDE68A] opacity-30 select-none pointer-events-none">
+<span class="material-symbols-outlined text-9xl" data-icon="format_quote">format_quote</span>
+</div>
+<p class="font-scripture-quote text-scripture-quote text-on-secondary-fixed leading-relaxed">
+          “각각 그 마음에 정한 대로 할 것이요 인색함으로나 억지로 하지 말지니<br class="hidden md:inline"> 하나님은 즐겨 내는 자를 사랑하시느니라”
+        </p>
+<cite class="block mt-3 text-label-md font-label-md text-secondary not-italic font-semibold">
+          — 고린도후서 9장 7절
+        </cite>
+</div>
+<!-- Financial Transparency Badge -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-surface-variant flex items-center justify-center gap-3 text-left">
+<span class="material-symbols-outlined text-secondary text-2xl flex-shrink-0" data-icon="account_balance">account_balance</span>
+<p class="text-body-sm font-body-sm text-on-surface"><strong class="font-semibold text-primary">재정 공시 약속:</strong> The바른교회는 교단 규정을 철저히 준수하며 매월 재정 수입과 지출 결산 내역을 공동의회 및 교회 주보를 통해 정직하고 투명하게 공시합니다.</p>
+</div>
+</section>
+<!-- 2. Online Offering Account Information (Bento Style Cards) -->
+<section class="space-y-8" id="offering-section">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-surface-container pb-4">
+<div>
+<span class="text-secondary font-label-md text-label-md tracking-wider">OFFERING GUIDE</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mt-1">온라인 헌금 계좌 안내</h2>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          목적별 계좌로 송금해 주시면 지정된 사역에 온전히 분리되어 집행됩니다.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Account Card 1: 주일/십일조/감사 -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant p-6 flex flex-col justify-between hover:border-outline transition-all duration-200 hover:shadow-sm group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm font-semibold">
+                일반 예배 헌금
+              </span>
+<span class="material-symbols-outlined text-primary" data-icon="church">church</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">주일헌금 · 십일조 · 감사헌금</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6">
+              교회 기본 목회 사역, 예배 준비, 다음세대 교육 및 공동체 돌봄 사역에 사용됩니다.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-4 mb-4">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mb-1">
+<span class="">우리은행</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded">중앙예배</span>
+</div>
+<div class="text-headline-sm font-bold text-primary tracking-wide font-mono select-all">
+                1002-123-456789
+              </div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-1">예금주: 대한예수교장로회 The바른교회</div>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-low border border-surface-variant text-on-surface font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors flex items-center justify-center gap-2 group-hover:border-primary-container" onclick="copyToClipboard('1002-123-456789', '우리은행 계좌번호가 복사되었습니다.')">
+<span class="material-symbols-outlined text-base" data-icon="content_copy">content_copy</span>
+<span class="">계좌번호 복사</span>
+</button>
+</div>
+<!-- Account Card 2: 선교 및 구제 -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant p-6 flex flex-col justify-between hover:border-outline transition-all duration-200 hover:shadow-sm group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-[#EFF6FF] text-[#1E3A8A] text-label-sm font-label-sm font-semibold">
+                국내외 선교 · 이웃 사랑
+              </span>
+<span class="material-symbols-outlined text-secondary" data-icon="public">public</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">선교 및 구제 헌금</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6">
+              미자립 개척교회 지원, 해외 파송 선교사 후원, 서초 관내 독거어르신 구제에 전액 사용됩니다.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-4 mb-4">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mb-1">
+<span class="">신한은행</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded">지정선교</span>
+</div>
+<div class="text-headline-sm font-bold text-primary tracking-wide font-mono select-all">
+                110-456-789012
+              </div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-1">예금주: 대한예수교장로회 The바른교회</div>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-low border border-surface-variant text-on-surface font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors flex items-center justify-center gap-2 group-hover:border-primary-container" onclick="copyToClipboard('110-456-789012', '신한은행 계좌번호가 복사되었습니다.')">
+<span class="material-symbols-outlined text-base" data-icon="content_copy">content_copy</span>
+<span class="">계좌번호 복사</span>
+</button>
+</div>
+<!-- Account Card 3: 건축 및 시설 준비 -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant p-6 flex flex-col justify-between hover:border-outline transition-all duration-200 hover:shadow-sm group">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm font-semibold">
+                예배 처소 안정
+              </span>
+<span class="material-symbols-outlined text-secondary" data-icon="foundation">foundation</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-primary mb-1">건축 / 시설 준비 헌금</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6">
+              다음세대를 위한 예배실 방음 보강 및 안정적인 영구 목양 예배처소 마련을 위해 적립됩니다.
+            </p>
+<div class="bg-surface-container-low rounded-lg p-4 mb-4">
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant mb-1">
+<span class="">하나은행</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded">시설기금</span>
+</div>
+<div class="text-headline-sm font-bold text-primary tracking-wide font-mono select-all">
+                234-567-890123
+              </div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mt-1">예금주: 대한예수교장로회 The바른교회</div>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-low border border-surface-variant text-on-surface font-label-md text-label-md hover:bg-surface-container hover:text-primary transition-colors flex items-center justify-center gap-2 group-hover:border-primary-container" onclick="copyToClipboard('234-567-890123', '하나은행 계좌번호가 복사되었습니다.')">
+<span class="material-symbols-outlined text-base" data-icon="content_copy">content_copy</span>
+<span class="">계좌번호 복사</span>
+</button>
+</div>
+</div>
+<!-- Transfer Guidelines Instruction Box -->
+<div class="bg-surface-container-lowest rounded-xl border border-surface-variant p-6 md:p-8">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl mt-0.5" data-icon="info">info</span>
+<div class="space-y-3">
+<h4 class="text-headline-sm font-headline-sm text-primary">송금 시 입금자명 표기 가이드 (헌금자 확인 안내)</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              온라인 헌금은 은행 전산상 <strong class="text-on-surface font-semibold">입금자명(보내는 분)</strong>을 기준으로 연말정산 기부금영수증 및 교적 장부에 기재됩니다. 정확한 기록을 위해 아래와 같은 형식으로 입금자명을 기재해 주시기 바랍니다.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<div class="p-3 bg-surface-container-low rounded border border-surface-container">
+<span class="text-label-sm font-label-sm text-secondary block font-bold mb-1">십일조 헌금 시</span>
+<span class="font-mono text-body-md font-semibold text-primary">홍길동십일</span>
+<span class="text-xs text-on-surface-variant block mt-0.5">성명 + 헌금구분(십일)</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded border border-surface-container">
+<span class="text-label-sm font-label-sm text-secondary block font-bold mb-1">감사 / 절기 헌금 시</span>
+<span class="font-mono text-body-md font-semibold text-primary">김은혜감사</span>
+<span class="text-xs text-on-surface-variant block mt-0.5">성명 + 감사제목 약칭</span>
+</div>
+<div class="p-3 bg-surface-container-low rounded border border-surface-container">
+<span class="text-label-sm font-label-sm text-secondary block font-bold mb-1">동명이인 성도 구분</span>
+<span class="font-mono text-body-md font-semibold text-primary">홍길동82</span>
+<span class="text-xs text-on-surface-variant block mt-0.5">성명 + 출생연도 뒷 2자리</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Tax Deduction Certificate Request Form -->
+<section class="bg-surface-container-lowest rounded-2xl border border-surface-variant p-6 md:p-12 shadow-sm relative">
+<div class="max-w-3xl mx-auto space-y-10">
+<!-- Section Header -->
+<div class="text-center space-y-3">
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm font-semibold inline-block">
+            연말정산 소득공제 간편 신청
+          </span>
+<h2 class="text-headline-lg font-headline-lg text-primary">
+            2024 귀속 연말정산 기부금영수증(기부금 납입증명서) 신청
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            세법에 따라 교회의 소득공제용 기부금영수증을 발급해 드립니다. 국세청 홈택스 간소화 서비스 자동 등록 또는 전자 PDF 수령 중 선택하실 수 있습니다.
+          </p>
+</div>
+<!-- Application Form -->
+<form class="space-y-8" id="taxReceiptForm" onsubmit="handleFormSubmit(event)">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- 1. 성도명 / 교적 등록 확인 -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="memberName">
+                신청 성도명 <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-4 rounded-lg bg-surface border border-outline-variant text-body-md text-on-surface focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" id="memberName" placeholder="예: 김더바 (교적 등록 실명)" required="" type="text">
+<span class="text-xs text-on-surface-variant">교적부에 등록된 실명을 기재해 주세요. (타락방/부서 표기 가능)</span>
+</div>
+<!-- 2. 기부금 납부 확인 연도 -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="taxYear">
+                귀속 연도 선택 <span class="text-error">*</span>
+</label>
+<select class="w-full h-11 px-4 rounded-lg bg-surface border border-outline-variant text-body-md text-on-surface focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" id="taxYear">
+<option selected="" value="2024">2024년도 귀속분 (2024.01.01 ~ 2024.12.31)</option>
+<option value="2023">2023년도 귀속분 (경정청구용 이전 내역)</option>
+</select>
+<span class="text-xs text-on-surface-variant">현재 정규 신청 기간 대상 연도는 2024년입니다.</span>
+</div>
+<!-- 3. 주민등록번호 (앞 6자리 + 뒤 1자리) -->
+<div class="space-y-2 md:col-span-2">
+<label class="block text-label-md font-label-md text-on-surface">
+                주민등록번호 <span class="text-error">*</span>
+<span class="text-xs font-normal text-on-surface-variant ml-2">(세법상 기부금영수증 필수 기재 사항, 암호화 보관)</span>
+</label>
+<div class="flex items-center gap-3">
+<input class="w-1/2 h-11 px-4 rounded-lg bg-surface border border-outline-variant text-body-md text-on-surface focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" maxlength="6" pattern="[0-9]{6}" placeholder="생년월일 6자리" required="" type="text">
+<span class="text-outline">-</span>
+<div class="w-1/2 flex items-center gap-2">
+<input class="w-16 h-11 px-4 rounded-lg bg-surface border border-outline-variant text-body-md text-center text-on-surface focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" maxlength="1" pattern="[1-4]" placeholder="성별 1자리" required="" type="text">
+<span class="tracking-widest text-outline select-none font-bold">● ● ● ● ● ●</span>
+</div>
+</div>
+<span class="text-xs text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="lock">lock</span>
+                소득세법 제160조의3에 의거하여 영수증 발행 목적으로만 사용되며 발행 후 즉시 파기 처리됩니다.
+              </span>
+</div>
+<!-- 4. 연락처 (알림톡 수신) -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="contactPhone">
+                휴대전화 번호 <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-4 rounded-lg bg-surface border border-outline-variant text-body-md text-on-surface focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" id="contactPhone" placeholder="010-0000-0000" required="" type="tel">
+<span class="text-xs text-on-surface-variant">발급 완료 알림톡 및 신청 확인용 번호입니다.</span>
+</div>
+<!-- 5. 이메일 주소 -->
+<div class="space-y-2">
+<label class="block text-label-md font-label-md text-on-surface" for="contactEmail">
+                수신 이메일 주소 <span class="text-error">*</span>
+</label>
+<input class="w-full h-11 px-4 rounded-lg bg-surface border border-outline-variant text-body-md text-on-surface focus:bg-surface-container-lowest focus:border-primary-container focus:ring-1 focus:ring-primary-container transition-colors" id="contactEmail" placeholder="example@email.com" required="" type="email">
+<span class="text-xs text-on-surface-variant">전자 직인이 날인된 영수증 PDF 파일이 전송됩니다.</span>
+</div>
+</div>
+<!-- 6. 수령 방법 라디오 그룹 -->
+<div class="space-y-3 pt-2">
+<label class="block text-label-md font-label-md text-on-surface">
+              희망 수령 방식 선택 <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<label class="flex items-start gap-3 p-4 rounded-lg border border-surface-variant bg-surface cursor-pointer hover:border-primary-container transition-all has-[:checked]:border-primary-container has-[:checked]:bg-[#EFF6FF]">
+<input checked="" class="mt-1 text-primary focus:ring-primary-container" name="deliveryMethod" type="radio" value="email">
+<div class="text-left">
+<strong class="block text-label-md font-label-md text-primary">PDF 이메일 수령 (권장)</strong>
+<span class="text-xs text-on-surface-variant">직인 날인본을 2영업일 내 메일로 발송</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-4 rounded-lg border border-surface-variant bg-surface cursor-pointer hover:border-primary-container transition-all has-[:checked]:border-primary-container has-[:checked]:bg-[#EFF6FF]">
+<input class="mt-1 text-primary focus:ring-primary-container" name="deliveryMethod" type="radio" value="hometax">
+<div class="text-left">
+<strong class="block text-label-md font-label-md text-primary">국세청 홈택스 자동합산</strong>
+<span class="text-xs text-on-surface-variant">연말정산 간소화 서비스 자동 자료 제출</span>
+</div>
+</label>
+<label class="flex items-start gap-3 p-4 rounded-lg border border-surface-variant bg-surface cursor-pointer hover:border-primary-container transition-all has-[:checked]:border-primary-container has-[:checked]:bg-[#EFF6FF]">
+<input class="mt-1 text-primary focus:ring-primary-container" name="deliveryMethod" type="radio" value="office">
+<div class="text-left">
+<strong class="block text-label-md font-label-md text-primary">목양실 현장 수령</strong>
+<span class="text-xs text-on-surface-variant">주일 예배 후 2층 목양실 직접 수령</span>
+</div>
+</label>
+</div>
+</div>
+<!-- 7. 개인정보 동의 체크 -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-surface-variant space-y-3">
+<label class="flex items-start gap-3 cursor-pointer">
+<input class="mt-1 rounded border-outline text-primary focus:ring-primary-container" required="" type="checkbox">
+<span class="text-body-sm font-body-sm text-on-surface">
+                [필수] 소득세법 제160조의3 및 개인정보 보호법에 의거한 고유식별정보 수집 및 기부금영수증 발행 업무 위탁 처리에 동의합니다.
+              </span>
+</label>
+<p class="text-xs text-on-surface-variant pl-7">
+              수집된 인적사항은 국세청 기부금영수증 발급 및 발급대장 비치(법정 의무 5년 보관) 외의 용도로는 일절 사용되지 않습니다.
+            </p>
+</div>
+<!-- Submission Button -->
+<div class="text-center pt-2">
+<button class="w-full md:w-auto px-10 py-3.5 rounded-lg bg-primary text-on-primary text-label-md font-label-md font-semibold hover:bg-primary-container transition-all duration-200 shadow-md active:scale-95 flex items-center justify-center gap-2 mx-auto" type="submit">
+<span class="material-symbols-outlined text-xl" data-icon="send">send</span>
+<span class="">기부금영수증 발급 신청하기</span>
+</button>
+<span class="block text-xs text-on-surface-variant mt-2">
+              신청 접수 후 주말을 제외하고 2영업일 이내에 담당자가 처리하여 안내드립니다.
+            </span>
+</div>
+</form>
+<!-- Notification Toast (Hidden initially) -->
+<div class="hidden p-4 rounded-lg bg-[#EFF6FF] border border-primary text-primary text-body-sm font-body-sm flex items-center gap-3" id="toastFeedback">
+<span class="material-symbols-outlined text-2xl text-primary" data-icon="check_circle">check_circle</span>
+<div class="">
+<strong>정상적으로 접수되었습니다.</strong><br>
+            확인 즉시 등록된 연락처로 진행 상황 안내 알림톡을 보내드립니다.
+          </div>
+</div>
+</div>
+</section>
+<!-- 4. Frequently Asked Questions (FAQ) & Procedures -->
+<section class="max-w-4xl mx-auto space-y-6">
+<div class="border-b border-surface-container pb-3">
+<h3 class="text-headline-md font-headline-md text-primary">기부금영수증 발급 FAQ &amp; 안내사항</h3>
+</div>
+<div class="space-y-4">
+<!-- FAQ item 1 -->
+<div class="border border-surface-variant rounded-xl p-5 bg-surface-container-lowest">
+<h4 class="text-label-md font-label-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="help">help</span>
+            국세청 연말정산 간소화 서비스(홈택스)에는 언제 반영되나요?
+          </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 pl-6 leading-relaxed">
+            국세청 홈택스 시스템 일정상 교회 재정 보고 마감은 매년 1월 7일까지 진행되며, 실제 성도님들의 간소화 서비스 조회는 <strong>1월 15일 국세청 홈택스 개통일</strong>부터 자동 조회 및 다운로드가 가능합니다. 긴급히 회사에 사전 제출이 필요한 경우 'PDF 이메일 수령'을 선택해 주시면 우선 발급해 드립니다.
+          </p>
+</div>
+<!-- FAQ item 2 -->
+<div class="border border-surface-variant rounded-xl p-5 bg-surface-container-lowest">
+<h4 class="text-label-md font-label-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="help">help</span>
+            배우자나 직계가족 명의로 합산하여 소득공제를 받을 수 있나요?
+          </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 pl-6 leading-relaxed">
+            소득세법상 기본공제 대상자인 배우자(연간 소득금액 100만 원 이하) 또는 직계존비속이 지출한 기부금은 근로자 본인이 합산하여 세액공제를 받을 수 있습니다. 단, 영수증 원본은 <strong>실제 교회에 헌금한 성도 본인 명의</strong>로만 법적으로 발급되며, 회사 정산 시 가족관계증명서를 첨부하여 합산 제출하셔야 합니다.
+          </p>
+</div>
+<!-- FAQ item 3 -->
+<div class="border border-surface-variant rounded-xl p-5 bg-surface-container-lowest"><h4 class="text-label-md font-label-md font-bold text-primary flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-lg" data-icon="help">help</span>The바른교회의 지정기부금 코드 및 법적 자격 요건은 무엇인가요?</h4><p class="text-body-sm font-body-sm text-on-surface-variant mt-2 pl-6 leading-relaxed">The바른교회는 대한예수교장로회 소속 교회로서 소득세법 제34조에 의거한 <strong>종교단체 지정기부금 (코드 41번)</strong>에 해당합니다. 연말정산 시 법정 한도(소득금액의 10% 이내에서 15% 공제) 내에서 세액공제 혜택을 받으실 수 있습니다.</p></div>
+</div>
+</section>
+<!-- 5. Direct Administration Contact Banner -->
+<section class="rounded-xl bg-tertiary text-on-tertiary p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="space-y-2 text-center md:text-left">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-tertiary-container text-tertiary-fixed text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+<span class="">목양 및 행정 직통 안내</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-tertiary">
+          헌금 확인이나 행정 서류 발급에 도움이 필요하신가요?
+        </h3>
+<p class="text-body-sm font-body-sm text-on-tertiary-container max-w-xl">
+          성도 한 분 한 분의 소중한 헌신을 신중히 관리하고 있습니다. 온라인 송금 내역 오류, 동명이인 확인 등 행정 문의는 언제든 연락 주시면 친절히 안내해 드립니다.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+<a class="w-full sm:w-auto px-5 py-3 rounded-lg bg-surface-container-lowest text-primary text-label-md font-label-md font-semibold hover:bg-surface-bright transition-colors flex items-center justify-center gap-2" href="tel:02-588-7000">
+<span class="material-symbols-outlined text-lg" data-icon="call">call</span>
+<span class="">02-588-7000</span>
+</a>
+<a class="w-full sm:w-auto px-5 py-3 rounded-lg border border-outline-variant text-on-tertiary text-label-md font-label-md hover:bg-tertiary-container transition-colors flex items-center justify-center gap-2" href="mailto:admin@thebarunchurch.org">
+<span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+<span class="">이메일 문의</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Global Footer (Shared Component) -->
+<footer class="bg-tertiary dark:bg-inverse-surface border-t border-outline dark:border-outline-variant docked full-width bottom flat no shadows mt-16">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Logo & Denomination Info -->
+<div class="space-y-4 max-w-md">
+<div class="text-headline-md font-headline-md text-on-tertiary dark:text-inverse-on-surface font-semibold flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb" alt="The바른교회 로고" class="w-9 h-9 object-contain rounded-full"><span class="">The바른교회</span></div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container leading-relaxed">부산광역시 서구 대영로38번길 47, 2층 (서대신동2가 / 서대신1동)<br>대한예수교장로회 (합동) | 담임목사 김바른<br>고유번호: 114-82-12345 | 행정실 직통: 02-588-7000</p>
+<div class="text-label-sm font-label-sm text-on-tertiary-container">© 2024 The바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.</div>
+</div>
+<!-- Footer Quick Links -->
+<div class="flex flex-col space-y-2 text-label-sm font-label-sm">
+<span class="text-on-tertiary font-semibold pb-1 tracking-wider">온라인 행정 및 안내</span>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">개인정보처리방침</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">이용약관</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">교회행정문의</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">오시는 길</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors duration-200" href="#">유튜브 방송 안내</a>
+</div>
+</div>
+</footer>
+<!-- Script for Copy & Micro Interactions -->
+<script>
+    function copyToClipboard(text, message) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          alert(message);
+        }).catch(err => {
+          fallbackCopy(text, message);
+        });
+      } else {
+        fallbackCopy(text, message);
+      }
+    }
+
+    function fallbackCopy(text, message) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.opacity = "0";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        alert(message);
+      } catch (err) {
+        alert("계좌번호: " + text);
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      const toast = document.getElementById('toastFeedback');
+      toast.classList.remove('hidden');
+      toast.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      const submitBtn = event.target.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      submitBtn.innerHTML = `
+        <span class="material-symbols-outlined animate-spin text-xl">progress_activity</span>
+        <span>신청 접수 완료 처리 중...</span>
+      `;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-xl">check</span>
+          <span>신청서 접수 완료</span>
+        `;
+      }, 1200);
+    }
+  </script>
+
+
+</body></html>

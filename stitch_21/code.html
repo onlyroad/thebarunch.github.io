@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>더바른교회 온라인행정 - 교역자 알림 템플릿</title>
+<!-- Google Fonts: Noto Serif & Source Sans 3 -->
+<script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YjZhZGFmZTcxMzUwOTEwN2Y3Y2FjMGIxMGNjEgsSBxD737z8-g0YAZIBJAoKcHJvamVjdF9pZBIWQhQxMjYzNDIxMDE3OTY1OTk1MDc4OA%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#191c1e",
+            "surface-container-low": "#f2f4f6",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-secondary-fixed": "#2f1500",
+            "on-tertiary": "#ffffff",
+            "on-primary-container": "#90a8ff",
+            "surface": "#f7f9fb",
+            "secondary-fixed": "#ffdcc3",
+            "on-secondary-fixed-variant": "#6e3900",
+            "secondary-container": "#fe932c",
+            "inverse-primary": "#b6c4ff",
+            "surface-variant": "#e0e3e5",
+            "surface-container-high": "#e6e8ea",
+            "on-secondary-container": "#663500",
+            "inverse-on-surface": "#eff1f3",
+            "error-container": "#ffdad6",
+            "surface-bright": "#f7f9fb",
+            "outline-variant": "#c5c5d3",
+            "tertiary-fixed": "#dae2fd",
+            "inverse-surface": "#2d3133",
+            "background": "#f7f9fb",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-highest": "#e0e3e5",
+            "error": "#ba1a1a",
+            "primary-container": "#1e3a8a",
+            "tertiary-container": "#384055",
+            "tertiary": "#222a3e",
+            "on-surface-variant": "#444651",
+            "surface-tint": "#4059aa",
+            "on-primary-fixed-variant": "#264191",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "surface-container": "#eceef0",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed": "#00164e",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#131b2e",
+            "tertiary-fixed-dim": "#bec6e0",
+            "secondary": "#904d00",
+            "primary-fixed": "#dce1ff",
+            "primary": "#00236f",
+            "surface-dim": "#d8dadc",
+            "on-primary": "#ffffff",
+            "outline": "#757682",
+            "secondary-fixed-dim": "#ffb77d",
+            "on-tertiary-container": "#a4acc5",
+            "on-error": "#ffffff",
+            "on-surface": "#191c1e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Noto Serif"],
+            "display-lg": ["Noto Serif"],
+            "headline-sm": ["Noto Serif"],
+            "body-md": ["\"Source Sans 3\""],
+            "headline-lg-mobile": ["Noto Serif"],
+            "display-lg-mobile": ["Noto Serif"],
+            "label-md": ["\"Source Sans 3\""],
+            "label-sm": ["\"Source Sans 3\""],
+            "headline-lg": ["Noto Serif"],
+            "body-lg": ["\"Source Sans 3\""],
+            "scripture-quote": ["Noto Serif"],
+            "body-sm": ["\"Source Sans 3\""]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c5c5d3;
+      border-radius: 4px;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- Thymeleaf fragment convention: fragments/navigation.html :: header -->
+<header class="w-full sticky top-0 z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm">
+<div class="w-full px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto h-20">
+<!-- Brand Logo -->
+<div class="flex items-center gap-6">
+<a class="text-headline-sm font-headline-sm text-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-primary text-[28px]">church</span>
+<span>더바른교회</span>
+</a>
+<span class="hidden md:inline-block px-2.5 py-0.5 rounded text-label-sm font-label-sm bg-surface-container text-on-surface-variant">온라인행정시스템</span>
+</div>
+<!-- Navigation Links from JSON -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소개</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2 text-label-md font-label-md" href="#">말씀·찬양</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2 text-label-md font-label-md" href="#">공동체</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소식</a>
+<a class="text-primary font-semibold border-b-2 border-primary py-2 text-label-md font-label-md" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" title="실시간 방송">
+<span class="material-symbols-outlined text-[24px]">smart_display</span>
+</button>
+<a class="bg-primary text-on-primary px-4 py-2 rounded-lg text-label-md font-label-md hover:bg-opacity-95 transition shadow-sm flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>새가족 등록 안내</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-12 py-8">
+<!-- Breadcrumb & Control Topbar -->
+<div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-outline-variant pb-6">
+<div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant mb-1">
+<span>온라인행정</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>새가족 관리</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">교역자 알림 템플릿</span>
+</div>
+<div class="flex items-center gap-3">
+<h1 class="text-headline-md font-headline-md text-on-background">교역자 새가족 접수 알림 (관리자용)</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-emerald-50 text-emerald-800 border border-emerald-200">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            자동 발송 활성
+          </span>
+</div>
+</div>
+<!-- Action Utilities -->
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface text-label-md font-label-md hover:bg-surface transition">
+<span class="material-symbols-outlined text-[18px]">history</span>
+          발송 로그 (24건)
+        </button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary text-label-md font-label-md hover:bg-opacity-90 transition shadow-sm">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+          발송 규칙 설정
+        </button>
+</div>
+</div>
+<!-- Layout Grid: Left Settings & Tabs / Center Mobile Preview Phone / Right Info Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Channel Tabs & Template Information (4 cols) -->
+<div class="lg:col-span-4 space-y-6">
+<!-- Tab Navigation (Graceful Tab Navigation) -->
+<div class="bg-surface-container-lowest rounded-xl p-2 border border-outline-variant shadow-sm">
+<div class="text-label-sm font-label-sm text-on-surface-variant px-3 pt-2 pb-1 font-semibold">발송 채널 선택</div>
+<nav class="flex flex-col space-y-1">
+<button class="flex items-center justify-between w-full px-3 py-2.5 rounded-lg text-left bg-primary-container/10 text-primary font-semibold border-l-4 border-primary">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px] text-amber-600">chat_bubble</span>
+<span class="text-label-md font-label-md">카카오 알림톡(교역자용)</span>
+</div>
+<span class="text-label-sm font-label-sm text-primary">기본채널</span>
+</button>
+<button class="flex items-center justify-between w-full px-3 py-2.5 rounded-lg text-left text-on-surface-variant hover:bg-surface-container transition">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">sms</span>
+<span class="text-label-md font-label-md">업무 LMS 문자</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">대체발송</span>
+</button>
+<button class="flex items-center justify-between w-full px-3 py-2.5 rounded-lg text-left text-on-surface-variant hover:bg-surface-container transition">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[20px]">webhook</span>
+<span class="text-label-md font-label-md">슬랙/웹훅 알림</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">사무국</span>
+</button>
+</nav>
+</div>
+<!-- Template Meta Card -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant shadow-sm space-y-4">
+<div class="flex items-center justify-between border-b border-outline-variant pb-3">
+<h3 class="text-headline-sm font-headline-sm text-primary">템플릿 세부 명세</h3>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container text-on-surface-variant">승인완료</span>
+</div>
+<div class="space-y-3 text-body-sm font-body-sm">
+<div class="flex justify-between">
+<span class="text-outline">템플릿 코드:</span>
+<span class="font-mono text-on-surface font-semibold">TPL_BARUN_NEWMEMBER_01</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">발신 프로필:</span>
+<span class="text-on-surface font-medium">더바른교회 행정알림봇 (@thebarun)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">발송 트리거:</span>
+<span class="text-on-surface">온라인 등록서 접수 완료 즉시</span>
+</div>
+<div class="flex justify-between">
+<span class="text-outline">발송 과금 분류:</span>
+<span class="text-on-surface">알림톡 (텍스트+버튼형)</span>
+</div>
+</div>
+<!-- Sacred Card Notice Tint -->
+<div class="bg-[#FEF3C7] rounded-lg p-3.5 border border-amber-300 text-on-secondary-container text-body-sm font-body-sm">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-700 text-[20px] mt-0.5">notification_important</span>
+<p class="leading-relaxed">
+<strong class="font-semibold">교역자 즉시 심방 규정:</strong> 온라인 새가족 접수 후 48시간 이내 환영 및 심방 일정 협의 전화 통화가 원칙입니다.
+              </p>
+</div>
+</div>
+</div>
+<!-- Notification Receiver Configuration -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant shadow-sm">
+<h4 class="text-label-md font-label-md text-on-surface font-semibold mb-2 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">group</span>
+            실시간 자동 수신 대상
+          </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+            새가족 등록지 주소/희망교구 자동 판별 알고리즘에 의해 분기 발송됩니다.
+          </p>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li class="flex items-center gap-2 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>해당 교구 담당 교역자</strong> (서초·반포: 3교구 박요한 목사)</span>
+</li>
+<li class="flex items-center gap-2 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>새가족부 부장 / 총무</strong> (김선경 권사 외 1인)</span>
+</li>
+<li class="flex items-center gap-2 p-2 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-[16px] text-primary">check_circle</span>
+<span><strong>담임목사실 행정비서</strong> (모니터링 계정)</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Center & Right: Phone Simulator Container (KakaoTalk Style Mobile Preview) (8 cols) -->
+<div class="lg:col-span-8 flex flex-col items-center">
+<!-- Preview Context Bar -->
+<div class="w-full max-w-[420px] mb-3 flex items-center justify-between px-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 font-semibold text-primary">
+<span class="material-symbols-outlined text-[16px]">smartphone</span>
+            교역자 수신 모바일 미리보기
+          </span>
+<span class="text-outline">기기: iPhone 15 Pro (393 × 852)</span>
+</div>
+<!-- Mobile Phone Chassis Frame -->
+<div class="w-full max-w-[420px] bg-slate-900 rounded-[44px] p-3.5 shadow-2xl border-4 border-slate-800">
+<!-- Screen Glass -->
+<div class="w-full bg-[#B2C7D9] rounded-[36px] overflow-hidden flex flex-col min-h-[780px] shadow-inner text-[#1e1e1e]">
+<!-- Mobile System Status Bar -->
+<div class="h-10 px-7 pt-2 flex justify-between items-center text-xs font-semibold tracking-tight text-slate-800">
+<span>9:41</span>
+<div class="w-20 h-4 bg-slate-900 rounded-full mx-auto"></div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[14px]">wifi</span>
+<span class="material-symbols-outlined text-[14px]">battery_full</span>
+</div>
+</div>
+<!-- KakaoTalk Channel Header -->
+<div class="px-4 py-2.5 bg-[#B2C7D9] flex items-center justify-between border-b border-black/5">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-slate-800 text-[22px]">arrow_back_ios</span>
+<div class="relative">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-white font-bold text-sm shadow-sm">
+                    바른
+                  </div>
+<div class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-yellow-400 rounded-full flex items-center justify-center border border-white">
+<span class="material-symbols-outlined text-[10px] text-slate-900 font-bold">check</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-1">
+<span class="text-sm font-bold text-slate-900 leading-tight">더바른교회 행정알림봇</span>
+<span class="bg-amber-400 text-[10px] font-bold px-1 py-0.2 rounded text-slate-900 leading-tight">인증</span>
+</div>
+<span class="text-[11px] text-slate-600">알림톡 전용 채널</span>
+</div>
+</div>
+<div class="flex items-center gap-2 text-slate-700">
+<span class="material-symbols-outlined text-[20px]">search</span>
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</div>
+</div>
+<!-- Chat Scroll Area -->
+<div class="flex-1 p-4 overflow-y-auto space-y-4 custom-scrollbar">
+<!-- Date Pill -->
+<div class="text-center">
+<span class="bg-black/15 text-white text-[11px] px-3 py-1 rounded-full font-medium">
+                  2025년 2월 24일 월요일
+                </span>
+</div>
+<!-- Kakao Notification Card Component -->
+<div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 space-y-3.5">
+<!-- Card Head & Tag -->
+<div class="border-b border-slate-100 pb-3">
+<div class="flex items-center justify-between mb-1.5">
+<span class="text-[12px] font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">church</span>
+                      더바른교회 교적행정실
+                    </span>
+<span class="text-[10px] bg-red-100 text-red-700 font-semibold px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">bolt</span>
+                      긴급·신규 접수
+                    </span>
+</div>
+<h2 class="text-[17px] font-bold text-slate-900 font-headline-sm leading-snug">
+                    [더바른교회] 새가족 등록 접수 알림<br/>
+<span class="text-primary font-semibold text-sm">(담당 교역자 확인 및 심방용)</span>
+</h2>
+</div>
+<!-- Guidance Badge Note -->
+<div class="bg-amber-50 rounded-lg p-2.5 border border-amber-200 text-amber-900 text-[12px] flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-700 text-[18px] shrink-0">calendar_clock</span>
+<div>
+<span class="font-bold">48시간 이내 첫 환영 연락 안내:</span> 성도님의 주말 선호 시간을 참고하시어 심방 및 공동체 소개 일정을 조율해 주시기 바랍니다.
+                  </div>
+</div>
+<!-- Registration Detail Table -->
+<div class="rounded-lg border border-slate-200 overflow-hidden text-[13px]">
+<div class="bg-slate-50 px-3 py-2 border-b border-slate-200 font-bold text-slate-700 flex justify-between items-center">
+<span>새가족 신청 명세</span>
+<span class="text-[11px] font-mono text-slate-500 font-normal">N2025-0224-0842</span>
+</div>
+<div class="divide-y divide-slate-100 text-slate-700 bg-white">
+<div class="grid grid-cols-3 px-3 py-2">
+<span class="text-slate-400 font-medium">성도명</span>
+<span class="col-span-2 font-bold text-slate-900 flex items-center justify-between">
+<span>홍길동 성도 (30대 남성)</span>
+<span class="text-[11px] font-normal text-slate-500 bg-slate-100 px-1.5 py-0.5 rounded">기혼 · 동반1인</span>
+</span>
+</div>
+<div class="grid grid-cols-3 px-3 py-2 items-center">
+<span class="text-slate-400 font-medium">연락처</span>
+<span class="col-span-2 font-mono font-semibold text-primary flex items-center justify-between">
+<span>010-1234-5678</span>
+<a class="text-[11px] bg-primary text-white px-2 py-0.5 rounded font-sans flex items-center gap-0.5 hover:bg-slate-900" href="tel:010-1234-5678">
+<span class="material-symbols-outlined text-[12px]">call</span>
+                          전화
+                        </a>
+</span>
+</div>
+<div class="grid grid-cols-3 px-3 py-2">
+<span class="text-slate-400 font-medium">거주지역</span>
+<span class="col-span-2 font-medium text-slate-800">서울 서초구 반포동 (아크로리버파크)</span>
+</div>
+<div class="grid grid-cols-3 px-3 py-2">
+<span class="text-slate-400 font-medium">배정 예정</span>
+<span class="col-span-2 text-slate-900 font-semibold">
+                        3교구 (반포·서초) / 청년목장
+                      </span>
+</div>
+<div class="grid grid-cols-3 px-3 py-2">
+<span class="text-slate-400 font-medium">신앙 배경</span>
+<span class="col-span-2 text-slate-800">
+                        세례교인 <span class="text-slate-500 text-[12px]">(전: 아름다운교회)</span>
+</span>
+</div>
+<div class="px-3 py-2.5 bg-slate-50/50">
+<div class="text-slate-400 font-medium mb-1 text-[11px]">기도 제목 및 특이사항</div>
+<p class="text-slate-800 italic bg-white p-2 rounded border border-slate-200 text-[12px] leading-relaxed font-serif">
+                        “새로운 교회에서 말씀 안에서 다시 깊이 뿌리내리고 교제하길 원합니다. 주말 오후 연락을 선호합니다.”
+                      </p>
+</div>
+</div>
+</div>
+<!-- Pastoral Action Checklist -->
+<div class="bg-slate-50 rounded-xl p-3 border border-slate-200">
+<div class="text-[12px] font-bold text-slate-800 mb-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[15px]">checklist</span>
+                    교역자 권장 업무 프로토콜
+                  </div>
+<ul class="space-y-1.5 text-[11px] text-slate-600">
+<li class="flex items-start gap-1.5">
+<span class="font-bold text-primary">1.</span>
+<span>접수 48시간 내 환영 유선 연락 (교구 안내 및 심방 의사 조율)</span>
+</li>
+<li class="flex items-start gap-1.5">
+<span class="font-bold text-primary">2.</span>
+<span>이번 주 주일 본관 1층 새가족실 영접 및 안내자 매칭</span>
+</li>
+</ul>
+</div>
+<!-- Kakao Official Action Buttons (Vertical Stack) -->
+<div class="space-y-2 pt-1">
+<!-- Button 1: ERP View -->
+<a class="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 rounded-lg text-slate-900 font-semibold text-[13px] flex items-center justify-center gap-1.5 border border-slate-200 transition" href="#erp-modal">
+<span class="material-symbols-outlined text-[16px] text-primary">lan</span>
+<span>교적 시스템(ERP) 상세 전산 보기</span>
+<span class="material-symbols-outlined text-[14px] text-slate-400 ml-auto">open_in_new</span>
+</a>
+<!-- Button 2: Direct Call -->
+<a class="w-full py-2.5 px-3 bg-[#FEF3C7] hover:bg-[#FDE68A] text-amber-950 font-bold text-[13px] rounded-lg flex items-center justify-center gap-1.5 border border-amber-300 transition" href="tel:010-1234-5678">
+<span class="material-symbols-outlined text-[16px] text-amber-800">phone_in_talk</span>
+<span>신청 성도 바로 전화걸기 (010-1234-5678)</span>
+</a>
+<!-- Button 3: Check/Complete Task -->
+<button class="w-full py-2.5 px-3 bg-primary text-white font-semibold text-[13px] rounded-lg flex items-center justify-center gap-1.5 hover:bg-opacity-95 transition shadow-sm" id="completeBtn" onclick="markComplete()">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span id="completeBtnText">교역자 접수 확인 및 담당 배정 완료</span>
+</button>
+</div>
+<!-- Footer Text in Bubble -->
+<div class="text-[10px] text-slate-400 text-center pt-1 border-t border-slate-100">
+                  더바른교회 행정사무국 교적팀 · 문의 02-555-7890
+                </div>
+</div>
+<!-- Message Timestamp -->
+<div class="text-right text-[11px] text-slate-600 pr-1">
+                오전 08:42 읽음 1
+              </div>
+</div>
+<!-- Phone Bottom Navigation Bar (Mimic Kakao Keyboard Bar) -->
+<div class="bg-[#ECEEF0] px-4 py-3 border-t border-slate-300 flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-500 text-[24px]">add_circle</span>
+<div class="flex-1 bg-white rounded-full px-3 py-1.5 text-xs text-slate-400 border border-slate-300 flex items-center justify-between">
+<span>알림톡 채널에는 답장을 보낼 수 없습니다</span>
+<span class="material-symbols-outlined text-slate-400 text-[18px]">sentiment_satisfied</span>
+</div>
+<span class="material-symbols-outlined text-slate-500 text-[24px]">mic</span>
+</div>
+<!-- iOS Home Indicator -->
+<div class="h-5 bg-[#ECEEF0] flex justify-center items-end pb-1.5">
+<div class="w-32 h-1 bg-slate-400 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Simulator Helper Controls -->
+<div class="mt-6 w-full max-w-[420px] flex items-center justify-between gap-3 text-label-sm font-label-sm text-on-surface-variant bg-surface-container-lowest p-3.5 rounded-xl border border-outline-variant shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">preview</span>
+<span>성도 샘플 데이터 전환:</span>
+</div>
+<select class="bg-surface text-on-surface text-label-sm font-label-sm rounded border border-outline-variant py-1 px-2.5 focus:ring-1 focus:ring-primary">
+<option>홍길동 (30대/기혼/남)</option>
+<option>이수진 (20대/미혼/여)</option>
+<option>박철우 (50대/가족4인/남)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Admin Operational Bottom Toolbar -->
+<section class="mt-12 pt-8 border-t border-outline-variant">
+<div class="bg-surface-container-lowest rounded-2xl p-6 md:p-8 border border-outline-variant shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<!-- Receiver Information Summary -->
+<div class="space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">admin_panel_settings</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface">템플릿 운영 및 발송 제어 도구</h3>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-2xl">
+<strong>수신 대상 라우팅:</strong> 해당 지역구 담당 교구 목사 / 전도사, 새가족부 부장, 담임목사실 교적 전산망으로 카카오 비즈니스 채널 API를 통해 실시간 푸시됩니다.
+            </p>
+</div>
+<!-- Bottom Operational Action Buttons -->
+<div class="flex flex-wrap items-center gap-3">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-outline-variant bg-white text-on-surface text-label-md font-label-md hover:bg-surface-container transition active:scale-95 shadow-sm" onclick="copyTemplateCode()">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span>템플릿 JSON 복사</span>
+</button>
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-amber-600/30 bg-amber-50 text-amber-900 text-label-md font-label-md hover:bg-amber-100 transition active:scale-95 shadow-sm" onclick="openTestModal()">
+<span class="material-symbols-outlined text-[18px] text-amber-700">send_to_mobile</span>
+<span>교역자 폰으로 테스트 발송</span>
+</button>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary text-label-md font-label-md hover:bg-opacity-95 transition shadow-sm active:scale-95" onclick="alert('알림톡 발송 주기가 [접수 즉시 실시간 발송]으로 저장되었습니다.');">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>발송 조건 저장 (실시간 즉시)</span>
+</button>
+</div>
+</div>
+<!-- Additional Operational Metrics Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 pt-6 border-t border-outline-variant text-center md:text-left">
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-outline block">이번 달 발송 성공률</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">99.8%</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-outline block">평균 최초 심방 소요시간</span>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold">14.2 시간</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-outline block">카카오톡 실패 시 SMS 전환율</span>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold">0.8% (정상)</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="text-label-sm font-label-sm text-outline block">당월 누적 새가족 접수</span>
+<span class="text-headline-sm font-headline-sm text-secondary font-bold">42 명</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Thymeleaf fragment convention: fragments/footer.html :: footer -->
+<footer class="mt-16 bg-tertiary text-tertiary-fixed border-t border-outline">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Footer Brand Column -->
+<div class="space-y-3">
+<div class="text-headline-md font-headline-md text-on-tertiary font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-white text-[28px]">church</span>
+<span>더바른교회</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container max-w-md">
+          말씀 위에 굳게 서서 이웃을 품고 세상을 섬기는 개혁주의 장로교회입니다. 복음의 감격으로 새가족 한 분 한 분을 주님의 사랑으로 맞이합니다.
+        </p>
+<p class="text-label-sm font-label-sm text-on-tertiary-container pt-2">
+          © 2024 더바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.
+        </p>
+</div>
+<!-- Footer Quick Links from JSON -->
+<div class="flex flex-wrap gap-x-8 gap-y-3 text-label-sm font-label-sm">
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">개인정보처리방침</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">이용약관</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">교회행정문의</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">오시는 길</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">유튜브 방송 안내</a>
+</div>
+</div>
+</footer>
+<!-- Notification Toast & Interactions -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-slate-700" id="toast">
+<span class="material-symbols-outlined text-amber-400 text-[20px]" id="toastIcon">check_circle</span>
+<span class="text-body-sm font-body-sm" id="toastMessage">작업이 완료되었습니다.</span>
+</div>
+<script>
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toastMessage');
+      const iconEl = document.getElementById('toastIcon');
+      
+      msgEl.innerText = message;
+      iconEl.innerText = icon;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 2800);
+    }
+
+    function copyTemplateCode() {
+      const dummyCode = JSON.stringify({
+        template_id: "TPL_BARUN_NEWMEMBER_01",
+        title: "[더바른교회] 새가족 등록 접수 알림 (교역자 확인용)",
+        target_role: ["PASTOR", "NEW_FAMILY_HEAD"],
+        buttons: [
+          { type: "WL", name: "교적 시스템(ERP) 상세 전산 보기" },
+          { type: "AL", name: "신청 성도 바로 전화걸기" },
+          { type: "WL", name: "교역자 접수 확인/심방 완료 처리" }
+        ]
+      }, null, 2);
+      
+      navigator.clipboard.writeText(dummyCode).then(() => {
+        showToast("알림톡 템플릿 JSON 데이터가 클립보드에 복사되었습니다.", "content_copy");
+      });
+    }
+
+    function openTestModal() {
+      const pastorPhone = prompt("테스트 알림톡을 수신할 담당 교역자 휴대전화 번호를 입력하세요:", "010-9988-7766");
+      if (pastorPhone) {
+        showToast(`${pastorPhone} 번호로 테스트 알림톡 발송 요청을 전송했습니다.`, "send");
+      }
+    }
+
+    let isComplete = false;
+    function markComplete() {
+      const btn = document.getElementById('completeBtn');
+      const btnText = document.getElementById('completeBtnText');
+      if (!isComplete) {
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-emerald-700');
+        btnText.innerText = "접수 완료됨 (박요한 목사 심방 진행중)";
+        showToast("교적 전산망에 [담당자 확인 완료] 상태로 업데이트되었습니다.", "verified");
+        isComplete = true;
+      } else {
+        btn.classList.add('bg-primary');
+        btn.classList.remove('bg-emerald-700');
+        btnText.innerText = "교역자 접수 확인 및 담당 배정 완료";
+        showToast("접수 상태가 대기 중으로 복원되었습니다.", "undo");
+        isComplete = false;
+      }
+    }
+  </script>
+</body></html>

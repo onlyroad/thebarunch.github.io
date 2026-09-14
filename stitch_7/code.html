@@ -1,0 +1,707 @@
+<!DOCTYPE html><html class="light" lang="ko"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>찬양 영상 | 말씀·찬양 | 더바른교회</title>
+<script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;type=content-script&amp;dmn=contribution.usercontent.google.com&amp;url=https%3A%2F%2Fcontribution.usercontent.google.com%2Fdownload%3Fc%3DCgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzAwMDY1YjZiNDI5NmU2MTYwNzc5OWU5MTUwMDI5YzFmEgsSBxD737z8-g0YAZIBJAoKcHJvamVjdF9pZBIWQhQxMjYzNDIxMDE3OTY1OTk1MDc4OA%26filename%3D%26opi%3D89354086&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-dnt"></script><script type="text/javascript" nonce="bda9ded2807e40b3990deb1794d" src="//local.adguard.org?ts=1789382299742&amp;name=AdGuard%20Extra&amp;type=user-script"></script><link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#b6c4ff",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#eff1f3",
+            "secondary": "#904d00",
+            "on-secondary-container": "#663500",
+            "on-surface": "#191c1e",
+            "outline-variant": "#c5c5d3",
+            "on-primary-container": "#90a8ff",
+            "tertiary": "#222a3e",
+            "surface-bright": "#f7f9fb",
+            "primary-container": "#1e3a8a",
+            "inverse-primary": "#b6c4ff",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#6e3900",
+            "surface-container-highest": "#e0e3e5",
+            "inverse-surface": "#2d3133",
+            "on-primary-fixed": "#00164e",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "surface-dim": "#d8dadc",
+            "background": "#f7f9fb",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "outline": "#757682",
+            "error-container": "#ffdad6",
+            "secondary-container": "#fe932c",
+            "on-tertiary-container": "#a4acc5",
+            "tertiary-fixed-dim": "#bec6e0",
+            "tertiary-fixed": "#dae2fd",
+            "on-secondary-fixed": "#2f1500",
+            "on-surface-variant": "#444651",
+            "surface": "#f7f9fb",
+            "on-background": "#191c1e",
+            "on-primary": "#ffffff",
+            "surface-container": "#eceef0",
+            "secondary-fixed": "#ffdcc3",
+            "surface-container-lowest": "#ffffff",
+            "error": "#ba1a1a",
+            "surface-variant": "#e0e3e5",
+            "on-tertiary-fixed": "#131b2e",
+            "secondary-fixed-dim": "#ffb77d",
+            "surface-container-high": "#e6e8ea",
+            "tertiary-container": "#384055",
+            "surface-tint": "#4059aa",
+            "primary": "#00236f",
+            "primary-fixed": "#dce1ff",
+            "on-primary-fixed-variant": "#264191"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "display-lg": ["Noto Serif KR", "Noto Serif", "serif"],
+            "display-lg-mobile": ["Noto Serif KR", "Noto Serif", "serif"],
+            "headline-sm": ["Noto Serif KR", "Noto Serif", "serif"],
+            "scripture-quote": ["Noto Serif KR", "Noto Serif", "serif"],
+            "label-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "body-lg": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-md": ["Noto Serif KR", "Noto Serif", "serif"],
+            "body-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-lg-mobile": ["Noto Serif KR", "Noto Serif", "serif"],
+            "body-md": ["\"Source Sans 3\"", "sans-serif"],
+            "label-md": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-lg": ["Noto Serif KR", "Noto Serif", "serif"]
+          },
+          "fontSize": {
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #c5c5d3;
+      border-radius: 9999px;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full bg-surface-container-lowest sticky top-0 z-50 shadow-sm border-b border-outline-variant">
+<div class="w-full max-w-7xl mx-auto px-6 md:px-12 h-20 flex justify-between items-center">
+<!-- Brand Logo -->
+<a class="text-headline-sm font-headline-sm text-primary flex items-center gap-2 transition-colors duration-200 cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">church</span>
+<span class="">더바른교회</span>
+</a>
+<!-- Navigation Links -->
+<nav aria-label="메인 내비게이션" class="hidden md:flex items-center space-x-8 text-label-md font-label-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">교회소개</a>
+<!-- Active Nav: 말씀·찬양 -->
+<a class="text-primary font-semibold border-b-2 border-primary py-2" href="#">말씀·찬양</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">공동체</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">교회소식</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<a class="hidden lg:flex items-center gap-1 text-label-md font-label-md text-on-surface-variant hover:text-primary py-2 transition-colors" href="#" title="실시간 예배 방송">
+<span class="material-symbols-outlined text-xl text-error">smart_display</span>
+<span class="">생방송</span>
+</a>
+<a class="bg-primary text-on-primary text-label-md font-label-md px-5 py-2.5 rounded-lg shadow-sm hover:bg-primary-container transition-colors duration-200 active:scale-95" href="#">
+          새가족 등록 안내
+        </a>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Breadcrumb & Page Header Section -->
+<section class="bg-surface-container-lowest border-b border-outline-variant">
+<div class="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-10">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center space-x-2 text-body-sm font-body-sm text-on-surface-variant mb-6">
+<a class="hover:text-primary flex items-center gap-1 transition-colors" href="#">
+<span class="material-symbols-outlined text-base">home</span>
+<span class="">홈</span>
+</a>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">말씀·찬양</a>
+<span class="material-symbols-outlined text-sm text-outline">chevron_right</span>
+<span class="text-primary font-semibold">찬양 영상</span>
+</nav>
+<!-- Header Content & Scripture Card -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-primary text-label-sm font-label-sm mb-3">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">music_note</span>
+<span class="">더바른 미디어 예배 사역원</span>
+</div>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight mb-3">
+              영혼을 울리는 거룩한 찬미: 찬양 영상
+            </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+              주일 대예배 찬양대의 웅장한 찬송과 청년 워십팀의 깊은 고백, 금요성령기도회의 뜨거운 찬양의 순간들을 함께 나눕니다.
+            </p>
+</div>
+<!-- Scripture Card -->
+<div class="lg:col-span-5 bg-surface-container-low border border-outline-variant p-6 rounded-xl relative overflow-hidden">
+<div class="absolute -right-4 -bottom-6 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-9xl text-primary">auto_stories</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl mt-0.5">format_quote</span>
+<div>
+<p class="text-body-md font-scripture-quote text-on-surface italic leading-relaxed mb-2">
+                  "호흡이 있는 자마다 여호와를 찬양할지어다 할렐루야"
+                </p>
+<p class="text-label-sm font-label-sm text-secondary font-semibold">
+                  시편 150:6
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sub-Category Tab Navigation -->
+<div class="mt-10 border-b border-outline-variant">
+<nav aria-label="말씀·찬양 서브 카테고리" class="flex space-x-8 overflow-x-auto custom-scrollbar">
+<a class="pb-3.5 px-1 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#">
+              전체 설교
+            </a>
+<a class="pb-3.5 px-1 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#">
+              시리즈 설교
+            </a>
+<a class="pb-3.5 px-1 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#">
+              특별집회/부흥회
+            </a>
+<!-- Active Tab: 찬양 영상 -->
+<a aria-current="page" class="pb-3.5 px-1 text-label-md font-label-md text-primary font-semibold border-b-2 border-primary whitespace-nowrap flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+<span class="">찬양 영상</span>
+</a>
+<a class="pb-3.5 px-1 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap" href="#">
+              온라인 주보 모아보기
+            </a>
+</nav>
+</div>
+</div>
+</section>
+<!-- Content Container -->
+<div class="max-w-7xl mx-auto px-6 md:px-12 py-12 space-y-16">
+<!-- Section 1: Featured Praise Video (이번 주 주일 찬양 하이라이트 히어로) -->
+<section aria-labelledby="featured-video-title">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary inline-block"></span>
+<span class="text-label-md font-label-md text-secondary tracking-wide uppercase font-semibold">Weekly Highlight</span>
+<h2 class="text-headline-md font-headline-md text-primary ml-2" id="featured-video-title">이번 주 주일 찬양 하이라이트</h2>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant">2024년 10월 27일 주일 3부 예배 봉헌 찬양</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm grid grid-cols-1 lg:grid-cols-12">
+<!-- Video Player Visual Container -->
+<div class="lg:col-span-8 relative aspect-video bg-tertiary group">
+<img class="w-full h-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105" data-alt="A grand choir and full symphony orchestra performing in a warm cathedral sanctuary with stained glass light filtering through, dressed in reverent robes under soft warm golden stage lighting, cinematic high quality view from the aisle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB386r7EEHVvNRMcSmfvcRqorjVPB34QWtzLD1TFMUbSutcwl09bVssby_6c-Z-ejVT-5ShkRrOQgQ2sHcz5uTeLDlIbsiDbNo8j6wJNCoxrp_9PI72pgA6LqMjWGB_zauKkYZDh-K_Rk03LJ5hxvRs2Ev4IotJOIVsRtjAncYPWHIdQDG1o-XVGo-Ior6d2Y9K5KJNlNEY0ynV_-a2PjckyNVSw4GqmxPByXA7V7RrzEA6PDfsp6FlsQ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex flex-col justify-between p-6">
+<div class="flex items-center justify-between">
+<span class="bg-black/60 backdrop-blur text-white text-label-sm font-label-sm px-3 py-1 rounded flex items-center gap-1.5 border border-white/20">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="">4K UHD LIVE</span>
+</span>
+<span class="bg-black/60 backdrop-blur text-white/90 text-label-sm font-label-sm px-3 py-1 rounded border border-white/20">
+                  06:42
+                </span>
+</div>
+<!-- Play Center Trigger Button -->
+<div class="self-center">
+<button aria-label="찬양 영상 재생하기" class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-white/90 hover:bg-white text-primary flex items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 group-hover:bg-secondary-fixed group-hover:text-on-secondary-fixed">
+<span class="material-symbols-outlined text-4xl md:text-5xl ml-1" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Bottom Overlay Badges -->
+<div class="flex items-center justify-between text-white text-body-sm">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">volume_up</span><span class="">전교인과 함께하는 은혜의 찬양</span></div>
+<span class="text-label-sm text-white/80">조회수 12,480회</span>
+</div>
+</div>
+</div>
+<!-- Metadata & Interactive Side Pane -->
+<div class="lg:col-span-4 p-6 md:p-8 flex flex-col justify-between bg-surface-container-lowest">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-low text-primary font-semibold text-label-sm font-label-sm">주일 찬양팀</span>
+<span class="text-label-sm text-secondary font-semibold">특송 &amp; 오케스트라</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-3 leading-snug">
+                주의 은혜라
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6 leading-relaxed">나의 나 된 것은 오직 주의 은혜라. 모든 성도들이 함께 한마음으로 주님을 찬미하는 더바른 찬양 공동체의 영혼 깊은 감사와 진솔한 고백의 찬양입니다.</p>
+<!-- Metadata List -->
+<div class="border-t border-b border-outline-variant py-4 space-y-2.5 text-body-sm font-body-sm"><div class="flex justify-between"><span class="text-on-surface-variant">작사 / 작곡</span><span class="font-medium text-on-surface">손경민</span></div><div class="flex justify-between"><span class="text-on-surface-variant">찬양 인도 / 건반</span><span class="font-medium text-on-surface">강성훈 전도사 · 김하은 청년</span></div><div class="flex justify-between"><span class="text-on-surface-variant">찬양 참여</span><span class="font-medium text-on-surface">더바른 예배 찬양팀 &amp; 전교인</span></div><div class="flex justify-between"><span class="text-on-surface-variant">찬양 일시</span><span class="font-medium text-on-surface">2024.10.27 (주일 예배)</span></div></div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-6 space-y-3">
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container transition-colors text-label-md font-label-md flex items-center justify-center gap-2 border border-outline-variant" onclick="document.getElementById('lyrics-modal').classList.remove('hidden')">
+<span class="material-symbols-outlined text-base">lyrics</span>
+<span class="">가사 &amp; 성가 묵상 노트 보기</span>
+</button>
+<div class="flex gap-2">
+<a class="flex-1 py-2 px-3 rounded-lg border border-outline-variant hover:bg-surface-container-low text-on-surface text-label-sm font-label-sm flex items-center justify-center gap-1.5 transition-colors" href="#score">
+<span class="material-symbols-outlined text-base text-primary">download</span>
+<span class="">파트보 다운로드</span>
+</a>
+<button class="py-2 px-3 rounded-lg border border-outline-variant hover:bg-surface-container-low text-on-surface text-label-sm font-label-sm flex items-center justify-center gap-1 transition-colors" title="찬양 링크 공유">
+<span class="material-symbols-outlined text-base">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Praise Team Filter Tabs & Search Strip -->
+<section class="space-y-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-outline-variant pb-4">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary">찬양 아카이브</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">교회의 모든 찬양대와 워십 사역팀의 은혜로운 영상을 찾아보실 수 있습니다.</p>
+</div>
+<!-- Quick Search and Filter Form -->
+<div class="flex items-center gap-3">
+<div class="relative w-full md:w-64">
+<input class="w-full pl-9 pr-4 py-2 text-body-sm rounded-lg border-outline-variant bg-surface-container-lowest focus:ring-primary focus:border-primary text-on-surface placeholder:text-outline" placeholder="찬양곡명, 작곡가, 찬양팀 검색" type="text">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-lg text-outline">search</span>
+</div>
+<select class="py-2 px-3 text-body-sm rounded-lg border-outline-variant bg-surface-container-lowest text-on-surface focus:ring-primary focus:border-primary">
+<option>최신순</option>
+<option>조회순</option>
+<option>주일 예배별</option>
+</select>
+</div>
+</div>
+<!-- Filter Pill Tabs -->
+<div class="flex flex-wrap gap-2"><button class="px-4 py-2 rounded-full text-label-sm font-label-sm bg-primary text-on-primary transition-colors shadow-sm">전체 찬양 (54)</button><button class="px-4 py-2 rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors border border-outline-variant">주일 예배 찬양</button><button class="px-4 py-2 rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors border border-outline-variant">금요 성령기도회 찬양</button><button class="px-4 py-2 rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors border border-outline-variant">청년·성도 특별 찬양</button><button class="px-4 py-2 rounded-full text-label-sm font-label-sm bg-surface-container-low text-on-surface-variant hover:bg-surface-container transition-colors border border-outline-variant">전교인 찬송가 합창</button></div>
+</section>
+<!-- Section 3: Praise Archive Video Grid -->
+<section>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative aspect-video bg-tertiary overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A dignified traditional Korean church choir wearing pure white choral robes singing solemnly in a wooden sanctuary background under warm architectural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnS0yXml1Zl8ASAwfob-jh_yD0car2CB4QrNohzVwAFs-vKiMW16a2PK9Ukd5CszILiGWPEtBDV-2BWmH_5wGvpMhNfS_hBrewR1FWVlrssZyngT5iZf1gQujhh_i6HoD8zsGN3Zcw9wcxITSoXM3whnF6wYYD0a5cDt5vk2OUwHk-1qjXPawaeuFvUkP8jJYy6erJiFYbKbJeF1SPKZGlnLVaUGrmjOcluNyHxaYxkmmvBQqKLKWUrA">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="w-12 h-12 rounded-full bg-white/80 group-hover:bg-white text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-2xl ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/75 text-white text-label-sm font-label-sm px-2 py-0.5 rounded">05:14</span>
+<span class="absolute top-2.5 left-2.5 bg-primary-container text-white text-label-sm font-label-sm px-2.5 py-0.5 rounded">할렐루야 찬양대</span>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant mb-1.5">
+<span class="">주일 2부 대예배</span>
+<span class="">2024.10.20</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                  은혜 아니면 (Grace Alone)
+                </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mb-4">
+                  조성은 곡 · 할렐루야 찬양대 &amp; 챔버 앙상블
+                </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="text-label-sm text-outline">지휘: 박요한 | 피아노: 김하은</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1 hover:text-primary transition-colors" title="가사 보기">
+<span class="material-symbols-outlined text-lg">lyrics</span>
+</button>
+<button class="p-1 hover:text-primary transition-colors" title="악보 파일 다운로드">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative aspect-video bg-tertiary overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern passionate young praise and worship team with acoustic guitars, keyboards and contemporary stage lighting singing deeply in an intimate auditorium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClEYRgJYV60Ilap5Y1d_yrPUMMg12O8GyaLIEJ_e7WfYmtKrZdI3aPWYklwUYwttf5LHrRqz26E1A0SbAVFjwevJcaO5f7lPkCWPD-g_NFhQIDqBJNENLNL3Jv7jSLDhVrNvkFA2LGzJpRtqw1DM2-IYDYacIgUZZ-PF3WIRiU6r7luwRkSzjQA0SJJcakj57rmx_JqCkL1iXG6M3MbBAzFEaZ2dh_mSk_9QyX3Cr1pGjtRaQGMz7BYQ">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="w-12 h-12 rounded-full bg-white/80 group-hover:bg-white text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-2xl ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/75 text-white text-label-sm font-label-sm px-2 py-0.5 rounded">08:22</span>
+<span class="absolute top-2.5 left-2.5 bg-secondary text-white text-label-sm font-label-sm px-2.5 py-0.5 rounded">청년 워십 카리스</span>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant mb-1.5">
+<span class="">청년 주일예배 워십</span>
+<span class="">2024.10.20</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                  꽃들도 (花も - Hana Mo)
+                </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mb-4">
+                  MEBIG 찬양 · 카리스 청년 워십밴드 실황
+                </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="text-label-sm text-outline">인도: 강성훈 전도사</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1 hover:text-primary transition-colors" title="가사 보기">
+<span class="material-symbols-outlined text-lg">lyrics</span>
+</button>
+<button class="p-1 hover:text-primary transition-colors" title="코드 악보 다운로드">
+<span class="material-symbols-outlined text-lg">music_note</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative aspect-video bg-tertiary overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A tranquil church choir bathed in morning dawn sunlight shining through church windows, serene solemn facial expressions singing with open hymnbooks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJljnBAeK6DCvqdNdEgf6T_w7ho2BUpKv28hZSJ9ULTYPO9V7DfIrfXt5CeNa5WyR6LFN-do_kxrVB44jX3ESNZ1br447xUJoZxtvsLcz1ACpL71x7M5dD_Qh5FbR987Ic9zB3Okz0JblDaFoxCoZM_01yExnoEWABiEdscdgWcevXKHB7yJz7n2QAPt5B_3MqOfPIzRB70LVk4Up95Ddayso3RZ0wSTg5OljNJiqMoJqMggX1Lq2Ywg">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="w-12 h-12 rounded-full bg-white/80 group-hover:bg-white text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-2xl ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/75 text-white text-label-sm font-label-sm px-2 py-0.5 rounded">04:45</span>
+<span class="absolute top-2.5 left-2.5 bg-surface-tint text-white text-label-sm font-label-sm px-2.5 py-0.5 rounded">시온 찬양대</span>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant mb-1.5">
+<span class="">주일 1부 이른아침예배</span>
+<span class="">2024.10.13</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                  주가 일하시네
+                </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mb-4">
+                  이혁진 곡 · 시온 찬양대
+                </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="text-label-sm text-outline">지휘: 최민석 | 반주: 윤서영</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1 hover:text-primary transition-colors" title="가사 보기">
+<span class="material-symbols-outlined text-lg">lyrics</span>
+</button>
+<button class="p-1 hover:text-primary transition-colors" title="악보 파일 다운로드">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative aspect-video bg-tertiary overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="An orchestral string section with cellos and violins performing passionately inside a modern church auditorium with subtle amber lighting and refined acoustic wooden panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpF1qhhY09CnSGCvlMu-oY-c6wXb_yKlwRrRtHWbHzjK9BSqv_K6i9LQFwPO1SZlXW6fJF5zKc9l4QcFyep5WnZIFlIAWE1YjWMMFRGdxuJAs1Wrzfl7Xf80ueG2vTpI5jt4rTvrJRLJOOGnw9oeZvoVE-iAI6If00PKGUcN0nYQ94vEOaBtncaitm36IzRO7aMsZOpC05VZylN83mrihwtUW5LyA_sOIS93vBQ1O3CVKbwM7yGit4_Q">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="w-12 h-12 rounded-full bg-white/80 group-hover:bg-white text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-2xl ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/75 text-white text-label-sm font-label-sm px-2 py-0.5 rounded">06:10</span>
+<span class="absolute top-2.5 left-2.5 bg-tertiary-container text-white text-label-sm font-label-sm px-2.5 py-0.5 rounded">오케스트라 특별연주</span>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant mb-1.5">
+<span class="">가을 음악예배 서곡</span>
+<span class="">2024.10.06</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                  내 주는 강한 성이요 (찬송가 585장)
+                </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mb-4">
+                  M. Luther 곡 · 더바른 심포니 오케스트라 앙상블
+                </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="text-label-sm text-outline">악장: 정유진 | 지휘: 한규태</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1 hover:text-primary transition-colors" title="해설 보기">
+<span class="material-symbols-outlined text-lg">info</span>
+</button>
+<button class="p-1 hover:text-primary transition-colors" title="오케스트라 총보 다운로드">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative aspect-video bg-tertiary overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A Friday evening prayer gathering in church filled with gentle candlelit glow, hands raised in heartfelt praise and worship with warm ambient navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbw-xflKiZm1sv1ceZjKimjwc789GaBrvUHAYC0E9TAMXhNfqWC8MQDFawFKSqOrxwlbpoHQRlxDAhyFlPzydQq6GEtEvZPvb8M_aaPVOGyHHXA1CMx38L2684Gta11yqu0JjU8gb_5cz4lX3ybTirn4tMHFolRqLsDad1zNzAgSgn0WUXB9fbwPWBnJHLOusZz9FlCqXRP87nSRm3d_8jL1lW66ectctt_cTeOyyG4AJ40Za-W1RR7g">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="w-12 h-12 rounded-full bg-white/80 group-hover:bg-white text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-2xl ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/75 text-white text-label-sm font-label-sm px-2 py-0.5 rounded">12:35</span>
+<span class="absolute top-2.5 left-2.5 bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm px-2.5 py-0.5 rounded font-semibold">금요 성령기도회</span>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant mb-1.5">
+<span class="">금요기도회 찬양 실황</span>
+<span class="">2024.10.18</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                  모든 시선을 주님께 드리고 (시선)
+                </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mb-4">
+                  김명선 곡 · 더바른 금요 연합찬양팀 실황
+                </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="text-label-sm text-outline">기도회 인도: 이은총 목사</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1 hover:text-primary transition-colors" title="가사 보기">
+<span class="material-symbols-outlined text-lg">lyrics</span>
+</button>
+<button class="p-1 hover:text-primary transition-colors" title="콘티 확인">
+<span class="material-symbols-outlined text-lg">playlist_play</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 6 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative aspect-video bg-tertiary overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Children and adult multi-generational family choir singing joyfully on stage together in a bright sanctuary, decorated in seasonal floral arrangements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk_65BaM3MXDZiH6nrXYmDvVj0Pg8l31MlLYebiOiC6pIy_RtQwz2ql_9Ig-D8-ieSHSEWlaCtLtZBa9ySdseQ8sVqE9Qz8YSEfRqfo49t6wYCb8L21SDtxCpse1iu71V7Swu3lMkhvUZWZ0Jdo6e741xlsKDTUP4OkM4HJNHLVw3pZu9gjCHwFvLTxspSpZm15WBCSXV5Ail0s4lZAehbmLooBR-tSYXYkvkeefC9IO-UEZMXvTq8Kg">
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<span class="w-12 h-12 rounded-full bg-white/80 group-hover:bg-white text-primary flex items-center justify-center transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-2xl ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/75 text-white text-label-sm font-label-sm px-2 py-0.5 rounded">05:08</span>
+<span class="absolute top-2.5 left-2.5 bg-outline text-white text-label-sm font-label-sm px-2.5 py-0.5 rounded">온가족 연합</span>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between text-label-sm text-on-surface-variant mb-1.5">
+<span class="">온세대 통합예배</span>
+<span class="">2024.10.06</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors line-clamp-1 mb-1">
+                  참 아름다워라 (This Is My Father's World)
+                </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant line-clamp-1 mb-4">
+                  꿈나무 유년부 &amp; 시온찬양대 합동 특송
+                </p>
+</div>
+<div class="pt-3 border-t border-outline-variant flex items-center justify-between text-on-surface-variant text-body-sm">
+<span class="text-label-sm text-outline">지휘: 박지영 교사</span>
+<div class="flex items-center gap-1.5">
+<button class="p-1 hover:text-primary transition-colors" title="가사 보기">
+<span class="material-symbols-outlined text-lg">lyrics</span>
+</button>
+<button class="p-1 hover:text-primary transition-colors" title="악보 파일 다운로드">
+<span class="material-symbols-outlined text-lg">description</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination -->
+<div class="mt-12 flex justify-center items-center space-x-2">
+<button aria-label="이전 페이지" class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container-low transition-colors" disabled="">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-primary text-on-primary text-label-md font-label-md">1</button>
+<button class="w-10 h-10 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-low text-label-md font-label-md transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-low text-label-md font-label-md transition-colors">3</button>
+<button class="w-10 h-10 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-low text-label-md font-label-md transition-colors">4</button>
+<span class="px-2 text-outline">…</span>
+<button class="w-10 h-10 rounded-lg border border-outline-variant text-on-surface hover:bg-surface-container-low text-label-md font-label-md transition-colors">12</button>
+<button aria-label="다음 페이지" class="w-10 h-10 rounded-lg border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Section 4: Choir & Worship Team Recruitment Callout (찬양대 섬김이 지원 안내) -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-2xl p-8 md:p-10 shadow-sm relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/3 h-full bg-gradient-to-l from-primary-fixed/20 to-transparent pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-8 space-y-4">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-semibold text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-base">volunteer_activism</span>
+<span class="">2025 찬양 사역자 및 섬김이 상시 모집</span>
+</div>
+<h2 class="text-headline-lg font-headline-lg text-primary leading-snug">
+              "주님 주신 달란트로 찬양의 제단을 함께 쌓아갈 성도님을 기다립니다"
+            </h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl leading-relaxed">주일 예배 싱어, 메인·세컨 건반, 어쿠스틱 기타, 예배 자막 PPT 및 음향 송출까지 작지만 따뜻한 손길로 함께 예배의 단을 세워갈 성도님을 기다립니다. 초보자도 기쁨으로 배우며 섬기실 수 있습니다.</p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2"><div class="border-l-2 border-primary pl-3"><p class="text-label-sm text-outline">예배 싱어</p><p class="text-body-md font-semibold text-on-surface">찬양 인도/보컬</p></div><div class="border-l-2 border-primary pl-3"><p class="text-label-sm text-outline">건반 및 악기</p><p class="text-body-md font-semibold text-on-surface">피아노/어쿠스틱</p></div><div class="border-l-2 border-primary pl-3"><p class="text-label-sm text-outline">예배 미디어</p><p class="text-body-md font-semibold text-on-surface">방송 자막/PPT</p></div><div class="border-l-2 border-secondary pl-3"><p class="text-label-sm text-secondary font-semibold">음향 보조</p><p class="text-body-md font-semibold text-on-surface">마이크/음향 믹서</p></div></div>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
+<a class="py-3 px-6 rounded-lg bg-primary text-on-primary text-label-md font-label-md font-semibold text-center hover:bg-primary-container transition-colors shadow-sm active:scale-95" href="#">
+              찬양 사역 온라인 지원서 작성
+            </a>
+<a class="py-3 px-6 rounded-lg bg-surface-container-low text-primary border border-outline-variant text-label-md font-label-md font-semibold text-center hover:bg-surface-container transition-colors active:scale-95" href="#">사역 문의 및 목회실 안내</a>
+</div>
+</div>
+</section>
+<!-- Media Subscription / Youtube Connect Banner -->
+<section class="bg-tertiary text-on-tertiary rounded-2xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+<div class="space-y-2 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<span class="material-symbols-outlined text-error text-3xl">smart_display</span>
+<span class="text-headline-sm font-headline-sm font-semibold">더바른교회 공식 유튜브 미디어 채널</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container max-w-xl">
+            주일 1·2·3부 찬양 실황과 특별 연주를 유튜브를 통해 언제 어디서나 가장 먼저 만나보실 수 있습니다. 구독과 알림 설정으로 함께 은혜를 나누세요.
+          </p>
+</div>
+<div class="flex items-center gap-3 shrink-0">
+<a class="px-6 py-3 rounded-lg bg-error text-white text-label-md font-label-md font-semibold flex items-center gap-2 hover:opacity-95 transition-opacity shadow-sm active:scale-95" href="https://youtube.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-lg">subscriptions</span>
+<span class="">유튜브 채널 구독하기</span>
+</a>
+</div>
+</section>
+</div>
+</main>
+<!-- Lyrics / Meditation Modal Dialog (Micro-Interaction) -->
+<div class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4" id="lyrics-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl p-6 md:p-8 shadow-2xl border border-outline-variant relative max-h-[85vh] flex flex-col">
+<div class="flex justify-between items-start pb-4 border-b border-outline-variant">
+<div>
+<span class="text-label-sm text-secondary font-semibold">연합찬양대 찬양 가사</span>
+<h3 class="text-headline-sm font-headline-sm text-primary">주의 은혜라</h3>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container-low transition-colors" onclick="document.getElementById('lyrics-modal').classList.add('hidden')">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="overflow-y-auto py-6 space-y-4 text-body-md font-body-md text-on-surface leading-relaxed pr-2">
+<p class="italic text-on-surface-variant text-body-sm font-scripture-quote">
+          "내가 누려왔던 모든 것들이 내가 지나왔던 모든 시간이<br>
+          내가 걸어왔던 모든 순간이 당연한 것 아니라 은혜였소"
+        </p>
+<p class="">
+          아침 해가 뜨고 저녁의 노을,<br>
+          봄의 꽃향기와 가을의 열매,<br>
+          변하는 계절의 모든 순간이 당연하게 여겼던 삶의 호흡이<br>
+          모든 것이 다 주의 은혜였소.
+        </p>
+<p class="font-semibold text-primary">
+          [후렴]<br>
+          모든 것이 은혜 은혜 은혜 한없는 은혜<br>
+          내 삶에 당연한 건 하나도 없었던 것을<br>
+          모든 것이 은혜 은혜였소.
+        </p>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-end">
+<button class="px-5 py-2 rounded-lg bg-primary text-on-primary text-label-md font-label-md hover:bg-primary-container transition-colors" onclick="document.getElementById('lyrics-modal').classList.add('hidden')">
+          확인
+        </button>
+</div>
+</div>
+</div>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-tertiary text-on-tertiary border-t border-outline">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Left: Brand info & Copyright -->
+<div class="space-y-4 max-w-md">
+<div class="text-headline-md font-headline-md text-on-tertiary font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">church</span>
+<span class="">더바른교회</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container leading-relaxed">
+          더바른교회는 대한예수교장로회 소속으로 복음의 본질을 회복하고, 말씀과 찬양으로 성도를 온전케 하여 세상을 섬기는 거룩한 신앙 공동체입니다.
+        </p>
+<div class="text-body-sm font-body-sm text-on-tertiary-container space-y-1">
+<p class="">담임목사: 김요한 | 서울특별시 서초구 반포대로 120 (더바른교회)</p>
+<p class="">대표전화: 02-588-7000 | 팩스: 02-588-7009</p>
+</div>
+<p class="text-label-sm font-label-sm text-on-tertiary-container pt-2">
+          © 2024 더바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.
+        </p>
+</div>
+<!-- Right: Links & Admin Contacts -->
+<div class="flex flex-col sm:flex-row gap-8 lg:gap-16 w-full md:w-auto">
+<div>
+<h4 class="text-label-md font-label-md text-on-tertiary font-semibold mb-3">바로가기</h4>
+<ul class="space-y-2 text-label-sm font-label-sm">
+<li class=""><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">개인정보처리방침</a></li>
+<li class=""><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">이용약관</a></li>
+<li class=""><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">교회행정문의</a></li>
+<li class=""><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">오시는 길</a></li>
+<li class=""><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">유튜브 방송 안내</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-label-md font-label-md text-on-tertiary font-semibold mb-3">예배 및 찬양 안내</h4>
+<div class="text-body-sm font-body-sm text-on-tertiary-container space-y-2">
+<div>
+<span class="block text-white font-medium">주일 예배 찬양</span>
+<span class="">1부 07:00 | 2부 09:30 | 3부 11:30</span>
+</div>
+<div>
+<span class="block text-white font-medium">청년부 카리스 워십</span>
+<span class="">주일 오후 02:00 (본당 2층 글로리아홀)</span>
+</div>
+<div>
+<span class="block text-white font-medium">금요 성령기도회</span>
+<span class="">매주 금요일 오후 08:30</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>
