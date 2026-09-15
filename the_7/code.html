@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>회원정보 수정 및 계정 관리 | The바른교회</title>
+<!-- Google Fonts: Noto Serif KR & Source Sans 3 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#b6c4ff",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "tertiary-fixed": "#dae2fd",
+            "error": "#ba1a1a",
+            "on-error-container": "#93000a",
+            "surface-bright": "#f7f9fb",
+            "on-tertiary-container": "#a4acc5",
+            "inverse-on-surface": "#eff1f3",
+            "surface-dim": "#d8dadc",
+            "primary": "#00236f",
+            "outline-variant": "#c5c5d3",
+            "on-secondary": "#ffffff",
+            "primary-container": "#1e3a8a",
+            "on-secondary-fixed": "#2f1500",
+            "surface-container-highest": "#e0e3e5",
+            "secondary-fixed-dim": "#ffb77d",
+            "inverse-surface": "#2d3133",
+            "background": "#f7f9fb",
+            "surface-container": "#eceef0",
+            "tertiary": "#222a3e",
+            "tertiary-container": "#384055",
+            "on-surface": "#191c1e",
+            "secondary-fixed": "#ffdcc3",
+            "on-tertiary-fixed": "#131b2e",
+            "secondary": "#904d00",
+            "surface-tint": "#4059aa",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed-variant": "#264191",
+            "primary-fixed-dim": "#b6c4ff",
+            "on-secondary-container": "#663500",
+            "on-surface-variant": "#444651",
+            "on-primary-container": "#90a8ff",
+            "surface-variant": "#e0e3e5",
+            "surface": "#f7f9fb",
+            "surface-container-low": "#f2f4f6",
+            "secondary-container": "#fe932c",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e6e8ea",
+            "surface-container-lowest": "#ffffff",
+            "error-container": "#ffdad6",
+            "outline": "#757682",
+            "on-primary-fixed": "#00164e",
+            "on-background": "#191c1e",
+            "on-secondary-fixed-variant": "#6e3900",
+            "on-error": "#ffffff",
+            "tertiary-fixed-dim": "#bec6e0",
+            "primary-fixed": "#dce1ff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin": "2rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Noto Serif KR", "serif"],
+            "headline-lg-mobile": ["Noto Serif KR", "serif"],
+            "display-lg": ["Noto Serif KR", "serif"],
+            "body-lg": ["Source Sans 3", "sans-serif"],
+            "headline-sm": ["Noto Serif KR", "serif"],
+            "scripture-quote": ["Noto Serif KR", "serif"],
+            "body-sm": ["Source Sans 3", "sans-serif"],
+            "label-sm": ["Source Sans 3", "sans-serif"],
+            "headline-lg": ["Noto Serif KR", "serif"],
+            "body-md": ["Source Sans 3", "sans-serif"],
+            "label-md": ["Source Sans 3", "sans-serif"],
+            "headline-md": ["Noto Serif KR", "serif"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar (Shared Component JSON Implementation) -->
+<header class="bg-surface-container-lowest shadow-sm docked full-width top-0 sticky z-50">
+<div class="w-full px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto py-3.5">
+<!-- Brand Logo / Product Name -->
+<a class="text-headline-sm font-headline-sm text-primary flex items-center gap-3 decoration-transparent" href="#">
+<img alt="The바른교회 로고" class="w-9 h-9 object-contain rounded-full shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEZjkvlhkqO4W4bAzSHF4tfLgpf7nNLi60STpXeqsbY_assFl90c8zFsN_gg2fO_f0LJ5TorRJOEt55myThbR5gLC4inJj1LDsyFIea1Ppwo48GoKjsCckNSzKYlIc_GIRTYB7QTvcRB2k8zZqS2Yzu49Eb-ILliphBrUz_zTtX1CCAHPLgG1DVjes1SHhhjCOEfBE9pJfSQQrobWtKNVf9D8cC_EodNUCugw-QOupxo7BKQpJEjWagW2DWmQ1mZVEcNM"/>
+<span class="tracking-tight font-bold">The바른교회</span>
+</a>
+<!-- Navigation Links (Web Desktop) -->
+<nav aria-label="메인 내비게이션" class="hidden md:flex items-center gap-8 text-label-md font-label-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">교회소개</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">말씀·찬양</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">공동체</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">교회소식</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors py-2" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Action & User Member Profile Badge -->
+<div class="flex items-center gap-3">
+<div class="hidden sm:flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/50 text-label-sm font-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="text-on-surface font-medium">이은혜 성도님 <span class="text-outline text-xs font-normal">(인증대기/일반)</span></span>
+</div>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-outline-variant text-primary hover:bg-surface-container transition-colors text-label-sm font-label-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span class="hidden sm:inline">마이페이지</span>
+</a>
+<button class="inline-flex items-center text-on-surface-variant hover:text-error transition-colors p-1.5 rounded-lg hover:bg-error-container/20 text-label-sm font-label-sm" title="로그아웃" type="button">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+</button>
+<a class="hidden lg:inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors text-label-sm font-label-sm ml-2" href="#">
+<span class="material-symbols-outlined text-[16px]">smart_display</span>
+<span>온라인 예배</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 md:px-8 py-8 md:py-12">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-4">
+<a class="hover:text-primary transition-colors" href="#">홈</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">마이페이지</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span aria-current="page" class="text-on-surface font-semibold">회원정보 관리</span>
+</nav>
+<!-- Page Header (Editorial Serenity) -->
+<header class="mb-8 border-b border-outline-variant/60 pb-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="inline-block text-label-sm font-label-sm px-2.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-semibold mb-2">My Page &amp; Account</span>
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">회원정보 수정 및 계정 관리</h1>
+<p class="mt-2 text-body-md font-body-md text-on-surface-variant max-w-2xl">
+            The바른교회 온라인 교적 및 소셜 간편로그인 연동 정보, 목양 알림 설정을 안전하게 관리하실 수 있습니다.
+          </p>
+</div>
+<div class="text-xs text-outline flex items-center gap-1.5 self-start md:self-end bg-surface-container px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+<span>개인정보보호법 및 교단 교적 규정 준수</span>
+</div>
+</div>
+<!-- Graceful Tab Navigation -->
+<div class="mt-8 flex gap-2 sm:gap-4 overflow-x-auto border-b border-outline-variant/50 no-scrollbar" role="tablist">
+<button aria-selected="true" class="pb-3 px-3 text-label-md font-label-md text-primary font-bold border-b-2 border-primary flex items-center gap-2 whitespace-nowrap bg-primary-fixed/20 rounded-t-lg" role="tab">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+          기본 프로필 &amp; 연락처 수정
+        </button>
+<button aria-selected="false" class="pb-3 px-3 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap" role="tab">
+<span class="material-symbols-outlined text-[18px]">groups</span>
+          교인 등록·다락방 정보 관리
+        </button>
+<button aria-selected="false" class="pb-3 px-3 text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 whitespace-nowrap" role="tab">
+<span class="material-symbols-outlined text-[18px]">notifications</span>
+          알림 및 수신 동의 설정
+        </button>
+<a class="pb-3 px-3 text-label-md font-label-md text-on-surface-variant hover:text-error transition-colors flex items-center gap-2 whitespace-nowrap" href="#withdrawal-section">
+<span class="material-symbols-outlined text-[18px]">person_cancel</span>
+          회원탈퇴 안내
+        </a>
+</div>
+</header>
+<!-- Main Form Structure -->
+<form class="space-y-10" id="profileForm" onsubmit="event.preventDefault(); alert('회원정보 수정사항이 안전하게 저장되었습니다.');">
+<!-- Section 1: 소셜 간편 연동 계정 및 기본 정보 -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 p-6 md:p-8 space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">id_card</span>
+</span>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">기본 프로필 &amp; 소셜 연동 정보</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">OAuth 2.0 기반 간편인증 및 본인 확인 정보입니다.</p>
+</div>
+</div>
+<span class="text-xs px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-semibold">실명확인 완료</span>
+</div>
+<!-- Security / OAuth Policy Notice Banner -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/60 flex items-start gap-3.5">
+<span class="material-symbols-outlined text-primary-container text-[22px] mt-0.5 shrink-0">shield</span>
+<div class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+<strong class="text-on-surface font-semibold">안전한 소셜 간편인증 안내:</strong><br/>
+            The바른교회는 비밀번호 분실 위험과 개인정보 유출을 원천 방지하기 위해 자체 ID/PW를 서버에 보관하지 않고 안전한 소셜 간편인증(카카오톡/구글)을 채택하고 있습니다.
+          </div>
+</div>
+<!-- Profile Avatar & Details Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 pt-2">
+<!-- Avatar Column -->
+<div class="md:col-span-4 flex flex-col items-center justify-center p-6 bg-surface-container-low/50 rounded-xl border border-outline-variant/40 text-center">
+<div class="relative group">
+<div class="w-28 h-28 rounded-full bg-primary-fixed/40 border-2 border-primary-container/30 flex items-center justify-center overflow-hidden shadow-xs">
+<span class="material-symbols-outlined text-primary-container text-[64px]">face_3</span>
+</div>
+<label class="absolute bottom-0 right-0 p-2 rounded-full bg-primary-container text-white cursor-pointer shadow-md hover:bg-primary transition-colors" for="avatarUpload" title="프로필 사진 등록">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<input accept="image/*" class="hidden" id="avatarUpload" type="file"/>
+</label>
+</div>
+<div class="mt-3">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">이은혜 성도</h3>
+<p class="text-label-sm font-label-sm text-outline mt-0.5">등록교적 번호: #B2024-0312</p>
+</div>
+<div class="flex gap-2 mt-4">
+<label class="px-3 py-1.5 rounded text-xs bg-surface-container-lowest border border-outline-variant text-on-surface hover:bg-surface-container transition-colors cursor-pointer" for="avatarUpload">사진 변경</label>
+<button class="px-3 py-1.5 rounded text-xs text-error hover:bg-error-container/20 transition-colors" type="button">삭제</button>
+</div>
+</div>
+<!-- Fields Column -->
+<div class="md:col-span-8 space-y-4">
+<!-- 성명 (Readonly with verification tag) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1">성명 (실명)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border border-outline-variant/60 rounded-lg px-3.5 py-2.5 text-on-surface font-medium cursor-not-allowed text-body-md font-body-md" readonly="" type="text" value="이은혜"/>
+<span class="absolute right-3 top-2.5 flex items-center gap-1 text-xs text-primary font-semibold bg-primary-fixed/60 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 실명 확인됨
+                </span>
+</div>
+<p class="text-xs text-outline mt-1">개명 등으로 성명 수정이 필요하신 경우 교회사무국(051-242-0191)으로 문의해 주시기 바랍니다.</p>
+</div>
+<!-- 연동 소셜 계정 (카카오톡 Primary) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1">연동 소셜 계정 (기본 로그인)</label>
+<div class="flex items-center justify-between p-3 rounded-lg border border-outline-variant/80 bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-[#FEE500] text-[#191919] flex items-center justify-center font-bold text-sm shadow-xs">
+                    💬
+                  </span>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-sm font-semibold text-on-surface">카카오 간편로그인</span>
+<span class="text-[11px] px-1.5 py-0.2 rounded bg-primary text-white font-medium">기본 로그인</span>
+</div>
+<span class="text-xs text-outline">eunhye.lee@kakao.com</span>
+</div>
+</div>
+<span class="text-xs text-outline font-medium px-2.5 py-1 rounded bg-surface-container">연동 해제 불가 (필수 계정)</span>
+</div>
+</div>
+<!-- 보조 연동 계정 (Google) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1">보조 간편로그인 연동</label>
+<div class="flex items-center justify-between p-3 rounded-lg border border-dashed border-outline-variant bg-surface-container-low/30">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-full bg-white border border-outline-variant/60 text-[#4285F4] flex items-center justify-center font-bold text-base shadow-xs">
+                    G
+                  </span>
+<div>
+<div class="text-sm font-medium text-on-surface">Google 계정</div>
+<span class="text-xs text-outline">미연동 (보조 로그인으로 추가 가능)</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant text-xs font-semibold text-on-surface hover:bg-surface-container-lowest transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">link</span> Google 계정 추가 연결
+                </button>
+</div>
+</div>
+<!-- 휴대전화 번호 및 점유인증 -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1">휴대전화 번호 (목양 알림톡 수신 번호)</label>
+<div class="flex flex-col sm:flex-row gap-2">
+<input class="flex-1 bg-surface-container-lowest border border-outline-variant rounded-lg px-3.5 py-2.5 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" type="tel" value="010-8765-4321"/>
+<button class="px-4 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-label-md font-label-md font-semibold transition-colors shrink-0 flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span> 번호 변경 / 점유인증
+                </button>
+</div>
+</div>
+<!-- 거주 지역 (행정동) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1">거주 지역 (행정동)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg px-3.5 py-2.5 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" type="text" value="부산광역시 서구 서대신동 (다락방 소그룹 편성 기준)"/>
+<span class="absolute right-3 top-3 text-xs text-outline">소그룹 자동 편성</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: 교회 출석 및 다락방(소그룹) 목양 정보 -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 p-6 md:p-8 space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">church</span>
+</span>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">교회 출석 및 다락방(소그룹) 목양 정보</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">The바른교회 교적 등록 및 소그룹 순모임 공동체 정보입니다.</p>
+</div>
+</div>
+</div>
+<!-- 교인 인증 상태 카드 (Amber Tone Sacred Card Accent) -->
+<div class="p-4 sm:p-5 rounded-xl bg-[#FEF3C7]/40 border border-[#FDE68A] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[24px] mt-0.5 shrink-0">pending_actions</span>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-label-md font-label-md text-on-secondary-fixed font-bold">현재 교인 인증 심사 진행 중</span>
+<span class="text-[11px] px-2 py-0.5 rounded-full bg-secondary text-white font-semibold">심사 번호 #REQ-20241120-04</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-normal">
+                제출하신 새가족 등록 및 세례 문답 교적 기록을 교회사무국에서 대조 검토하고 있습니다. 승인 완료 시 정교인 전용 '은혜나눔 및 중보기도실'이 자동 개방됩니다.
+              </p>
+</div>
+</div>
+<button class="shrink-0 px-3.5 py-2 rounded-lg bg-white border border-[#FDE68A] text-xs font-semibold text-secondary hover:bg-[#FEF3C7] transition-colors" type="button">
+            제출 서류 확인
+          </button>
+</div>
+<!-- Information Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 space-y-1">
+<span class="text-label-sm font-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">diversity_3</span> 소속/희망 다락방
+            </span>
+<div class="text-body-lg font-headline-sm text-primary font-semibold">서대신 다락방</div>
+<p class="text-xs text-on-surface-variant">담당: 이은혜 순장 / 안민주 담임목사</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 space-y-1">
+<span class="text-label-sm font-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> 주요 출석 예배
+            </span>
+<div class="text-body-lg font-headline-sm text-on-surface font-semibold">주일 2부 예배 (오전 11:00)</div>
+<p class="text-xs text-on-surface-variant">본당 2층 글로리아홀 현장 참석</p>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/40 space-y-1 sm:col-span-2 lg:col-span-1">
+<span class="text-label-sm font-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">workspace_premium</span> 직분 구분
+            </span>
+<div class="text-body-lg font-headline-sm text-on-surface font-semibold">일반 성도 (세례교인)</div>
+<p class="text-xs text-on-surface-variant">소속교단: 대한예수교장로회(합신)</p>
+</div>
+</div>
+<!-- Pastoral Prayer Memo Field -->
+<div class="space-y-2 pt-2">
+<label class="block text-label-md font-label-md text-on-surface flex items-center justify-between" for="pastoralMemo">
+<span class="flex items-center gap-1.5 font-semibold">
+<span class="material-symbols-outlined text-primary text-[18px]">volunteer_activism</span>
+              담임목사님 및 교역자께 전하는 말씀 (목양 메모 / 기도제목)
+            </span>
+<span class="text-xs text-outline font-normal">비공개 안전 보장</span>
+</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant rounded-lg p-3 text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container" id="pastoralMemo" placeholder="새로운 가정 기도제목이나 심방 요청 사항이 있으시면 자유롭게 적어주세요. 담임목사님과 담당 교역자만 열람합니다." rows="3">새로운 사업장 이전과 둘째 아이의 학업 진로를 위해 기도 부탁드립니다. 항상 귀한 생명의 말씀으로 먹여주셔서 감사드립니다.</textarea>
+</div>
+</section>
+<!-- Section 3: 알림 및 수신 설정 (Notification Settings) -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 p-6 md:p-8 space-y-6">
+<div class="flex items-center justify-between border-b border-outline-variant/40 pb-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">mark_chat_read</span>
+</span>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-on-surface">알림 및 목양 소식 수신 설정</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">교회 소식 및 주보, 설교 영상 수신 채널을 설정합니다.</p>
+</div>
+</div>
+</div>
+<div class="divide-y divide-outline-variant/40">
+<!-- Item 1: 카카오 알림톡 -->
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-body-md font-body-md font-semibold text-on-surface">카카오 알림톡 수신 동의</span>
+<span class="text-[11px] px-2 py-0.2 rounded bg-primary-fixed text-on-primary-fixed font-semibold">필수 권장</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                주일 설교 영상 링크, 온라인 주보(PDF), 교인 인증 심사 결과 및 다락방 순모임 일정 알림
+              </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Item 2: SMS 알림 -->
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="space-y-1">
+<span class="text-body-md font-body-md font-semibold text-on-surface">중보기도 및 교회 소식 SMS 문자 수신</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                성도 경조사(부고·결혼), 공동의회 일정 및 긴급 중보기도 요청 SMS
+              </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Item 3: 긴급 목회 행사 -->
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="space-y-1">
+<span class="text-body-md font-body-md font-semibold text-on-surface">긴급 목회 및 교단(합신) 특별 공지</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                기상 특보로 인한 비대면 예배 전환 등 재난/긴급 목회 상황 알림
+              </p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-outline-variant after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Form Action Buttons -->
+<div class="flex flex-col-reverse sm:flex-row items-center justify-end gap-3 pt-2">
+<a class="w-full sm:w-auto px-6 py-3 rounded-lg border border-outline-variant text-on-surface text-center font-semibold hover:bg-surface-container transition-colors text-label-md font-label-md" href="#">
+          취소하고 마이페이지로 돌아가기
+        </a>
+<button class="w-full sm:w-auto px-8 py-3 rounded-lg bg-primary-container hover:bg-primary text-white font-semibold transition-all shadow-sm hover:shadow active:scale-95 text-label-md font-label-md flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+          변경사항 저장하기
+        </button>
+</div>
+</form>
+<!-- Section 4: 회원탈퇴 (Account Withdrawal & Deletion) Section -->
+<section class="mt-16 bg-surface-container-lowest rounded-xl border border-error/30 p-6 md:p-8 space-y-6" id="withdrawal-section">
+<div class="flex items-center justify-between border-b border-error/20 pb-4">
+<div class="flex items-center gap-3">
+<span class="w-8 h-8 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">no_accounts</span>
+</span>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-error">회원탈퇴 안내 및 온라인 계정 삭제</h2>
+<p class="text-body-sm font-body-sm text-on-surface-variant">홈페이지 이용 권한 종료 및 소셜 연동 해제</p>
+</div>
+</div>
+<span class="text-xs px-2.5 py-1 rounded bg-error-container text-on-error-container font-semibold">신중한 결정 권장</span>
+</div>
+<!-- Dignified Pastoral Guidance -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-outline-variant/60 space-y-3">
+<div class="flex items-start gap-2.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">info</span>
+<p class="text-body-sm font-body-sm text-on-surface leading-relaxed">
+            The바른교회 온라인 교적 및 홈페이지 계정을 탈퇴하시기 전 아래 내용을 반드시 확인해 주시기 바랍니다.
+          </p>
+</div>
+<ul class="text-xs text-on-surface-variant space-y-1.5 pl-7 list-disc">
+<li>탈퇴 즉시 온라인 교적 인증, 은혜나눔 게시글 작성 및 댓글 쓰기 권한, 비공개 중보기도 요청 내역 열람이 중단됩니다.</li>
+<li>기존에 연동된 카카오톡 및 구글 소셜 로그인 토큰 정보는 영구 파기되어 복구되지 않습니다.</li>
+<li><strong class="text-on-surface">중요:</strong> 본 절차는 '홈페이지 온라인 회원 탈퇴'이며, 오프라인 교회의 실제 등록 교적(원부) 제적 및 이명 증명서 발급은 교단 헌법 및 교회 행정 규정에 따라 행정사무국(051-242-0191)으로 직접 요청해 주셔야 합니다.</li>
+</ul>
+</div>
+<!-- Withdrawal Reasons -->
+<div class="space-y-3 pt-2">
+<label class="block text-label-md font-label-md text-on-surface font-semibold">탈퇴 사유를 선택해 주세요 (목회 행정 참고용)</label>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-body-sm font-body-sm">
+<label class="flex items-center gap-2.5 p-3 rounded-lg border border-outline-variant/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input checked="" class="text-primary focus:ring-primary" name="withdrawalReason" type="radio"/>
+<span class="text-on-surface">타지역 이사 / 타교회 이명</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-lg border border-outline-variant/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="withdrawalReason" type="radio"/>
+<span class="text-on-surface">온라인 서비스 이용 빈도 낮음</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-lg border border-outline-variant/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="withdrawalReason" type="radio"/>
+<span class="text-on-surface">개인정보 삭제 및 소셜 연결 해제 희망</span>
+</label>
+<label class="flex items-center gap-2.5 p-3 rounded-lg border border-outline-variant/70 hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="withdrawalReason" type="radio"/>
+<span class="text-on-surface">기타 (직접 입력)</span>
+</label>
+</div>
+</div>
+<!-- Confirmation Checkbox -->
+<div class="pt-2">
+<label class="flex items-start gap-3 p-3.5 rounded-lg bg-error-container/10 border border-error/20 cursor-pointer">
+<input class="rounded text-error focus:ring-error mt-0.5" id="withdrawConfirmCheck" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface">
+            위 유의사항을 모두 확인하였으며, The바른교회 홈페이지 온라인 회원탈퇴 및 소셜 연동 해제를 진행하는 것에 동의합니다.
+          </span>
+</label>
+</div>
+<!-- Danger Action Trigger -->
+<div class="pt-2 flex justify-end">
+<button class="px-6 py-2.5 rounded-lg border border-error text-error hover:bg-error hover:text-white font-semibold transition-colors text-label-md font-label-md flex items-center gap-2" onclick="handleWithdrawal()" type="button">
+<span class="material-symbols-outlined text-[18px]">person_remove</span>
+          The바른교회 온라인 회원탈퇴 신청하기
+        </button>
+</div>
+</section>
+</main>
+<!-- Scripture & Liturgical Benediction Strip -->
+<aside class="w-full bg-surface-container-low border-t border-outline-variant/40 py-6 px-6 text-center">
+<div class="max-w-3xl mx-auto space-y-1">
+<p class="font-scripture-quote text-scripture-quote text-primary italic font-serif">
+        "여호와는 네게 복을 주시고 너를 지키시기를 원하며, 여호와는 그의 얼굴을 네게 비추사 은혜 베푸시기를 원하며"
+      </p>
+<p class="text-label-sm font-label-sm text-outline">
+        민수기 6장 24-25절 · Soli Deo Gloria — 오직 하나님께 영광을
+      </p>
+</div>
+</aside>
+<!-- Footer (Shared Component JSON Implementation) -->
+<footer class="bg-tertiary text-on-tertiary docked full-width bottom border-t border-outline">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Left Column: Brand & Ecclesiastical Identity -->
+<div class="space-y-3 max-w-md">
+<div class="text-headline-md font-headline-md text-on-tertiary font-semibold flex items-center gap-2.5">
+<img alt="The바른교회" class="w-7 h-7 object-contain brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Xt-JJeNQYK3Ag_PLvSiBHtcz09nKFe0--aLSrZfnPB4oMkNUN9KrMT86RBadYdK4ht4AF-i4bQq3CVtuHXpmepqKrBjCddPjusfOmMg9lTcY0DB73MhAYc95YnqYtFqhyPqGnsKep7_2CfDij8Khrm3yuQa0plx7SeiLzLh2DA6Ev5vf3UiGT3mjpkB0VpCB_UAGTktGst9izt0NLYohnonQb5OmPrX2vZ_rT-MyXRiTV2bFssCyMThjYN8-g86fy6A"/>
+<span>The바른교회</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-tertiary-container leading-relaxed">
+          대한예수교장로회(합신) The바른교회 | 담임목사 안민주<br/>
+          부산광역시 서구 대영로38번길 47, 2층 (서대신동2가)<br/>
+          행정사무국: 051-242-0191 | 이메일: barunchurch@naver.com
+        </p>
+<p class="text-label-sm font-label-sm text-tertiary-fixed-dim pt-1">
+          © 2024 더바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.
+        </p>
+</div>
+<!-- Right Column: Quick Church Administration Links -->
+<div class="flex flex-col sm:flex-row gap-8 lg:gap-14 text-label-sm font-label-sm">
+<div class="space-y-2.5">
+<span class="font-semibold text-tertiary-fixed block uppercase tracking-wider text-xs">교회 정보 및 행정</span>
+<ul class="space-y-2">
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">개인정보처리방침</a></li>
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">이용약관</a></li>
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">교회행정문의</a></li>
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">오시는 길</a></li>
+</ul>
+</div>
+<div class="space-y-2.5">
+<span class="font-semibold text-tertiary-fixed block uppercase tracking-wider text-xs">예배 및 목양 방송</span>
+<ul class="space-y-2">
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">유튜브 방송 안내</a></li>
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">새가족 등록 안내</a></li>
+<li><a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">온라인 헌금 안내</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- Light Vanilla Script for Interactions -->
+<script>
+    function handleWithdrawal() {
+      const confirmCheck = document.getElementById('withdrawConfirmCheck');
+      if (!confirmCheck.checked) {
+        alert('안내사항을 확인하신 후 탈퇴 동의 체크박스에 체크해 주셔야 신청이 가능합니다.');
+        confirmCheck.focus();
+        return;
+      }
+      if (confirm('정말로 The바른교회 온라인 홈페이지 탈퇴를 신청하시겠습니까?\n온라인 교적 및 소셜 연동 계정이 즉시 해제됩니다.')) {
+        alert('탈퇴 신청이 정상적으로 처리되었습니다. The바른교회와 함께해 주셔서 감사드리며, 성도님의 앞날에 주님의 은혜가 충만하시기를 기도합니다.');
+        window.location.href = '#';
+      }
+    }
+  </script>
+</body></html>

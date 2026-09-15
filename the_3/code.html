@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>마이페이지 | The바른교회 (대한예수교장로회 합신)</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-primary": "#b6c4ff",
+            "surface-container-high": "#e6e8ea",
+            "tertiary-fixed": "#dae2fd",
+            "error-container": "#ffdad6",
+            "secondary": "#904d00",
+            "secondary-container": "#fe932c",
+            "tertiary-container": "#384055",
+            "on-secondary-fixed": "#2f1500",
+            "on-surface": "#191c1e",
+            "outline": "#757682",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "on-secondary-fixed-variant": "#6e3900",
+            "error": "#ba1a1a",
+            "background": "#f7f9fb",
+            "surface-container-highest": "#e0e3e5",
+            "inverse-on-surface": "#eff1f3",
+            "secondary-fixed": "#ffdcc3",
+            "on-tertiary-container": "#a4acc5",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#c5c5d3",
+            "on-tertiary-fixed": "#131b2e",
+            "on-primary-container": "#90a8ff",
+            "primary-fixed": "#dce1ff",
+            "on-primary-fixed-variant": "#264191",
+            "surface-dim": "#d8dadc",
+            "surface-bright": "#f7f9fb",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#444651",
+            "on-secondary-container": "#663500",
+            "tertiary-fixed-dim": "#bec6e0",
+            "secondary-fixed-dim": "#ffb77d",
+            "on-primary-fixed": "#00164e",
+            "primary": "#00236f",
+            "tertiary": "#222a3e",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#b6c4ff",
+            "surface": "#f7f9fb",
+            "surface-variant": "#e0e3e5",
+            "on-background": "#191c1e",
+            "surface-tint": "#4059aa",
+            "surface-container": "#eceef0",
+            "surface-container-low": "#f2f4f6",
+            "inverse-surface": "#2d3133",
+            "primary-container": "#1e3a8a",
+            "on-error": "#ffffff",
+            "on-error-container": "#93000a",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "margin": "2rem",
+            "space-xs": "0.25rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Noto Serif KR", "serif"],
+            "scripture-quote": ["Noto Serif KR", "serif"],
+            "label-md": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-lg-mobile": ["Noto Serif KR", "serif"],
+            "body-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-md": ["Noto Serif KR", "serif"],
+            "body-md": ["\"Source Sans 3\"", "sans-serif"],
+            "display-lg": ["Noto Serif KR", "serif"],
+            "display-lg-mobile": ["Noto Serif KR", "serif"],
+            "body-lg": ["\"Source Sans 3\"", "sans-serif"],
+            "label-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-sm": ["Noto Serif KR", "serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .active-tab-indicator {
+      border-bottom: 2px solid #00236f;
+      color: #00236f;
+      font-weight: 600;
+      background-color: #f2f4f6;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar (Shared Component Anchor) -->
+<header class="w-full sticky top-0 z-50 bg-surface-container-lowest dark:bg-inverse-surface shadow-sm dark:shadow-none border-b border-outline-variant dark:border-outline">
+<div class="w-full px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto h-20">
+<!-- Brand Logo Cluster -->
+<a class="flex items-center gap-3 group transition-transform active:scale-95" href="#">
+<img alt="The바른교회 로고" class="w-11 h-11 object-contain rounded-full shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1WhM-zgKRpZqnaSnlDBk2s35W1LSHtr3m2dcfC5hFbbEb0afInaHnHz86Upw81xXDaeGvZ_tB0U_05CpMtNyRmhaI8z3meqk6gO5K4xzGLE8ENAcR5TtaP6pjtZBxJwZsN5fnuSQ-dm8YTIaZ6Lei-3mlc7Fl0kGQ9EQLzqAdIct174DRIc74HABvWcgS_GYhydimqNlt-ODDnyKHnbMfjfl8wiY2gYhTla61EmplKWJI-cjEwxvJe3aHkb"/>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight group-hover:opacity-90">더바른교회</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant dark:text-surface-variant">대한예수교장로회(합신)</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소개</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">말씀·찬양</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">공동체</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors py-2 text-label-md font-label-md" href="#">교회소식</a>
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary py-2 text-label-md font-label-md" href="#">온라인행정</a>
+</nav>
+<!-- Trailing Action: Logged-in State Cluster -->
+<div class="flex items-center gap-3">
+<div class="hidden lg:flex items-center gap-2 px-3 py-1.5 bg-surface-container-low rounded-full text-label-md font-label-md text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-semibold text-primary">홍길동 성도님</span>
+<span class="text-on-surface-variant text-label-sm font-label-sm">환영합니다</span>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 text-label-sm font-label-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>마이페이지</span>
+</a>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 text-label-sm font-label-sm rounded-lg border border-outline-variant text-on-surface-variant hover:text-primary hover:bg-surface-container-low transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span class="hidden sm:inline">로그아웃</span>
+</button>
+<a class="hidden md:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary text-label-md font-label-md hover:bg-primary transition-colors shadow-sm active:scale-95" href="#">
+<span class="material-symbols-outlined text-base">smart_display</span>
+<span>새가족 등록 안내</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Canvas Container -->
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-8 md:py-12 flex flex-col gap-8">
+<!-- 1. Hero Header & Profile Summary Section -->
+<section class="flex flex-col gap-6">
+<!-- Spiritual Welcome Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant p-6 sm:p-8 shadow-sm">
+<div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-surface-container-low to-transparent pointer-events-none hidden md:block"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="flex flex-col gap-2 max-w-2xl">
+<div class="inline-flex items-center gap-2 text-label-sm font-label-sm text-secondary bg-secondary-fixed/50 px-3 py-1 rounded-full w-fit">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span>The바른교회 온라인 목양실</span>
+</div>
+<h1 class="text-headline-md sm:text-headline-lg font-headline-lg text-primary tracking-tight">
+              홍길동 성도님, 그리스도 안에서 평안하신지요.
+            </h1>
+<p class="text-scripture-quote font-scripture-quote text-on-surface-variant italic pt-1">
+              "여호와는 나의 목자시니 내게 부족함이 없으리로다" 
+              <span class="text-label-md font-label-md not-italic text-outline"> (시편 23:1)</span>
+</p>
+</div>
+<div class="flex sm:flex-col items-start sm:items-end justify-between border-t md:border-t-0 pt-4 md:pt-0 border-outline-variant gap-2">
+<span class="text-label-sm font-label-sm text-on-surface-variant">오늘의 묵상 본문</span>
+<div class="text-headline-sm font-headline-sm text-primary">시편 23편 1~6절</div>
+<a class="inline-flex items-center gap-1 text-label-sm font-label-sm text-primary hover:underline" href="#">
+<span>말씀 묵상 큐티 바로가기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Member Profile Detailed Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 sm:p-8 shadow-sm flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+<!-- Left: Identity & Verification -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 w-full lg:w-auto">
+<div class="relative">
+<div class="w-20 h-20 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-headline-md border-2 border-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary">account_circle</span>
+</div>
+<span class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-surface-container-lowest flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">verified</span>
+</span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="text-headline-md font-headline-md text-on-surface">홍길동</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">성도 (서리집사)</span>
+<!-- Official Verified Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-low text-primary border border-outline-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">verified</span>
+                공식 등록 교인 (2024년 정회원)
+              </span>
+</div>
+<!-- Belonging details -->
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-label-md font-label-md text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-outline">group</span>
+<span>소속: <strong class="text-on-surface font-semibold">서대신 다락방</strong></span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-outline">diversity_3</span>
+<span>순장: <span class="text-on-surface font-medium">이은혜 집사</span></span>
+</div>
+<span class="text-outline-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm text-secondary">mail</span>
+<span class="text-label-sm font-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">카카오 간편인증 (kakao@example.com)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Action Buttons and Status Switcher View -->
+<div class="flex flex-wrap items-center gap-3 w-full lg:w-auto pt-4 lg:pt-0 border-t lg:border-t-0 border-outline-variant justify-start lg:justify-end">
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg border border-outline-variant bg-surface-container-lowest hover:bg-surface-container-low text-on-surface text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">manage_accounts</span>
+<span>회원정보/연락처 수정</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary text-label-md font-label-md transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-base">badge</span>
+<span>디지털 교인증 확인</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 2. Pastoral Care Message Box -->
+<section class="bg-secondary-fixed/30 border border-secondary/20 rounded-xl p-6 relative overflow-hidden flex flex-col sm:flex-row items-start sm:items-center gap-5">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">church</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="text-label-md font-label-md font-semibold text-secondary">담임목사 안민주 목사의 목양 서신</span>
+<span class="text-label-sm font-label-sm text-outline">주간 목양 편지</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface">
+          "한 영혼을 귀히 여기는 The바른교회입니다. 성도님의 삶의 자리와 기도제목에 늘 함께하겠습니다. 심방이나 긴급 기도가 필요하시면 언제든 1:1 목양 상담 창구를 이용해 주세요."
+        </p>
+</div>
+<a class="shrink-0 px-4 py-2 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container border border-outline-variant text-label-md font-label-md transition-colors" href="#pastoral-counsel">
+        1:1 목양 상담하기
+      </a>
+</section>
+<!-- 3. Member Privilege & Service Quick Access Cards (Bento Grid) -->
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-sm font-headline-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+          교인 특권 및 온라인 행정 바로가기
+        </h2>
+<span class="text-label-sm font-label-sm text-on-surface-variant">성도님께 부여된 정회원 권한 서비스</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+<!-- Card 1: 은혜나눔 & 감사제목 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 hover:border-primary transition-all duration-200 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</div>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">공동체 나눔</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">은혜나눔 &amp; 감사제목</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">내가 작성한 은혜나눔 <strong class="text-primary font-semibold">3건</strong> • 받은 아멘 공감 <strong class="text-secondary font-semibold">24개</strong></p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">최근 글: 2024.11.17 작성</span>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary font-semibold hover:underline" href="#">
+<span>글쓰기 바로가기</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 2: 담임목사님 1:1 목양 상담 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 hover:border-primary transition-all duration-200 shadow-sm flex flex-col justify-between group" id="pastoral-counsel">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">support_agent</span>
+</div>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded font-semibold">
+                답변완료 1건
+              </span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">담임목사 1:1 목양 상담</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">안민주 담임목사님과의 비밀 기도상담 및 가정 심방 신청 창구</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">비공개 비밀보장</span>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary font-semibold hover:underline" href="#">
+<span>질문 및 답변 확인</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 3: 소그룹 다락방 나눔터 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 hover:border-primary transition-all duration-200 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">groups</span>
+</div>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded text-on-surface">서대신 다락방</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">소그룹 다락방 나눔터</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">이번 주 말씀 나눔 교재 다운로드 및 금주 모임 일정 확인</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">모임: 매주 금 20:00</span>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary font-semibold hover:underline" href="#">
+<span>다락방 입장</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 4: 온라인 주보 & 말씀 다시보기 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 hover:border-primary transition-all duration-200 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">menu_book</span>
+</div>
+<span class="text-label-sm font-label-sm bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant">주일 예배</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">온라인 주보 &amp; 말씀노트</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">주일 설교 요약노트 PDF 다운로드 및 성경 본문 묵상 가이드</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">제52권 47호 주보</span>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary font-semibold hover:underline" href="#">
+<span>주보 열람하기</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 5: 온라인 헌금 & 기부금영수증 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 hover:border-primary transition-all duration-200 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">receipt_long</span>
+</div>
+<span class="text-label-sm font-label-sm bg-secondary-fixed/60 text-secondary px-2 py-0.5 rounded font-semibold">연말정산 안내</span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">온라인 헌금 &amp; 기부금영수증</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">2024년 헌금 기부금영수증 국세청 간소화 및 직접 온라인 발급 신청</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">등록교인 전용 서비스</span>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary font-semibold hover:underline" href="#">
+<span>신청 내역 확인</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Card 6: 중보기도 요청 창구 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 hover:border-primary transition-all duration-200 shadow-sm flex flex-col justify-between group">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">volunteer_activism</span>
+</div>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm bg-primary/10 text-primary px-2 py-0.5 rounded font-semibold">
+                기도 진행 중
+              </span>
+</div>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors">중보기도 요청 창구</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">The바른교회 목회팀과 중보기도 사역팀이 성도님을 위해 기도합니다.</p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">진행 중 기도제목: 2건</span>
+<a class="inline-flex items-center gap-1 text-label-md font-label-md text-primary font-semibold hover:underline" href="#">
+<span>기도제목 관리</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Detailed Dashboard Tabs Section -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Tab Navigation Rail (은혜로운 단아한 탭) -->
+<div class="border-b border-outline-variant bg-surface-container-low/50 px-6 pt-3 flex overflow-x-auto gap-4" role="tablist">
+<button class="tab-btn active-tab-indicator px-5 py-3 text-label-md font-label-md rounded-t-lg transition-colors flex items-center gap-2" onclick="switchTab(0)" type="button">
+<span class="material-symbols-outlined text-base">history_edu</span>
+<span>나의 신앙활동 및 작성 내역</span>
+</button>
+<button class="tab-btn text-on-surface-variant hover:text-primary px-5 py-3 text-label-md font-label-md rounded-t-lg transition-colors flex items-center gap-2" onclick="switchTab(1)" type="button">
+<span class="material-symbols-outlined text-base">how_to_reg</span>
+<span>교인 인증 및 교적 관리</span>
+</button>
+<button class="tab-btn text-on-surface-variant hover:text-primary px-5 py-3 text-label-md font-label-md rounded-t-lg transition-colors flex items-center gap-2" onclick="switchTab(2)" type="button">
+<span class="material-symbols-outlined text-base">notifications</span>
+<span>알림 및 목양 수신 설정</span>
+</button>
+</div>
+<!-- Tab Panels Container -->
+<div class="p-6 md:p-8">
+<!-- Tab 1: 나의 신앙활동 및 작성 내역 -->
+<div class="tab-content flex flex-col gap-6" id="tab-panel-0">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">최근 작성한 은혜나눔 및 기도 요청</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">성도님이 나눈 은혜와 목사님 및 중보기도팀의 응답 현황입니다.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant text-label-sm font-label-sm hover:bg-surface-container transition-colors" type="button">전체보기</button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary text-label-sm font-label-sm hover:bg-primary-container transition-colors" type="button">새 글 작성</button>
+</div>
+</div>
+<!-- Activity Table -->
+<div class="overflow-x-auto border border-outline-variant rounded-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant text-label-sm font-label-sm text-outline">
+<th class="py-3.5 px-4">구분</th>
+<th class="py-3.5 px-4">제목</th>
+<th class="py-3.5 px-4 text-center">진행 상태</th>
+<th class="py-3.5 px-4">작성일자</th>
+<th class="py-3.5 px-4 text-right">관리</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant text-body-sm font-body-sm text-on-surface">
+<tr class="hover:bg-surface-container-lowest/50">
+<td class="py-4 px-4 font-semibold text-primary">담임목사 상담</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">lock</span>
+<span class="font-medium hover:text-primary cursor-pointer">가정 내 신앙 양육과 관련한 심방 요청 및 기도 상담</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-label-sm font-label-sm font-semibold">
+                      목사님 답변완료
+                    </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">2024.11.12</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-label-sm font-label-sm" type="button">열람</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/50">
+<td class="py-4 px-4 font-semibold text-on-surface">은혜나눔</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="font-medium hover:text-primary cursor-pointer">지난 주일 '참된 제자의 길' 설교를 듣고 받은 큰 위로와 결단</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">[아멘 14]</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface text-label-sm font-label-sm">
+                      게시완료
+                    </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">2024.11.10</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-label-sm font-label-sm" type="button">수정</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest/50">
+<td class="py-4 px-4 font-semibold text-secondary">중보기도</td>
+<td class="py-4 px-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-outline">lock</span>
+<span class="font-medium hover:text-primary cursor-pointer">친정 부모님 건강 회복 및 영혼 구원을 위한 긴급 중보기도 요청</span>
+</div>
+</td>
+<td class="py-4 px-4 text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed/50 text-secondary text-label-sm font-label-sm font-semibold">
+                      기도중 (기도팀 연계)
+                    </span>
+</td>
+<td class="py-4 px-4 text-on-surface-variant">2024.11.04</td>
+<td class="py-4 px-4 text-right">
+<button class="text-primary hover:underline text-label-sm font-label-sm" type="button">내용보기</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Tab 2: 교인 인증 및 교적 관리 -->
+<div class="tab-content hidden flex-col gap-6" id="tab-panel-1">
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">The바른교회 등록 교인 교적 정보</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">대한예수교장로회(합신) 총회 및 노회 규정에 따른 교적 등록 상세 현황입니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="border border-outline-variant rounded-xl p-5 bg-surface-container-low/30 flex flex-col gap-4">
+<h5 class="text-label-md font-label-md font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-base">badge</span>
+                교인 등록 원부 사항
+              </h5>
+<div class="flex flex-col divide-y divide-outline-variant text-body-sm font-body-sm">
+<div class="py-2.5 flex justify-between">
+<span class="text-outline">등록 교인 번호</span>
+<span class="font-semibold text-on-surface">TBR-2024-0348</span>
+</div>
+<div class="py-2.5 flex justify-between">
+<span class="text-outline">등록 일자</span>
+<span class="font-semibold text-on-surface">2024년 3월 10일 (정회원 인증)</span>
+</div>
+<div class="py-2.5 flex justify-between">
+<span class="text-outline">신급 (세례/입교 여부)</span>
+<span class="font-semibold text-on-surface">입교·세례교인 (세례 완료)</span>
+</div>
+<div class="py-2.5 flex justify-between">
+<span class="text-outline">직분 현황</span>
+<span class="font-semibold text-on-surface">서리집사 (2024년 임명)</span>
+</div>
+<div class="py-2.5 flex justify-between">
+<span class="text-outline">소속 공동체</span>
+<span class="font-semibold text-on-surface">장년교구 2교구 &gt; 서대신 다락방</span>
+</div>
+</div>
+</div>
+<div class="border border-outline-variant rounded-xl p-5 bg-surface-container-low/30 flex flex-col justify-between gap-4">
+<div class="flex flex-col gap-3">
+<h5 class="text-label-md font-label-md font-semibold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-base">family_restroom</span>
+                  가족 교적 연계 및 인증 상태 변경
+                </h5>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                  직계가족(배우자, 자녀)의 교적 동기화 및 새가족 등록 수료 후 정회원 인증 승격 요청이 가능합니다. 이사 및 연락처 변경 시 즉시 수정해 주시기 바랍니다.
+                </p>
+<div class="p-3 bg-surface-container-lowest border border-outline-variant rounded-lg">
+<span class="text-label-sm font-label-sm text-primary font-semibold">연계된 가족:</span>
+<span class="text-body-sm font-body-sm text-on-surface ml-1">배우자(김바른 성도), 자녀 1명(영아부)</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-2 pt-2">
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-lowest hover:bg-surface-container border border-outline-variant text-on-surface text-label-md font-label-md transition-colors" type="button">
+                  가족 교적 연계 신청
+                </button>
+<button class="w-full py-2.5 px-4 rounded-lg bg-primary text-on-primary hover:bg-primary-container text-label-md font-label-md transition-colors" type="button">
+                  교적 정정 및 증명서 신청
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 3: 알림 및 목양 수신 설정 -->
+<div class="tab-content hidden flex-col gap-6" id="tab-panel-2">
+<div>
+<h4 class="text-headline-sm font-headline-sm text-on-surface">알림톡 및 온라인 목양 소식 수신 설정</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant">카카오톡 알림톡 및 문자메시지로 전송되는 The바른교회 목양 알림 설정입니다.</p>
+</div>
+<div class="divide-y divide-outline-variant border border-outline-variant rounded-xl p-4 sm:p-6 bg-surface-container-lowest">
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-on-surface">주일 주보 및 말씀 요약 알림</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">매주 토요일 저녁 주일예배 순서 및 온라인 주보 링크 수신</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-on-surface">1:1 목양 상담 담임목사 답변 알림</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">안민주 담임목사님의 비밀 기도 및 심방 답변 등록 즉시 알림</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-on-surface">소그룹 다락방 주간 공지 및 나눔 교재 알림</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">서대신 다락방 순장 공지 및 금주 교재 업로드 시 실시간 알림</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="py-4 flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-on-surface">긴급 성도 경조사 및 중보기도 요청 알림</span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">교회 내 장례, 긴급 입원 및 전교인 합심기도 발생 시 발송</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Quick Location & Service Time Summary Fragment -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Worship Schedule Snapshot Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">schedule</span>
+              예배 시간표 안내
+            </span>
+<span class="text-label-sm font-label-sm text-outline">본당 2층</span>
+</div>
+<div class="divide-y divide-outline-variant text-body-sm font-body-sm">
+<div class="py-2.5 flex justify-between items-center">
+<span class="font-medium text-on-surface">주일 대예배 1부</span>
+<span class="font-semibold bg-surface-container-low px-2.5 py-1 rounded text-primary text-label-sm font-label-sm">주일 오전 09:00</span>
+</div>
+<div class="py-2.5 flex justify-between items-center">
+<span class="font-medium text-on-surface">주일 대예배 2부 (찬양/다락방)</span>
+<span class="font-semibold bg-primary-fixed/60 px-2.5 py-1 rounded text-primary text-label-sm font-label-sm">주일 오전 11:00</span>
+</div>
+<div class="py-2.5 flex justify-between items-center">
+<span class="font-medium text-on-surface">금요성령집회 및 다락방모임</span>
+<span class="font-semibold bg-surface-container-low px-2.5 py-1 rounded text-on-surface-variant text-label-sm font-label-sm">매주 금 오후 20:00</span>
+</div>
+<div class="py-2.5 flex justify-between items-center">
+<span class="font-medium text-on-surface">새벽기도회</span>
+<span class="font-semibold bg-surface-container-low px-2.5 py-1 rounded text-on-surface-variant text-label-sm font-label-sm">월~금 오전 05:30</span>
+</div>
+</div>
+</div>
+<a class="mt-4 inline-flex items-center justify-center gap-1 text-label-sm font-label-sm text-primary font-semibold hover:underline" href="#">
+<span>전체 예배 및 다음세대 부서 안내 보기</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Church Address & Pastoral Office Snapshot Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-semibold text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-base">pin_drop</span>
+              성전 위치 및 행정 안내
+            </span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">서대신동</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 text-body-sm font-body-sm">
+<p class="font-semibold text-on-surface">
+              부산광역시 서구 대영로38번길 47, 2층 (서대신동2가 / 서대신1동)
+            </p>
+<p class="text-on-surface-variant text-label-sm font-label-sm">
+              지하철 1호선 서대신역 2번 출구 도보 5분거리 • 주차 안내: 서대신 공영주차장 이용 지원
+            </p>
+<div class="mt-2 p-3 bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-base">phone</span>
+<span class="text-label-sm font-label-sm font-semibold text-on-surface">목양실 직통 / 051-242-0191</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline">담임목사 안민주</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex items-center gap-2">
+<a class="flex-1 py-2 px-3 text-center rounded-lg border border-outline-variant bg-surface-container-lowest hover:bg-surface-container text-label-sm font-label-sm font-semibold text-on-surface transition-colors" href="#">
+            카카오맵 길찾기
+          </a>
+<a class="flex-1 py-2 px-3 text-center rounded-lg border border-outline-variant bg-surface-container-lowest hover:bg-surface-container text-label-sm font-label-sm font-semibold text-on-surface transition-colors" href="#">
+            네이버 지도 보기
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component Anchor) -->
+<footer class="w-full bg-tertiary dark:bg-inverse-surface border-t border-outline dark:border-outline-variant mt-12 text-on-tertiary">
+<div class="w-full px-6 md:px-12 py-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<!-- Left: Logo & Church Admin Info -->
+<div class="flex flex-col gap-4 max-w-md">
+<div class="flex items-center gap-3">
+<img alt="The바른교회 엠블럼" class="w-10 h-10 object-contain rounded-full bg-surface-container-lowest p-0.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbDtCGP7tQDKR95J4A8vLyk7SPwzFgtZZ7UM5L0ucBxcpQ938zEUeO8Yg1ok7oiVvbI7kyApF6OS7PUR7PgNmTb7K5aFlk8VS7XLq5mmI8xtjSDZhQX7r0koMQ6wlynFnZw1fG-D9w4HuZyalba16H_XrpbKfnrczB82Va5ePu_qqnNB__mE1z6i8E-VJirrccHQTOEWwrqcGFqKLn4YVRd6UAtbosU-nlTMvJWwGIi6gRng1PQlQlmp3JapC0ZmPxdxA"/>
+<div class="flex flex-col">
+<span class="text-headline-md font-headline-md text-on-tertiary dark:text-inverse-on-surface font-semibold">The바른교회</span>
+<span class="text-label-sm font-label-sm text-tertiary-fixed">대한예수교장로회 (합신)</span>
+</div>
+</div>
+<div class="text-body-sm font-body-sm text-tertiary-fixed/90 flex flex-col gap-1">
+<p>담임목사: 안민주 목사 | 소속: 대한예수교장로회(합신) 부산노회</p>
+<p>주소: 부산광역시 서구 대영로38번길 47, 2층 (서대신동2가 / 서대신1동)</p>
+<p>전화: 051-242-0191 | 온라인 헌금/목양 문의: info@thebarun.church</p>
+</div>
+<p class="text-label-sm font-label-sm text-on-tertiary-container dark:text-surface-variant pt-2">
+          © 2024 더바른교회 (The Barun Church). All rights reserved. 대한예수교장로회.
+        </p>
+</div>
+<!-- Right: Navigation Links -->
+<div class="flex flex-col sm:flex-row gap-8 lg:gap-14 text-label-sm font-label-sm">
+<div class="flex flex-col gap-2.5">
+<span class="text-on-tertiary font-semibold pb-1 border-b border-tertiary-container">바로가기</span>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">개인정보처리방침</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">이용약관</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">교회행정문의</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">오시는 길</a>
+<a class="text-on-tertiary-container dark:text-surface-variant hover:text-on-tertiary dark:hover:text-inverse-on-surface transition-colors" href="#">유튜브 방송 안내</a>
+</div>
+<div class="flex flex-col gap-2.5">
+<span class="text-on-tertiary font-semibold pb-1 border-b border-tertiary-container">온라인 목양</span>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">온라인 주보 열람</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">설교 영상 및 음성</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">기부금영수증 발급신청</a>
+<a class="text-on-tertiary-container hover:text-on-tertiary transition-colors" href="#">1:1 담임목사 상담</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Vanilla JS for Micro-Interactions (Tab Switching) -->
+<script>
+    function switchTab(index) {
+      const buttons = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.tab-content');
+
+      buttons.forEach((btn, i) => {
+        if (i === index) {
+          btn.classList.add('active-tab-indicator');
+          btn.classList.remove('text-on-surface-variant');
+        } else {
+          btn.classList.remove('active-tab-indicator');
+          btn.classList.add('text-on-surface-variant');
+        }
+      });
+
+      panels.forEach((panel, i) => {
+        if (i === index) {
+          panel.classList.remove('hidden');
+          panel.classList.add('flex');
+        } else {
+          panel.classList.add('hidden');
+          panel.classList.remove('flex');
+        }
+      });
+    }
+  </script>
+</body></html>
