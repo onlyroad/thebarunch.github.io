@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The바른교회 메뉴 구조도</title>
+  <style>
+    :root {
+      --ink: #17324d;
+      --muted: #63758a;
+      --line: #d8e4ec;
+      --paper: #f6f9fb;
+      --white: #ffffff;
+      --teal: #0e849e;
+      --teal-dark: #07566b;
+      --amber: #d97706;
+      --amber-soft: #fff4df;
+      --blue-soft: #eaf5f8;
+      --shadow: 0 18px 50px rgb(23 50 77 / 10%);
+      font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, #e9f4f6 0, #f6f9fb 380px, #f6f9fb 100%);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 80px;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--teal-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 12px;
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1.12;
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .home-link {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      color: var(--white);
+      background: var(--teal-dark);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 8px 20px rgb(7 86 107 / 20%);
+    }
+
+    .home-link:hover { background: var(--teal); }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 18px;
+      margin-bottom: 28px;
+      padding: 15px 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: rgb(255 255 255 / 72%);
+      font-size: 0.85rem;
+    }
+
+    .legend span { display: inline-flex; align-items: center; gap: 7px; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--teal); }
+    .dot.amber { background: var(--amber); }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: baseline;
+      margin: 46px 0 16px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0;
+      font-size: 1.55rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .menu-tree {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .menu-card {
+      position: relative;
+      overflow: hidden;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .menu-card::before {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 5px;
+      background: var(--teal);
+      content: "";
+    }
+
+    .menu-card:nth-child(2)::before,
+    .menu-card:nth-child(5)::before { background: var(--amber); }
+
+    .menu-card h3 {
+      margin-bottom: 16px;
+      padding-left: 6px;
+      font-size: 1.22rem;
+      letter-spacing: -0.03em;
+    }
+
+    .menu-list {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu-item {
+      display: grid;
+      gap: 8px;
+      padding: 12px 13px;
+      border: 1px solid #e5edf2;
+      border-radius: 7px;
+      background: #fbfdfe;
+    }
+
+    .menu-item strong { font-size: 0.98rem; }
+
+    .menu-item a {
+      color: var(--teal-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .menu-item a:hover { text-decoration: underline; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .route {
+      display: inline-flex;
+      align-items: center;
+      min-height: 25px;
+      padding: 3px 8px;
+      color: var(--teal-dark);
+      background: var(--blue-soft);
+      border-radius: 4px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .route:hover { background: #d7edf1; }
+
+    .route.home { color: #7c4a03; background: var(--amber-soft); }
+    .route.home:hover { background: #ffe9bd; }
+
+    .orphan-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .orphan-list li {
+      padding: 12px 14px;
+      border: 1px solid #eadfcf;
+      border-radius: 7px;
+      background: #fffaf2;
+    }
+
+    .orphan-list a {
+      color: #8b5608;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .orphan-list a:hover { text-decoration: underline; }
+
+    .orphan-list small {
+      display: block;
+      margin-top: 3px;
+      color: #927b5b;
+      font-size: 0.75rem;
+    }
+
+    footer {
+      margin-top: 42px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 760px) {
+      .page { width: min(100% - 22px, 620px); padding-top: 32px; }
+      .hero { display: block; }
+      .home-link { margin-top: 20px; }
+      .menu-tree, .orphan-list { grid-template-columns: 1fr; }
+      .section-heading { display: block; }
+      .section-heading p { margin-top: 5px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">The Barun Presbyterian Church</p>
+        <h1>The바른교회 메뉴 구조도</h1>
+        <p class="intro">홈페이지의 5대 메뉴를 기준으로 내부 섹션과 현재 연결할 수 있는 페이지를 정리했습니다. 청록색 태그는 실제 페이지 연결, 주황색 태그는 현재 홈페이지 내부 섹션입니다.</p>
+      </div>
+      <a class="home-link" href="stitch_1/church-home.html">홈페이지 열기 <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="legend" aria-label="링크 범례">
+      <span><i class="dot" aria-hidden="true"></i> 연결 가능한 페이지</span>
+      <span><i class="dot amber" aria-hidden="true"></i> church-home.html 내부 앵커</span>
+    </div>
+
+    <div class="section-heading">
+      <h2>연동 가능한 메뉴 목록</h2>
+      <p>메뉴 항목을 클릭하면 해당 섹션 또는 관련 페이지로 이동합니다.</p>
+    </div>
+
+    <section class="menu-tree" aria-label="The바른교회 5대 메뉴">
+      <article class="menu-card">
+        <h3>01. 교회소개</h3>
+        <ul class="menu-list">
+          <li class="menu-item"><strong><a href="stitch_1/church-home.html#welcome">환영인사</a></strong><div class="links"><a class="route home" href="stitch_1/church-home.html#welcome">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="ext1/the_2/our-servants.html">섬기는 사람들</a></strong><div class="links"><a class="route" href="ext1/the_2/our-servants.html">our-servants.html</a><a class="route home" href="stitch_1/church-home.html#people">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_1/church-home.html#worship-info">예배 안내</a></strong><div class="links"><a class="route" href="stitch_15/time-map.html">time-map.html</a><a class="route home" href="stitch_1/church-home.html#worship-info">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_15/time-map.html">오시는 길</a></strong><div class="links"><a class="route" href="stitch_15/time-map.html">time-map.html</a><a class="route home" href="stitch_1/church-home.html#location">홈 섹션</a></div></li>
+        </ul>
+      </article>
+
+      <article class="menu-card">
+        <h3>02. 말씀·찬양</h3>
+        <ul class="menu-list">
+          <li class="menu-item"><strong><a href="stitch_4/sermons.html">주일 예배 말씀</a></strong><div class="links"><a class="route" href="stitch_4/sermons.html">sermons.html</a><a class="route home" href="stitch_1/church-home.html#sermon-section">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_7/worship-videos.html">찬양대 &amp; 특송</a></strong><div class="links"><a class="route" href="stitch_7/worship-videos.html">worship-videos.html</a><a class="route home" href="stitch_1/church-home.html#choir">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_5/sermon-series.html">설교 시리즈</a></strong><div class="links"><a class="route" href="stitch_5/sermon-series.html">sermon-series.html</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_6/special-events.html">특별집회·부흥회</a></strong><div class="links"><a class="route" href="stitch_6/special-events.html">special-events.html</a></div></li>
+        </ul>
+      </article>
+
+      <article class="menu-card">
+        <h3>03. 공동체</h3>
+        <ul class="menu-list">
+          <li class="menu-item"><strong><a href="stitch_14/small-groups.html">소그룹 (목장/순)</a></strong><div class="links"><a class="route" href="stitch_14/small-groups.html">small-groups.html</a><a class="route home" href="stitch_1/church-home.html#groups">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="ext1/the_3/young-children.html">다음세대 (주일학교)</a></strong><div class="links"><a class="route" href="ext1/the_3/young-children.html">young-children.html</a><a class="route" href="ext1/the_6/Youth.html">Youth.html</a><a class="route" href="ext1/the_8/young-adult.html">young-adult.html</a><a class="route home" href="stitch_1/church-home.html#next-gen">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="ext1/the_1/disciple-training.html">사역 및 선교</a></strong><div class="links"><a class="route" href="ext1/the_1/disciple-training.html">disciple-training.html</a><a class="route" href="ext1/the_5/ministry-training.html">ministry-training.html</a><a class="route home" href="stitch_1/church-home.html#ministry">홈 섹션</a></div></li>
+        </ul>
+      </article>
+
+      <article class="menu-card">
+        <h3>04. 교회소식</h3>
+        <ul class="menu-list">
+          <li class="menu-item"><strong><a href="stitch_10/announcements-calendar.html">공지사항</a></strong><div class="links"><a class="route" href="stitch_10/announcements-calendar.html">announcements-calendar.html</a><a class="route home" href="stitch_1/church-home.html#church-news">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_8/bulletin.html">온라인 주보</a></strong><div class="links"><a class="route" href="stitch_8/bulletin.html">bulletin.html</a><a class="route home" href="stitch_1/church-home.html#bulletin">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_11/news-gallery.html">교회 갤러리</a></strong><div class="links"><a class="route" href="stitch_11/news-gallery.html">news-gallery.html</a><a class="route home" href="stitch_1/church-home.html#gallery">홈 섹션</a></div></li>
+        </ul>
+      </article>
+
+      <article class="menu-card">
+        <h3>05. 온라인행정</h3>
+        <ul class="menu-list">
+          <li class="menu-item"><strong><a href="stitch_18/online-giving.html">온라인 헌금</a></strong><div class="links"><a class="route" href="stitch_18/online-giving.html">online-giving.html</a><a class="route home" href="stitch_1/church-home.html#offering">홈 섹션</a></div></li>
+          <li class="menu-item"><strong><a href="stitch_2/newcomer-registration.html">새가족 등록 안내</a></strong><div class="links"><a class="route" href="stitch_2/newcomer-registration.html">newcomer-registration.html</a><a class="route home" href="stitch_1/church-home.html#newcomer">홈 섹션</a></div></li>
+        </ul>
+      </article>
+    </section>
+
+    <div class="section-heading">
+      <h2>연결되지 않는 목록</h2>
+      <p>현재 5대 메뉴에 직접 배치되지 않은 보조·회원·관리 페이지입니다.</p>
+    </div>
+
+    <ul class="orphan-list" aria-label="현재 메뉴에 직접 연결되지 않는 페이지">
+      <li><a href="stitch_3/registration-complete.html">registration-complete.html</a><small>등록 완료 안내</small></li>
+      <li><a href="stitch_9/church-introduction.html">church-introduction.html</a><small>교회소개 별도 페이지</small></li>
+      <li><a href="stitch_12/pastoral-counseling.html">pastoral-counseling.html</a><small>목양상담</small></li>
+      <li><a href="stitch_13/testimonies.html">testimonies.html</a><small>은혜나눔·간증</small></li>
+      <li><a href="stitch_16/testimony-management.html">testimony-management.html</a><small>은혜나눔 글 관리</small></li>
+      <li><a href="stitch_17/testimony-counseling.html">testimony-counseling.html</a><small>간증·상담 연계</small></li>
+      <li><a href="stitch_19/prayer-request.html">prayer-request.html</a><small>중보기도 요청</small></li>
+      <li><a href="stitch_20/notification-templates.html">notification-templates.html</a><small>알림톡·문자 템플릿</small></li>
+      <li><a href="stitch_21/ministry-notifications.html">ministry-notifications.html</a><small>교역자 알림</small></li>
+      <li><a href="the_1/signup.html">signup.html</a><small>회원가입</small></li>
+      <li><a href="the_2/login.html">login.html</a><small>로그인</small></li>
+      <li><a href="the_3/my-page.html">my-page.html</a><small>마이페이지</small></li>
+      <li><a href="the_4/verification-edit.html">verification-edit.html</a><small>인증정보 수정</small></li>
+      <li><a href="the_5/verification-pending.html">verification-pending.html</a><small>인증 대기</small></li>
+      <li><a href="the_6/member-dashboard.html">member-dashboard.html</a><small>회원 대시보드</small></li>
+      <li><a href="the_7/account-settings.html">account-settings.html</a><small>계정 설정</small></li>
+      <li><a href="the_8/verification-complete.html">verification-complete.html</a><small>인증 완료</small></li>
+      <li><a href="the_9/verification-request.html">verification-request.html</a><small>인증 신청</small></li>
+      <li><a href="ext1/the_4/popup_sample02.html">popup_sample02.html</a><small>팝업 화면 1</small></li>
+      <li><a href="ext1/the_7/popup_sample01.html">popup_sample01.html</a><small>팝업 화면 2</small></li>
+    </ul>
+
+    <footer>기준 페이지: <a href="stitch_1/church-home.html">stitch_1/church-home.html</a> · 파일이 실제로 존재하는 항목만 연결 목록에 배치했습니다.</footer>
+  </main>
+</body>
+</html>
