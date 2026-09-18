@@ -114,6 +114,50 @@
       letter-spacing: 0.04em;
       vertical-align: middle;
     }
+
+    .image-section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .image-section h2 {
+      margin: 0 0 16px;
+      font-size: 1.2rem;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .image-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 12px;
+      box-sizing: border-box;
+    }
+
+    .image-card img {
+      display: block;
+      width: 100%;
+      height: 110px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      margin-bottom: 10px;
+    }
+
+    .image-card .image-name {
+      display: block;
+      font-size: 0.8rem;
+      color: #334155;
+      font-weight: 600;
+      word-break: break-word;
+    }
   </style>
 </head>
 <body>
@@ -161,8 +205,26 @@
       <li class="new-item"><a href="ext1/the_8/young-adult.html" target="_blank"><span class="new-tag">NEW</span> ext1/the_8 - 청년부 | The바른교회 다음세대</a></li>
       <li class="new-item"><a href="ext1/the_4/popup_sample02.html" target="_blank"><span class="new-tag">NEW</span> ext1/the_4 - The바른교회 팝업화면1</a></li>
       <li class="new-item"><a href="ext1/the_7/popup_sample01.html" target="_blank"><span class="new-tag">NEW</span> ext1/the_7 - 팝업화면2</a></li>
-      
     </ul>
+
+    <section class="image-section" aria-labelledby="images-title">
+      <h2 id="images-title">/images 폴더 이미지 목록</h2>
+      <div class="image-grid">
+        <div class="image-card"><img src="images/barunch_logo_01_958_209.png" alt="barunch_logo_01_958_209.png"><span class="image-name">barunch_logo_01_958_209.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_02_959_209.png" alt="barunch_logo_02_959_209.png"><span class="image-name">barunch_logo_02_959_209.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_03_1167_178.png" alt="barunch_logo_03_1167_178.png"><span class="image-name">barunch_logo_03_1167_178.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_04_693_438.png" alt="barunch_logo_04_693_438.png"><span class="image-name">barunch_logo_04_693_438.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_05_693_429.png" alt="barunch_logo_05_693_429.png"><span class="image-name">barunch_logo_05_693_429.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_06_627_440.png" alt="barunch_logo_06_627_440.png"><span class="image-name">barunch_logo_06_627_440.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_07_1151_163.png" alt="barunch_logo_07_1151_163.png"><span class="image-name">barunch_logo_07_1151_163.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_08_932_214.png" alt="barunch_logo_08_932_214.png"><span class="image-name">barunch_logo_08_932_214.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_09_959_209.png" alt="barunch_logo_09_959_209.png"><span class="image-name">barunch_logo_09_959_209.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_10_627_440.png" alt="barunch_logo_10_627_440.png"><span class="image-name">barunch_logo_10_627_440.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_11_626_440.png" alt="barunch_logo_11_626_440.png"><span class="image-name">barunch_logo_11_626_440.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_12_958_209.png" alt="barunch_logo_12_958_209.png"><span class="image-name">barunch_logo_12_958_209.png</span></div>
+        <div class="image-card"><img src="images/barunch_paster.png" alt="barunch_paster.png"><span class="image-name">barunch_paster.png</span></div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
