@@ -142,13 +142,15 @@
 
     .image-card img {
       display: block;
-      width: 100%;
-      height: 110px;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 140px;
       object-fit: contain;
       background: #fff;
       border-radius: 8px;
       border: 1px solid #e5e7eb;
-      margin-bottom: 10px;
+      margin: 0 auto 10px;
     }
 
     .image-card .image-name {
@@ -157,6 +159,14 @@
       color: #334155;
       font-weight: 600;
       word-break: break-word;
+    }
+
+    .image-card .image-size {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.72rem;
+      color: #64748b;
+      letter-spacing: 0.01em;
     }
   </style>
 </head>
@@ -210,21 +220,38 @@
     <section class="image-section" aria-labelledby="images-title">
       <h2 id="images-title">/images 폴더 이미지 목록</h2>
       <div class="image-grid">
-        <div class="image-card"><img src="images/barunch_logo_01_958_209.png" alt="barunch_logo_01_958_209.png"><span class="image-name">barunch_logo_01_958_209.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_02_959_209.png" alt="barunch_logo_02_959_209.png"><span class="image-name">barunch_logo_02_959_209.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_03_1167_178.png" alt="barunch_logo_03_1167_178.png"><span class="image-name">barunch_logo_03_1167_178.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_04_693_438.png" alt="barunch_logo_04_693_438.png"><span class="image-name">barunch_logo_04_693_438.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_05_693_429.png" alt="barunch_logo_05_693_429.png"><span class="image-name">barunch_logo_05_693_429.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_06_627_440.png" alt="barunch_logo_06_627_440.png"><span class="image-name">barunch_logo_06_627_440.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_07_1151_163.png" alt="barunch_logo_07_1151_163.png"><span class="image-name">barunch_logo_07_1151_163.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_08_932_214.png" alt="barunch_logo_08_932_214.png"><span class="image-name">barunch_logo_08_932_214.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_09_959_209.png" alt="barunch_logo_09_959_209.png"><span class="image-name">barunch_logo_09_959_209.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_10_627_440.png" alt="barunch_logo_10_627_440.png"><span class="image-name">barunch_logo_10_627_440.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_11_626_440.png" alt="barunch_logo_11_626_440.png"><span class="image-name">barunch_logo_11_626_440.png</span></div>
-        <div class="image-card"><img src="images/barunch_logo_12_958_209.png" alt="barunch_logo_12_958_209.png"><span class="image-name">barunch_logo_12_958_209.png</span></div>
-        <div class="image-card"><img src="images/barunch_paster.png" alt="barunch_paster.png"><span class="image-name">barunch_paster.png</span></div>
+        <div class="image-card"><img src="images/barunch_logo_01_958_209.png" alt="barunch_logo_01_958_209.png"><span class="image-name">barunch_logo_01_958_209.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_02_959_209.png" alt="barunch_logo_02_959_209.png"><span class="image-name">barunch_logo_02_959_209.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_03_1167_178.png" alt="barunch_logo_03_1167_178.png"><span class="image-name">barunch_logo_03_1167_178.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_04_693_438.png" alt="barunch_logo_04_693_438.png"><span class="image-name">barunch_logo_04_693_438.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_05_693_429.png" alt="barunch_logo_05_693_429.png"><span class="image-name">barunch_logo_05_693_429.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_06_627_440.png" alt="barunch_logo_06_627_440.png"><span class="image-name">barunch_logo_06_627_440.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_07_1151_163.png" alt="barunch_logo_07_1151_163.png"><span class="image-name">barunch_logo_07_1151_163.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_08_932_214.png" alt="barunch_logo_08_932_214.png"><span class="image-name">barunch_logo_08_932_214.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_09_959_209.png" alt="barunch_logo_09_959_209.png"><span class="image-name">barunch_logo_09_959_209.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_10_627_440.png" alt="barunch_logo_10_627_440.png"><span class="image-name">barunch_logo_10_627_440.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_11_626_440.png" alt="barunch_logo_11_626_440.png"><span class="image-name">barunch_logo_11_626_440.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_logo_12_958_209.png" alt="barunch_logo_12_958_209.png"><span class="image-name">barunch_logo_12_958_209.png</span><span class="image-size">-</span></div>
+        <div class="image-card"><img src="images/barunch_paster.png" alt="barunch_paster.png"><span class="image-name">barunch_paster.png</span><span class="image-size">-</span></div>
       </div>
     </section>
   </main>
+
+  <script>
+    document.querySelectorAll('.image-card img').forEach((img) => {
+      const sizeTag = img.parentElement.querySelector('.image-size');
+      const updateSize = () => {
+        const width = img.naturalWidth || img.width || 0;
+        const height = img.naturalHeight || img.height || 0;
+        sizeTag.textContent = width && height ? `${width} × ${height}` : '크기 확인 중';
+      };
+
+      if (img.complete) {
+        updateSize();
+      } else {
+        img.addEventListener('load', updateSize, { once: true });
+      }
+    });
+  </script>
 </body>
 </html>
