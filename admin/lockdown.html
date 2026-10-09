@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>더바른교회 목회행정실 - 긴급 보안 잠금</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Noto Serif KR & Source Sans 3 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with configuration -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline": "#757682",
+            "primary-fixed-dim": "#b6c4ff",
+            "tertiary-fixed-dim": "#bec6e0",
+            "on-secondary-fixed": "#2f1500",
+            "surface-bright": "#f7f9fb",
+            "error-container": "#ffdad6",
+            "background": "#f7f9fb",
+            "on-tertiary-fixed-variant": "#3f465c",
+            "tertiary": "#222a3e",
+            "on-error": "#ffffff",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#ffdcc3",
+            "on-surface-variant": "#444651",
+            "surface-container": "#eceef0",
+            "surface-container-low": "#f2f4f6",
+            "primary-fixed": "#dce1ff",
+            "surface-container-high": "#e6e8ea",
+            "surface-tint": "#4059aa",
+            "on-primary-fixed": "#00164e",
+            "inverse-primary": "#b6c4ff",
+            "on-secondary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c5c5d3",
+            "secondary-container": "#fe932c",
+            "primary": "#00236f",
+            "inverse-on-surface": "#eff1f3",
+            "tertiary-fixed": "#dae2fd",
+            "on-primary-container": "#90a8ff",
+            "surface-dim": "#d8dadc",
+            "on-tertiary-container": "#a4acc5",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#131b2e",
+            "on-surface": "#191c1e",
+            "secondary-fixed-dim": "#ffb77d",
+            "primary-container": "#1e3a8a",
+            "surface-container-highest": "#e0e3e5",
+            "on-tertiary": "#ffffff",
+            "surface": "#f7f9fb",
+            "on-primary-fixed-variant": "#264191",
+            "on-background": "#191c1e",
+            "on-secondary-container": "#663500",
+            "inverse-surface": "#2d3133",
+            "tertiary-container": "#384055",
+            "surface-variant": "#e0e3e5",
+            "on-secondary-fixed-variant": "#6e3900",
+            "on-primary": "#ffffff",
+            "secondary": "#904d00"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "margin": "2rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["\"Source Sans 3\""],
+            "headline-sm": ["\"Noto Serif KR\"", "Noto Serif"],
+            "display-lg": ["\"Noto Serif KR\"", "Noto Serif"],
+            "display-lg-mobile": ["\"Noto Serif KR\"", "Noto Serif"],
+            "scripture-quote": ["\"Noto Serif KR\"", "Noto Serif"],
+            "headline-lg-mobile": ["\"Noto Serif KR\"", "Noto Serif"],
+            "headline-md": ["\"Noto Serif KR\"", "Noto Serif"],
+            "headline-lg": ["\"Noto Serif KR\"", "Noto Serif"],
+            "body-lg": ["\"Source Sans 3\""],
+            "body-md": ["\"Source Sans 3\""],
+            "label-md": ["\"Source Sans 3\""],
+            "label-sm": ["\"Source Sans 3\""]
+          },
+          "fontSize": {
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md overflow-hidden antialiased select-none">
+<!-- ==================== BACKGROUND: SYSTEM CONFIGURATION SCREEN (UNDERPINNING) ==================== -->
+<div class="relative w-full h-screen overflow-hidden flex flex-col filter blur-[1.5px] pointer-events-none">
+<!-- TopNavBar (Shared Component implementation) -->
+<header class="w-full h-16 px-gutter flex items-center justify-between border-b border-outline-variant bg-surface-container-lowest docked full-width top-0 sticky z-40">
+<div class="flex items-center gap-space-lg">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">The Barun Church Pastoral Admin</span>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px]" data-icon="search">search</span>
+<input class="h-9 w-72 pl-9 pr-3 text-body-sm font-body-sm bg-surface-container-low border border-outline-variant rounded-lg" placeholder="성도 교적부, 사역 그룹 검색 (Ctrl+K)..." readonly="" type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-md text-label-md px-2.5 py-1 bg-surface-container text-on-surface-variant rounded border border-outline-variant">Security IP: 192.168.1.42 Verified</span>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-4 w-[1px] bg-outline-variant mx-1"></div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container text-white flex items-center justify-center font-bold text-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_circle">account_circle</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">안민주 담임목사</span>
+</div>
+<button class="text-body-sm font-body-sm text-error hover:underline ml-2">로그아웃</button>
+</div>
+</header>
+<!-- App Body (SideNav + Background Settings Content) -->
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar (Shared Component implementation) -->
+<aside class="w-64 flex flex-col justify-between py-space-md px-space-sm border-r border-outline-variant bg-surface-container-lowest shrink-0">
+<div>
+<!-- Header Area -->
+<div class="px-space-md pb-space-md border-b border-outline-variant mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[28px]" data-icon="church">church</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-primary">더바른교회 목회행정실</h2>
+<p class="font-body-sm text-body-sm text-outline">교구 총괄 사역자 모드</p>
+</div>
+</div>
+<button class="w-full mt-3 py-1.5 px-3 bg-secondary text-white rounded-lg text-body-sm font-label-md flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="campaign">campaign</span>
+<span>긴급 사역 공지 발송</span>
+</button>
+</div>
+<!-- Main Navigation Tabs -->
+<nav class="space-y-1">
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>종합 목회 대시보드</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>성도 및 교구 교적부 (218)</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="how_to_reg">how_to_reg</span>
+<span>새가족 등록 심사 (3)</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span>다락방 소그룹 관리</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="church">church</span>
+<span>예배 및 주보·공지 관리</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span>은혜나눔 및 게시글 승인 (2)</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span>온라인 헌금 및 재정</span>
+</a>
+<!-- Active item mapping to settings screen -->
+<a class="bg-primary-container text-on-primary-container font-semibold rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>시스템 환경설정</span>
+</a>
+</nav>
+</div>
+<!-- Footer Navigation Links -->
+<div class="pt-space-sm border-t border-outline-variant space-y-1">
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>시스템 로그</span>
+</a>
+<a class="text-on-surface-variant hover:bg-surface-container-low rounded-lg px-space-md py-space-sm flex items-center gap-space-sm font-body-sm">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span>관리자 가이드</span>
+</a>
+</div>
+</aside>
+<!-- Main Canvas (Dummy Settings Underneath) -->
+<main class="flex-1 bg-surface-container-low p-margin overflow-y-auto">
+<div class="max-w-5xl mx-auto space-y-space-lg opacity-40">
+<div class="border-b border-outline-variant pb-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-primary">시스템 보안 및 접속 환경설정</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">더바른교회 목회데이터 보호 및 인가 접속자 정책 관리</p>
+</div>
+<div class="grid grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface-variant">현재 활성 세션</h3>
+<p class="font-display-lg text-display-lg text-primary font-bold mt-2">12 <span class="text-base font-normal">명</span></p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface-variant">인가된 교역자 IP 대역</h3>
+<p class="font-headline-md text-headline-md text-on-surface font-semibold mt-2">211.234.**.** (본당)</p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-label-md text-label-md text-on-surface-variant">데이터 암호화 상태</h3>
+<p class="font-headline-md text-headline-md text-primary font-semibold mt-2">AES-256 활성화</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- ==================== EMERGENCY BACKDROP & MODAL DIALOG ==================== -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 bg-slate-950/80 backdrop-blur-md transition-all duration-200">
+<!-- Subtle Red Emergency Ambient Radial Gradient -->
+<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-red-950/40 via-transparent to-black/60"></div>
+<!-- Central Security Lockdown Modal Window -->
+<div class="relative w-full max-w-4xl max-h-[942px] flex flex-col bg-surface-container-lowest rounded-xl shadow-2xl border-2 border-red-600/70 overflow-hidden ring-1 ring-red-500/30">
+<!-- Top Emergency Accent Strip -->
+<div class="h-1.5 w-full bg-gradient-to-r from-red-700 via-red-500 to-red-800"></div>
+<!-- 1. Modal Header -->
+<div class="px-space-lg py-4 border-b border-outline-variant/60 flex items-center justify-between bg-surface-container-lowest">
+<div class="flex items-center gap-3">
+<div class="relative flex items-center justify-center w-11 h-11 rounded-lg bg-red-100 text-red-600 border border-red-200">
+<span class="material-symbols-outlined text-[28px]" data-icon="shield_lock" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+<!-- Pulsing emergency radar dot -->
+<span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-red-600"></span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-red-700 font-bold tracking-tight">긴급 보안 잠금 (Emergency Security Lockdown)</h2>
+<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-red-600 text-white tracking-wider">CRITICAL 1급</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-body-sm font-body-sm text-outline">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-high rounded text-on-surface-variant font-semibold">최고관리자 단독 권한</span>
+<span>•</span>
+<span class="text-on-surface-variant font-semibold">대한예수교장로회 더바른교회 목양행정 안보 통제 프로토콜</span>
+</div>
+</div>
+</div>
+<!-- Dismiss Action -->
+<button class="w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-on-surface hover:bg-surface-container transition-colors" title="닫기 (ESC)">
+<span class="material-symbols-outlined text-[20px]" data-icon="close">close</span>
+</button>
+</div>
+<!-- Scrollable Core Form Area -->
+<div class="flex-1 overflow-y-auto px-space-lg py-5 space-y-5 bg-surface">
+<!-- 2. Critical Warning Banner -->
+<div class="p-4 rounded-lg bg-red-50/80 border border-red-200 text-red-950 flex items-start gap-3 shadow-xs">
+<span class="material-symbols-outlined text-red-600 text-[24px] shrink-0 mt-0.5" data-icon="warning" data-weight="fill" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div class="text-body-sm font-body-sm space-y-1">
+<p class="font-semibold text-red-900 font-label-md text-label-md">
+              [엄중 경고] 즉각적인 전체 세션 강제 종료(Kill-Session) 및 목회 데이터 일시 동결 고지
+            </p>
+<p class="text-red-800 leading-relaxed">
+              본 조치를 발동하면 본당 인가 IP(211.234.**.12) 및 <strong class="text-red-950 underline font-semibold">안민주 담임목사(최고관리자)</strong> 계정을 제외한 모든 부교역자, 순장, 재정간사의 관리자 콘솔 접근 세션이 즉시 강제 종료(Kill-Session)되며, 교적 조회·온라인 헌금 승인·새가족 접수 기능이 일시 동결됩니다.
+            </p>
+</div>
+</div>
+<!-- 3. Lockdown Scope Selection & Options -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-xs">
+<div class="flex items-center justify-between pb-2 mb-3 border-b border-outline-variant/60">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="lock_reset">lock_reset</span>
+<h3 class="font-headline-sm text-[16px] leading-[22px] font-bold text-tertiary">1. 긴급 통제 범위 지정 (Lockdown Scope Selection)</h3>
+</div>
+<span class="text-label-sm font-label-sm text-outline">필수 보안 정책 4건 자동 선택됨</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+<!-- Option 1 -->
+<label class="flex items-start gap-3 p-3 rounded-lg border border-red-200 bg-red-50/30 hover:bg-red-50/60 cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 rounded text-red-600 focus:ring-red-500 w-4 h-4 border-outline-variant cursor-pointer" type="checkbox"/>
+<div class="text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface block">외부 및 원격 IP 접속 전면 차단</span>
+<span class="text-outline text-xs block">교역자 사택, 외부 모바일 LTE 접속 즉시 드롭 (본당 지정 유선망만 허용)</span>
+</div>
+</label>
+<!-- Option 2 -->
+<label class="flex items-start gap-3 p-3 rounded-lg border border-red-200 bg-red-50/30 hover:bg-red-50/60 cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 rounded text-red-600 focus:ring-red-500 w-4 h-4 border-outline-variant cursor-pointer" type="checkbox"/>
+<div class="text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface block">전 관리자 세션 만료 &amp; 2FA 재인증 요구</span>
+<span class="text-outline text-xs block">담임목사를 제외한 11개 동시 활성 로그인 세션 즉각 토큰 파기</span>
+</div>
+</label>
+<!-- Option 3 -->
+<label class="flex items-start gap-3 p-3 rounded-lg border border-red-200 bg-red-50/30 hover:bg-red-50/60 cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 rounded text-red-600 focus:ring-red-500 w-4 h-4 border-outline-variant cursor-pointer" type="checkbox"/>
+<div class="text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface block">교적부/개인정보 강제 마스킹 &amp; 다운로드 금지</span>
+<span class="text-outline text-xs block">성도 주민등록번호, 계좌, 연락처 엑셀 추출 API 즉각 차단</span>
+</div>
+</label>
+<!-- Option 4 -->
+<label class="flex items-start gap-3 p-3 rounded-lg border border-red-200 bg-red-50/30 hover:bg-red-50/60 cursor-pointer transition-colors">
+<input checked="" class="mt-0.5 rounded text-red-600 focus:ring-red-500 w-4 h-4 border-outline-variant cursor-pointer" type="checkbox"/>
+<div class="text-body-sm font-body-sm">
+<span class="font-semibold text-on-surface block">카카오 알림톡/LMS 대량 발송 일시 정지</span>
+<span class="text-outline text-xs block">해킹을 통한 교인 대상 피싱 문자 및 비인가 헌금 유도 링크 방지</span>
+</div>
+</label>
+</div>
+<!-- Option 5: Optional full homepage maintenance mode -->
+<div class="mt-2.5 pt-2 border-t border-outline-variant/40">
+<label class="flex items-center gap-3 p-2.5 rounded-lg border border-outline-variant hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="rounded text-primary focus:ring-primary w-4 h-4 border-outline-variant cursor-pointer" type="checkbox"/>
+<div class="flex-1 flex items-center justify-between">
+<span class="text-body-sm font-body-sm font-medium text-on-surface">메인 교회 홈페이지 전체 '서비스 점검 모드'로 전환</span>
+<span class="text-label-sm font-label-sm px-2 py-0.5 bg-surface-container text-outline rounded">선택 사항: '현재 서버 점검 중' 안내 배너 표출</span>
+</div>
+</label>
+</div>
+</div>
+<!-- 4. Verification & Safeguard Mechanism (2-Step Confirmation) -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-outline-variant shadow-xs space-y-4">
+<div class="pb-2 border-b border-outline-variant/60 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="verified_user">verified_user</span>
+<h3 class="font-headline-sm text-[16px] leading-[22px] font-bold text-tertiary">2. 담임목사 결재 사유 및 2차 인증 (Safeguard Verification)</h3>
+</div>
+<span class="text-label-sm font-label-sm text-red-600 font-semibold">* 모든 항목 필수 입력</span>
+</div>
+<!-- Reason Dropdown & Detailed Memo in 2 Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5">긴급 잠금 사유 선택 <span class="text-error">*</span></label>
+<div class="relative">
+<select class="w-full h-11 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer">
+<option selected="">미인가 IP 비정상 로그인 시도 감지 (해외/비인가 VPN)</option>
+<option>관리자/교역자 모바일 단말기 분실 의심 보고</option>
+<option>외부 디도스(DDoS) 및 데이터 크롤링 이상 징후 발생</option>
+<option>정기 분기별 목회 데이터 긴급 보안 모의 훈련</option>
+<option>기타 긴급 목양상 보안 결재 사유</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5">세부 목양 보안 조치 사유 작성 <span class="text-error">*</span></label>
+<input class="w-full h-11 px-3 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface focus:bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary" placeholder="예: 14:20경 동남아발 비정상 세션 감지되어 교적보호 위해 즉각 셧다운 발동함." type="text"/>
+</div>
+</div>
+<!-- 2FA OTP & Confirmation Key in 2 Columns -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+<!-- 2FA OTP Input with Active Timer -->
+<div class="bg-surface-container-low/60 p-3 rounded-lg border border-outline-variant">
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold">최고관리자 2차 인증 OTP 번호 (6자리)</label>
+<span class="text-label-sm font-label-sm font-mono text-red-600 bg-red-100 px-1.5 py-0.5 rounded font-bold">02:59 남음</span>
+</div>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<input class="w-full h-11 px-3 font-mono tracking-widest text-center text-lg bg-surface-container-lowest border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary" maxlength="6" placeholder="******" type="password"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline text-[18px]" data-icon="key">key</span>
+</div>
+<button class="px-3 h-11 bg-surface-container text-on-surface font-label-md text-label-md rounded-lg border border-outline-variant hover:bg-surface-container-high transition-colors whitespace-nowrap" type="button">
+                  인증번호 재전송
+                </button>
+</div>
+<span class="text-xs text-outline mt-1 block">안민주 담임목사 인가 단말기(010-****-9821)로 6자리가 발송되었습니다.</span>
+</div>
+<!-- Explicit Text Match Confirmation -->
+<div class="bg-red-50/50 p-3 rounded-lg border border-red-200">
+<label class="font-label-md text-label-md text-red-950 font-semibold mb-1 block">
+                최종 실행 확약 문구 입력 <span class="text-error">*</span>
+</label>
+<p class="text-xs text-red-800 mb-1.5">
+                오작동 방지를 위해 아래 빈칸에 <span class="font-bold text-red-700 bg-red-100 px-1 py-0.5 rounded select-all">[긴급보안잠금]</span> 문구를 정확히 입력하십시오.
+              </p>
+<input class="w-full h-11 px-3 bg-surface-container-lowest border-2 border-red-300 rounded-lg font-body-md text-body-md text-red-950 placeholder:text-outline/50 focus:border-red-600 focus:ring-1 focus:ring-red-600 font-semibold" placeholder="긴급보안잠금" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Modal Action Buttons & Footer Status -->
+<div class="px-space-lg py-4 border-t border-outline-variant bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-4">
+<!-- Left State Indicator -->
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">현재 보안 상태:</span>
+<span class="font-mono text-xs text-outline">본당 망 정상 (TLS v1.3 / 인가 세션 2개 가동 중)</span>
+</div>
+<!-- Right Action Button Group -->
+<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+<button class="px-5 py-2.5 rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md transition-colors cursor-pointer active:scale-95" type="button">
+            취소 및 나가기
+          </button>
+<button class="px-6 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white font-label-md text-label-md font-bold shadow-md hover:shadow-lg flex items-center gap-2 transition-all cursor-pointer active:scale-95 ring-2 ring-red-500/50" type="button">
+<span class="material-symbols-outlined text-[20px]" data-icon="lock" data-weight="fill" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>긴급 보안 잠금 즉시 발동 (Lockdown Execute)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

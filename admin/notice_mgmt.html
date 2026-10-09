@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>바른교회 목회행정 포털 - 공지사항 종합 관리</title>
+<!-- Google Fonts: Noto Serif KR & Source Sans 3 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700&amp;family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed": "#00164e",
+            "on-secondary-fixed": "#2f1500",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#bec6e0",
+            "primary": "#00236f",
+            "secondary-container": "#fe932c",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#b6c4ff",
+            "inverse-surface": "#2d3133",
+            "on-primary": "#ffffff",
+            "inverse-primary": "#b6c4ff",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#904d00",
+            "on-tertiary-container": "#a4acc5",
+            "inverse-on-surface": "#eff1f3",
+            "on-surface": "#191c1e",
+            "on-primary-fixed-variant": "#264191",
+            "tertiary-container": "#384055",
+            "surface-container": "#eceef0",
+            "on-background": "#191c1e",
+            "primary-fixed": "#dce1ff",
+            "secondary-fixed-dim": "#ffb77d",
+            "surface-bright": "#f7f9fb",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f2f4f6",
+            "on-secondary-container": "#663500",
+            "surface-container-high": "#e6e8ea",
+            "outline-variant": "#c5c5d3",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#ffdcc3",
+            "error-container": "#ffdad6",
+            "primary-container": "#1e3a8a",
+            "tertiary": "#222a3e",
+            "background": "#f7f9fb",
+            "on-secondary-fixed-variant": "#6e3900",
+            "tertiary-fixed": "#dae2fd",
+            "on-primary-container": "#90a8ff",
+            "outline": "#757682",
+            "surface-variant": "#e0e3e5",
+            "surface-tint": "#4059aa",
+            "surface": "#f7f9fb",
+            "on-tertiary-fixed": "#131b2e",
+            "surface-dim": "#d8dadc",
+            "surface-container-highest": "#e0e3e5",
+            "on-surface-variant": "#444651",
+            "on-tertiary-fixed-variant": "#3f465c"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Noto Serif", "serif"],
+            "body-lg": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-lg-mobile": ["Noto Serif", "serif"],
+            "headline-md": ["Noto Serif", "serif"],
+            "label-md": ["\"Source Sans 3\"", "sans-serif"],
+            "display-lg-mobile": ["Noto Serif", "serif"],
+            "label-sm": ["\"Source Sans 3\"", "sans-serif"],
+            "headline-sm": ["Noto Serif", "serif"],
+            "scripture-quote": ["Noto Serif", "serif"],
+            "body-md": ["\"Source Sans 3\"", "sans-serif"],
+            "display-lg": ["Noto Serif", "serif"],
+            "body-sm": ["\"Source Sans 3\"", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "display-lg-mobile": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "scripture-quote": ["20px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+            "display-lg": ["48px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["14px", { "lineHeight": "22px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: 'liga';
+    }
+    /* Subtle custom scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f7f9fb;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c5c5d3;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #757682;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md min-h-screen flex flex-col">
+<!-- ==================== SHARED COMPONENT: TopNavBar ==================== -->
+<header class="flex items-center justify-between px-6 w-full h-16 fixed top-0 left-0 bg-surface-container-lowest z-50 shadow-sm border-b border-surface-container-highest">
+<!-- Brand Title & Search Bar -->
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="church">church</span>
+<span class="text-headline-sm font-headline-sm font-bold text-primary tracking-tight">바른교회 목회행정 포털</span>
+</div>
+<!-- On Left Search Bar -->
+<div class="relative w-80">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg" data-icon="search">search</span>
+<input class="w-full pl-9 pr-4 py-1.5 bg-surface-container-low text-on-surface text-body-sm font-body-sm rounded-lg border-0 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-colors" placeholder="교인, 행정문서, 주보 및 공지 통합검색..." type="text"/>
+</div>
+</div>
+<!-- Right Actions & Admin Profile -->
+<div class="flex items-center gap-3">
+<!-- Trailing Secondary: Security IP -->
+<div class="flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-low text-on-surface-variant rounded-md text-label-sm font-label-sm border border-outline-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+<span>보안IP 인증됨</span>
+<span class="text-outline text-[11px]">(211.234.**.12)</span>
+</div>
+<!-- Trailing Primary Action -->
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary text-on-primary rounded-lg text-label-md font-label-md hover:bg-tertiary transition duration-150 active:scale-[0.99] shadow-sm" type="button">
+<span class="material-symbols-outlined text-base" data-icon="send">send</span>
+<span>주보 긴급 배포</span>
+</button>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-1 border-l border-surface-container-highest pl-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-lg transition duration-150 relative" title="알림" type="button">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary-container rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-lg transition duration-150" title="도움말" type="button">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface rounded-lg transition duration-150" title="설정" type="button">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<!-- Super Admin Profile Badge -->
+<div class="flex items-center gap-2 pl-3 border-l border-surface-container-highest">
+<div class="w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center font-bold text-xs ring-1 ring-outline-variant">
+          안
+        </div>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md text-on-surface font-semibold leading-tight">안민주 담임목사</span>
+<span class="text-[11px] text-primary font-medium">슈퍼관리자 (교역자)</span>
+</div>
+</div>
+</div>
+</header>
+<!-- ==================== MAIN SHELL (SideNav + Content) ==================== -->
+<div class="flex pt-16 flex-1 min-w-[1400px]">
+<!-- ==================== SHARED COMPONENT: SideNavBar ==================== -->
+<aside class="fixed left-0 top-0 bottom-0 w-64 pt-20 pb-6 px-4 flex flex-col justify-between overflow-y-auto bg-surface-container-lowest z-40 border-r border-surface-container-highest shadow-none select-none">
+<!-- Top Section: Header & Main Tabs -->
+<div class="flex flex-col gap-5">
+<!-- Sidebar Brand Header -->
+<div class="px-2 pb-3 border-b border-surface-container-highest flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="church">church</span>
+</div>
+<div>
+<h2 class="text-headline-sm font-headline-sm font-bold text-primary">바른교회 목회사역원</h2>
+<p class="text-label-sm font-label-sm text-outline">Super Admin Console</p>
+</div>
+</div>
+<!-- Call to Action Button in Sidebar -->
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-3 bg-secondary-container text-on-secondary rounded-lg text-label-md font-label-md font-semibold hover:bg-secondary transition duration-150 shadow-sm active:scale-[0.99]" id="open-new-notice-btn" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+<span>새 공지 및 팝업 등록</span>
+</button>
+<!-- Navigation Tabs (Active Item: 예배 및 주보·공지 관리) -->
+<nav aria-label="주요 목회 행정 메뉴" class="flex flex-col gap-1">
+<!-- 1. 목회 종합 대시보드 -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-normal hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-label-md font-label-md">목회 종합 대시보드</span>
+</a>
+<!-- 2. 예배 및 주보·공지 관리 [ACTIVE STATE APPLIED] -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary-fixed text-on-primary-fixed font-semibold" href="#">
+<span class="material-symbols-outlined text-primary" data-icon="church">church</span>
+<span class="text-label-md font-label-md">예배 및 주보·공지 관리</span>
+</a>
+<!-- Sub-items under active menu -->
+<div class="pl-8 pr-1 py-1 flex flex-col gap-1 border-l-2 border-primary ml-5 text-body-sm font-body-sm">
+<a class="px-2.5 py-1.5 rounded text-primary font-semibold bg-surface-container-low flex items-center justify-between" href="#">
+<span>공지사항 CRUD 관리</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary"></span>
+</a>
+<a class="px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span>디지털 주보 편집기</span>
+</a>
+<a class="px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span>예배 순서 및 사역자 배정</span>
+</a>
+<a class="px-2.5 py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" href="#">
+<span>팝업 모달 노출 제어</span>
+</a>
+</div>
+<!-- 3. 교인 및 심방 관리 -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-normal hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-label-md font-label-md">교인 및 심방 관리</span>
+</a>
+<!-- 4. 설교 아카이브 관리 -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-normal hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-label-md font-label-md">설교 아카이브 관리</span>
+</a>
+<!-- 5. 재정 및 온라인 헌금 -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-normal hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="text-label-md font-label-md">재정 및 온라인 헌금</span>
+</a>
+<!-- 6. 시스템 및 권한 설정 -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant font-normal hover:bg-surface-container-low hover:text-on-surface transition-colors duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="text-label-md font-label-md">시스템 및 권한 설정</span>
+</a>
+</nav>
+</div>
+<!-- Footer Tabs (Shared Component Spec) -->
+<div class="border-t border-surface-container-highest pt-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface text-label-md font-label-md transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span>환경설정</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-error hover:bg-error-container hover:text-on-error-container text-label-md font-label-md transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>로그아웃</span>
+</a>
+</div>
+</aside>
+<!-- ==================== MAIN CONTENT CANVAS ==================== -->
+<main class="ml-64 flex-1 p-8 bg-surface min-h-[calc(100vh-4rem)]">
+<div class="max-w-[1360px] mx-auto space-y-6">
+<!-- 1. Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<span class="hover:text-primary cursor-pointer flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="home">home</span>
+            홈
+          </span>
+<span class="text-outline-variant">/</span>
+<span class="hover:text-primary cursor-pointer">예배 및 주보·공지 관리</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-semibold">공지사항 CRUD 관리</span>
+</nav>
+<!-- 2. Page Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-2 border-b border-surface-container-highest">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="text-headline-lg font-headline-lg text-primary tracking-tight">교회 공지사항 종합 관리</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-label-sm font-label-sm font-semibold">Notice CRUD &amp; Display Control</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+              교회 홈페이지, 주보 연동, 모바일 알림톡 및 메인 팝업 배너로 표출되는 모든 공지사항을 등록·수정·삭제·예약 배포합니다.
+            </p>
+</div>
+<!-- Header Right Actions -->
+<div class="flex items-center gap-2 flex-wrap">
+<button class="px-3.5 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-label-md font-label-md text-error hover:bg-error-container hover:text-on-error-container transition duration-150 shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+              선택 공지 삭제
+            </button>
+<button class="px-3.5 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low transition duration-150 shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base" data-icon="visibility_off">visibility_off</span>
+              선택 일괄 숨김
+            </button>
+<button class="px-3.5 py-2 bg-surface-container-lowest border border-outline-variant rounded-lg text-label-md font-label-md text-secondary hover:bg-secondary-fixed transition duration-150 shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base" data-icon="bolt">bolt</span>
+              홈페이지 팝업 즉시 반영
+            </button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg text-label-md font-label-md font-semibold hover:bg-tertiary transition duration-150 shadow-sm flex items-center gap-1.5 active:scale-[0.99]" id="trigger-create-btn" type="button">
+<span class="material-symbols-outlined text-base" data-icon="add">add</span>
+              + 새 공지사항 작성
+            </button>
+</div>
+</div>
+<!-- 3. Top Notice Statistics Summary (4 KPI Bento Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-xl p-4 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">현재 활성 공지</span>
+<div class="text-headline-md font-headline-md text-primary font-bold">5<span class="text-body-md font-normal text-on-surface-variant">건</span></div>
+<p class="text-[12px] text-emerald-700 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> 홈페이지 라이브 노출 중
+              </p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="campaign">campaign</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-xl p-4 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">긴급/필독 상단고정</span>
+<div class="text-headline-md font-headline-md text-error font-bold">2<span class="text-body-md font-normal text-on-surface-variant">건</span></div>
+<p class="text-[12px] text-outline">상단 고정 뱃지 우선 노출</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="push_pin">push_pin</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-xl p-4 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">메인 모달 팝업 연동</span>
+<div class="text-headline-md font-headline-md text-secondary font-bold">1<span class="text-body-md font-normal text-on-surface-variant">건 가동중</span></div>
+<p class="text-[12px] text-secondary font-medium">신년 말씀사경회 팝업 연동</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="picture_in_picture">picture_in_picture</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-xl p-4 flex items-center justify-between shadow-sm hover:shadow transition-shadow">
+<div class="space-y-1">
+<span class="text-label-sm font-label-sm text-on-surface-variant">예약 게시 대기</span>
+<div class="text-headline-md font-headline-md text-tertiary font-bold">1<span class="text-body-md font-normal text-on-surface-variant">건</span></div>
+<p class="text-[12px] text-outline">2026.03.15 주일 00:00 오픈</p>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="schedule">schedule</span>
+</div>
+</div>
+</div>
+<!-- 4. Notice CRUD Dedicated Management Area -->
+<div class="bg-surface-container-lowest border border-surface-container-highest rounded-xl p-5 shadow-sm space-y-4">
+<!-- Top Filter Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-4 border-b border-surface-container-high">
+<!-- Search bar -->
+<div class="relative w-full lg:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low text-on-surface text-body-sm font-body-sm rounded-lg border border-outline-variant focus:bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="공지 제목, 본문 키워드, 작성자 검색..." type="text"/>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0" role="tablist">
+<button class="px-3 py-1.5 rounded-lg text-label-md font-label-md bg-primary text-on-primary font-semibold shadow-xs" type="button">
+                전체 (12)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button">
+                필독/긴급 (2)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button">
+                목회/행정 (4)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button">
+                예배/집회 (3)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-label-md font-label-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button">
+                다음세대/소그룹 (3)
+              </button>
+</div>
+<!-- Status Filter & Sorting -->
+<div class="flex items-center gap-2">
+<select class="py-1.5 pl-3 pr-8 text-label-sm font-label-sm rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface focus:border-primary focus:ring-primary">
+<option selected="">전체 게시상태</option>
+<option>게시중 (노출)</option>
+<option>예약됨 (대기)</option>
+<option>임시저장</option>
+<option>종료/비노출</option>
+</select>
+<select class="py-1.5 pl-3 pr-8 text-label-sm font-label-sm rounded-lg border border-outline-variant bg-surface-container-lowest text-on-surface focus:border-primary focus:ring-primary">
+<option selected="">최신 등록순</option>
+<option>우선순위 상단고정순</option>
+<option>조회수순</option>
+</select>
+</div>
+</div>
+<!-- 5. Notice CRUD Data Table & Action Console -->
+<div class="overflow-x-auto rounded-lg border border-surface-container-highest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant text-label-sm font-label-sm border-b border-surface-container-highest">
+<th class="p-3.5 w-10 text-center">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+</th>
+<th class="p-3.5 w-24">우선순위</th>
+<th class="p-3.5 w-28">분류</th>
+<th class="p-3.5">공지사항 제목</th>
+<th class="p-3.5 w-44">노출 채널</th>
+<th class="p-3.5 w-32">작성자</th>
+<th class="p-3.5 w-28">등록/예약일</th>
+<th class="p-3.5 w-20 text-center">조회수</th>
+<th class="p-3.5 w-24 text-center">팝업/고정</th>
+<th class="p-3.5 w-36 text-center">관리 액션</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-highest text-body-sm font-body-sm">
+<!-- ROW 1 (긴급/필독 고정 1) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-primary-fixed/20">
+<td class="p-3.5 text-center">
+<input checked="" class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+</td>
+<td class="p-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-error text-on-error text-label-sm font-label-sm font-bold shadow-xs">
+<span class="material-symbols-outlined text-xs" data-icon="push_pin">push_pin</span> 고정 1
+                    </span>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant text-label-sm font-label-sm">목회/행정</span>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-primary hover:underline cursor-pointer">
+                        [긴급/필독] 2026년 봄학기 제자훈련 및 사역훈련 개강 일정 및 오리엔테이션 안내
+                      </span>
+<span class="inline-flex items-center text-outline" title="첨부파일 1건">
+<span class="material-symbols-outlined text-sm" data-icon="attach_file">attach_file</span>
+</span>
+<span class="px-1.5 py-0.5 text-[11px] rounded bg-secondary-container text-on-secondary font-medium">모달 팝업 연동</span>
+</div>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-1 flex-wrap text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">홈페이지</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">주보</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">카카오알림</span>
+</div>
+</td>
+<td class="p-3.5 text-on-surface">안민주 담임목사</td>
+<td class="p-3.5 text-outline text-label-sm">2026.03.06</td>
+<td class="p-3.5 text-center font-medium">412</td>
+<td class="p-3.5 text-center">
+<button class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-200 ease-in-out" type="button">
+<span class="translate-x-4 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</td>
+<td class="p-3.5 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="수정/편집" type="button">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="미리보기" type="button">
+<span class="material-symbols-outlined text-base" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-error transition-colors" title="삭제" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2 (필독 고정 2) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-3.5 text-center">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+</td>
+<td class="p-3.5">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-primary text-on-primary text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs" data-icon="push_pin">push_pin</span> 고정 2
+                    </span>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant text-label-sm font-label-sm">예배/집회</span>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface hover:text-primary hover:underline cursor-pointer">
+                        [필독] 주일 예배 차량 이용 성도 인근 공영주차장 지원 안내
+                      </span>
+<span class="px-1.5 py-0.5 text-[11px] rounded bg-surface-container-high text-on-surface-variant font-medium">주보 1면 연동</span>
+</div>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-1 flex-wrap text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">홈페이지</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">주보</span>
+</div>
+</td>
+<td class="p-3.5 text-on-surface">목양행정실</td>
+<td class="p-3.5 text-outline text-label-sm">2026.03.04</td>
+<td class="p-3.5 text-center font-medium">328</td>
+<td class="p-3.5 text-center">
+<button class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-200 ease-in-out" type="button">
+<span class="translate-x-4 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</td>
+<td class="p-3.5 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="수정/편집" type="button">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="미리보기" type="button">
+<span class="material-symbols-outlined text-base" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-error transition-colors" title="삭제" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3 (일반 3 - 메인 팝업 연동 ON) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-3.5 text-center">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm font-medium">일반 3</span>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant text-label-sm font-label-sm">예배/집회</span>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface hover:text-primary hover:underline cursor-pointer">
+                        신년 특별 말씀사경회 안내 및 강사 소개 (3월 20일~22일)
+                      </span>
+<span class="px-1.5 py-0.5 text-[11px] rounded bg-secondary-fixed text-on-secondary-fixed font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="auto_awesome">auto_awesome</span> 메인 팝업 ON
+                      </span>
+</div>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-1 flex-wrap text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">메인팝업</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">홈페이지</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">카카오알림</span>
+</div>
+</td>
+<td class="p-3.5 text-on-surface">안민주 담임목사</td>
+<td class="p-3.5 text-outline text-label-sm">2026.03.01</td>
+<td class="p-3.5 text-center font-medium">894</td>
+<td class="p-3.5 text-center">
+<button class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-primary transition-colors duration-200 ease-in-out" type="button">
+<span class="translate-x-4 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</td>
+<td class="p-3.5 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="수정/편집" type="button">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="미리보기" type="button">
+<span class="material-symbols-outlined text-base" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-error transition-colors" title="삭제" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4 (일반 4) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-3.5 text-center">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm font-medium">일반 4</span>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant text-label-sm font-label-sm">다음세대</span>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface hover:text-primary hover:underline cursor-pointer">
+                        2026년 1학기 다음세대(유초등부·중고등부) 부서실 이동 안내
+                      </span>
+</div>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-1 flex-wrap text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">홈페이지</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">주보</span>
+</div>
+</td>
+<td class="p-3.5 text-on-surface">교육국 총무</td>
+<td class="p-3.5 text-outline text-label-sm">2026.02.26</td>
+<td class="p-3.5 text-center font-medium">195</td>
+<td class="p-3.5 text-center">
+<button class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-surface-dim transition-colors duration-200 ease-in-out" type="button">
+<span class="translate-x-0 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</td>
+<td class="p-3.5 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="수정/편집" type="button">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="미리보기" type="button">
+<span class="material-symbols-outlined text-base" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-error transition-colors" title="삭제" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5 (일반 5 - 예약 대기) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-surface-container-lowest">
+<td class="p-3.5 text-center">
+<input class="rounded text-primary focus:ring-primary border-outline-variant" type="checkbox"/>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-label-sm font-label-sm font-medium">일반 5</span>
+</td>
+<td class="p-3.5">
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface-variant text-label-sm font-label-sm">목회/행정</span>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-2">
+<span class="font-medium text-on-surface hover:text-primary hover:underline cursor-pointer">
+                        사순절 릴레이 중보기도표 및 기도 체인 작성 안내
+                      </span>
+<span class="px-1.5 py-0.5 text-[11px] rounded bg-tertiary-fixed text-on-tertiary-fixed font-medium">예약 대기중</span>
+</div>
+</td>
+<td class="p-3.5">
+<div class="flex items-center gap-1 flex-wrap text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">홈페이지</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">주보</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px]">카카오알림</span>
+</div>
+</td>
+<td class="p-3.5 text-on-surface">목양행정실</td>
+<td class="p-3.5 text-outline text-label-sm">2026.03.15 (예약)</td>
+<td class="p-3.5 text-center font-medium">0</td>
+<td class="p-3.5 text-center">
+<button class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-surface-dim transition-colors duration-200 ease-in-out" type="button">
+<span class="translate-x-0 pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+</button>
+</td>
+<td class="p-3.5 text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="수정/편집" type="button">
+<span class="material-symbols-outlined text-base" data-icon="edit">edit</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-primary transition-colors" title="미리보기" type="button">
+<span class="material-symbols-outlined text-base" data-icon="visibility">visibility</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high rounded text-on-surface-variant hover:text-error transition-colors" title="삭제" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Multi-Action bar -->
+<div class="flex items-center justify-between pt-2">
+<div class="text-body-sm font-body-sm text-outline">
+              총 <span class="font-semibold text-on-surface">12</span>개 공지사항 중 <span class="font-semibold text-on-surface">1 - 5</span> 표시 중
+            </div>
+<div class="flex items-center gap-1">
+<button class="px-2.5 py-1 rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-sm align-middle" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="px-3 py-1 rounded bg-primary text-on-primary font-semibold text-label-sm font-label-sm">1</button>
+<button class="px-3 py-1 rounded border border-outline-variant text-on-surface hover:bg-surface-container-low text-label-sm font-label-sm">2</button>
+<button class="px-3 py-1 rounded border border-outline-variant text-on-surface hover:bg-surface-container-low text-label-sm font-label-sm">3</button>
+<button class="px-2.5 py-1 rounded border border-outline-variant text-on-surface-variant hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-sm align-middle" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 6. Inline Notice Quick Editor / Drawer Console Panel -->
+<section class="bg-surface-container-lowest border border-surface-container-highest rounded-xl p-6 shadow-sm space-y-6">
+<div class="flex items-center justify-between border-b border-surface-container-highest pb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="edit_note">edit_note</span>
+<div>
+<h2 class="text-headline-sm font-headline-sm text-primary">선택 공지사항 상세 편집 / 신규 등록 에디터</h2>
+<p class="text-label-sm font-label-sm text-outline">본문 내용, 상단 고정, 홈페이지 메인 팝업 연동 및 배포 스케줄을 실시간으로 설정합니다.</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-outline">최종 임시저장: 2026.03.06 14:32</span>
+<button class="px-2.5 py-1 bg-surface-container-low hover:bg-surface-container text-on-surface rounded text-label-sm font-label-sm transition-colors" type="button">
+                히스토리 복원
+              </button>
+</div>
+</div>
+<form class="space-y-5" onsubmit="event.preventDefault();">
+<!-- Row 1: Title & Pin status -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+<div class="lg:col-span-8 space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold">공지사항 제목 <span class="text-error">*</span></label>
+<input class="w-full px-3.5 py-2.5 bg-surface-container-low border border-outline-variant rounded-lg text-body-md font-body-md focus:bg-surface-container-lowest focus:border-primary focus:ring-1 focus:ring-primary font-medium" type="text" value="[긴급/필독] 2026년 봄학기 제자훈련 및 사역훈련 개강 일정 및 오리엔테이션 안내"/>
+</div>
+<div class="lg:col-span-4 flex items-end">
+<div class="w-full p-2.5 rounded-lg border border-outline-variant bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<input checked="" class="rounded text-error focus:ring-error border-outline-variant" id="pin-fixed" type="checkbox"/>
+<label class="text-label-md font-label-md text-on-surface font-semibold flex items-center gap-1 cursor-pointer" for="pin-fixed">
+<span class="material-symbols-outlined text-error text-base" data-icon="push_pin">push_pin</span>
+                      긴급/필독 상단 고정 공지 지정
+                    </label>
+</div>
+<span class="text-label-sm font-label-sm text-error font-medium">우선순위 1번</span>
+</div>
+</div>
+</div>
+<!-- Row 2: Category, Channels & Publish Period -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold">카테고리 분류 <span class="text-error">*</span></label>
+<select class="w-full py-2.5 px-3 bg-surface-container-low border border-outline-variant rounded-lg text-body-sm font-body-sm focus:border-primary focus:ring-primary">
+<option selected="">목회/행정</option>
+<option>예배/집회</option>
+<option>다음세대 및 주일학교</option>
+<option>선교 및 구제</option>
+<option>새가족 및 등록</option>
+<option>재정/온라인헌금</option>
+</select>
+</div>
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold">노출 시작일시</label>
+<input class="w-full py-2.5 px-3 bg-surface-container-low border border-outline-variant rounded-lg text-body-sm font-body-sm focus:border-primary focus:ring-primary" type="datetime-local" value="2026-03-06T09:00"/>
+</div>
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold">노출 종료일시</label>
+<input class="w-full py-2.5 px-3 bg-surface-container-low border border-outline-variant rounded-lg text-body-sm font-body-sm focus:border-primary focus:ring-primary" type="datetime-local" value="2026-04-15T23:59"/>
+</div>
+</div>
+<!-- Row 3: Modal Popup Direct Linking Settings (Amber/Warm Card Accent) -->
+<div class="p-4 rounded-xl border border-secondary-fixed-dim bg-secondary-fixed/20 space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<input checked="" class="rounded text-secondary focus:ring-secondary border-outline-variant" id="enable-popup" type="checkbox"/>
+<label class="text-label-md font-label-md font-bold text-on-secondary-fixed-variant cursor-pointer flex items-center gap-1.5" for="enable-popup">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="aspect_ratio">aspect_ratio</span>
+                    홈페이지 메인 레이어 모달 팝업으로 동시 송출
+                  </label>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary text-label-sm font-label-sm font-bold">팝업 ON</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-3 pt-1 text-body-sm font-body-sm">
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant">팝업 가로 너비 (Width)</label>
+<input class="w-full mt-1 py-1.5 px-2.5 bg-surface-container-lowest border border-outline-variant rounded-md" type="text" value="520px"/>
+</div>
+<div>
+<label class="block text-label-sm font-label-sm text-on-surface-variant">팝업 세로 높이 (Height)</label>
+<input class="w-full mt-1 py-1.5 px-2.5 bg-surface-container-lowest border border-outline-variant rounded-md" type="text" value="640px"/>
+</div>
+<div class="flex items-center gap-2 pt-6">
+<input checked="" class="rounded text-secondary focus:ring-secondary border-outline-variant" id="today-dismiss" type="checkbox"/>
+<label class="text-label-sm font-label-sm text-on-surface cursor-pointer" for="today-dismiss">'오늘 하루 보지 않기' 제공</label>
+</div>
+<div class="flex items-center gap-2 pt-6">
+<input checked="" class="rounded text-secondary focus:ring-secondary border-outline-variant" id="scroll-lock" type="checkbox"/>
+<label class="text-label-sm font-label-sm text-on-surface cursor-pointer" for="scroll-lock">배경 백드롭 딤드 처리</label>
+</div>
+</div>
+</div>
+<!-- Row 4: Smart Rich-Text Content Editor -->
+<div class="space-y-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold">공지 본문 내용 <span class="text-error">*</span></label>
+<!-- Editor Toolbar -->
+<div class="border border-outline-variant rounded-t-lg bg-surface-container-low p-2 flex items-center gap-1 flex-wrap text-on-surface-variant">
+<button class="p-1.5 hover:bg-surface-container hover:text-on-surface rounded" title="굵게" type="button"><span class="material-symbols-outlined text-base" data-icon="format_bold">format_bold</span></button>
+<button class="p-1.5 hover:bg-surface-container hover:text-on-surface rounded" title="기울임" type="button"><span class="material-symbols-outlined text-base" data-icon="format_italic">format_italic</span></button>
+<button class="p-1.5 hover:bg-surface-container hover:text-on-surface rounded" title="밑줄" type="button"><span class="material-symbols-outlined text-base" data-icon="format_underlined">format_underlined</span></button>
+<span class="w-px h-4 bg-outline-variant mx-1"></span>
+<button class="p-1.5 hover:bg-surface-container hover:text-on-surface rounded" title="왼쪽 정렬" type="button"><span class="material-symbols-outlined text-base" data-icon="format_align_left">format_align_left</span></button>
+<button class="p-1.5 hover:bg-surface-container hover:text-on-surface rounded" title="가운데 정렬" type="button"><span class="material-symbols-outlined text-base" data-icon="format_align_center">format_align_center</span></button>
+<button class="p-1.5 hover:bg-surface-container hover:text-on-surface rounded" title="글머리 기호" type="button"><span class="material-symbols-outlined text-base" data-icon="format_list_bulleted">format_list_bulleted</span></button>
+<span class="w-px h-4 bg-outline-variant mx-1"></span>
+<!-- Sacred Church Tool: 성경 구절 인용 삽입 -->
+<button class="px-2 py-1 bg-surface-container-lowest border border-outline-variant rounded text-label-sm font-label-sm font-semibold text-primary hover:bg-primary-fixed transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span>
+                  성경말씀 인용박스
+                </button>
+<button class="px-2 py-1 bg-surface-container-lowest border border-outline-variant rounded text-label-sm font-label-sm font-semibold text-on-surface hover:bg-surface-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="image">image</span>
+                  포스터 이미지 업로드
+                </button>
+</div>
+<!-- Editor Text Area -->
+<textarea class="w-full p-4 border border-t-0 border-outline-variant rounded-b-lg bg-surface-container-lowest text-body-md font-body-md focus:border-primary focus:ring-0" rows="7">할렐루야! 바른교회 성도 여러분의 가정과 삶에 하나님의 평강이 함께하시길 축복합니다.
+
+2026년도 상반기 '예수의 온전한 제자'로 거듭나는 봄학기 제자훈련 및 사역훈련 과정이 다음과 같이 개강됩니다. 성도님들의 많은 관심과 기도로 준비해 주시기 바랍니다.
+
+1. 훈련 개요 및 기간: 2026년 3월 24일(화) ~ 6월 16일(화) 매주 화요일 저녁 7:30 (총 12주)
+2. 훈련 장소: 2층 그레이스홀 및 목양세미나실
+3. 신청 자격: 바른교회 등록 후 새가족 4주 과정을 수료한 세례성도
+4. 오리엔테이션 일시: 2026년 3월 15일(주일) 3부 예배 직후
+5. 첨부된 신청서 서식을 다운로드하여 작성 후 목양행정실로 제출해 주시기 바랍니다.</textarea>
+</div>
+<!-- Row 5: Attachment Uploader -->
+<div class="border border-dashed border-outline rounded-lg p-3 bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="upload_file">upload_file</span>
+</div>
+<div>
+<div class="text-label-md font-label-md font-semibold text-on-surface">첨부파일: 2026_spring_discipleship_application.hwp (1.4 MB)</div>
+<div class="text-[12px] text-outline">최대 25MB 업로드 가능 (PDF, HWP, DOCX, ZIP 지원)</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 text-label-sm font-label-sm border border-outline-variant bg-surface-container-lowest rounded hover:bg-surface-container" type="button">파일 교체</button>
+<button class="p-1 text-error hover:bg-error-container rounded" type="button"><span class="material-symbols-outlined text-base" data-icon="close">close</span></button>
+</div>
+</div>
+<!-- Row 6: Bottom Action Bar inside Editor -->
+<div class="flex items-center justify-between pt-3 border-t border-surface-container-highest">
+<button class="px-4 py-2 bg-surface-container-lowest border border-error text-error rounded-lg text-label-md font-label-md hover:bg-error-container hover:text-on-error-container transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base" data-icon="delete">delete</span>
+                이 공지 삭제하기
+              </button>
+<div class="flex items-center gap-2">
+<button class="px-4 py-2 bg-surface-container border border-outline-variant text-on-surface-variant rounded-lg text-label-md font-label-md hover:bg-surface-container-high transition-colors" type="button">
+                  임시저장
+                </button>
+<button class="px-4 py-2 bg-surface-container-lowest border border-primary text-primary rounded-lg text-label-md font-label-md font-semibold hover:bg-primary-fixed transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-base" data-icon="schedule">schedule</span>
+                  게시 예약
+                </button>
+<button class="px-5 py-2 bg-primary text-on-primary rounded-lg text-label-md font-label-md font-semibold hover:bg-tertiary transition-all shadow flex items-center gap-1.5 active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-base" data-icon="publish">publish</span>
+                  즉시 게시 및 저장 (전 채널 반영)
+                </button>
+</div>
+</div>
+</form>
+</section>
+</div>
+</main>
+</div>
+<!-- ==================== SYSTEM FOOTER ==================== -->
+<footer class="ml-64 bg-surface-container-lowest border-t border-surface-container-highest py-6 px-8 text-on-surface-variant text-body-sm font-body-sm">
+<div class="max-w-[1360px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="space-y-1 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<span class="font-headline-sm font-bold text-primary">바른교회 목회사역원 행정포털</span>
+<span class="text-outline-variant">|</span>
+<span class="text-label-sm font-label-sm text-outline">The Barun Church Pastoral Admin System</span>
+</div>
+<p class="text-label-sm font-label-sm text-outline">
+          부산광역시 서구 대영로38번길 47 2층 | 대표전화: 051-257-0691 | 행정문의: davidan0113@gmail.com
+        </p>
+</div>
+<div class="flex items-center gap-4 text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-low border border-outline-variant text-on-surface">
+<span class="material-symbols-outlined text-base text-emerald-600" data-icon="lock">lock</span>
+<span>TLS v1.3 256-bit 보안 암호화 구동중</span>
+</div>
+<span class="text-outline">Copyright © 2026 The Barun Church. All rights reserved.</span>
+</div>
+</div>
+</footer>
+<!-- Simple Vanilla Script for UI Feedback -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openBtn = document.getElementById('open-new-notice-btn');
+      const triggerBtn = document.getElementById('trigger-create-btn');
+
+      const scrollToEditor = () => {
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      };
+
+      if (openBtn) openBtn.addEventListener('click', scrollToEditor);
+      if (triggerBtn) triggerBtn.addEventListener('click', scrollToEditor);
+    });
+  </script>
+</body></html>
