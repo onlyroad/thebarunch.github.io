@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>관리자 페이지 목록</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+      color: #17324d;
+      background: #f4f8fa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 48px 20px;
+      background: linear-gradient(180deg, #e9f4f6 0, #f4f8fa 360px);
+    }
+
+    main {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      margin: 0 0 24px;
+      color: #63758a;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    a {
+      display: block;
+      padding: 16px 18px;
+      border: 1px solid #d8e4ec;
+      border-radius: 10px;
+      background: #fff;
+      color: #07566b;
+      font-weight: 700;
+      text-decoration: none;
+      transition: border-color 150ms ease, transform 150ms ease;
+    }
+
+    a:hover, a:focus-visible {
+      transform: translateY(-2px);
+      border-color: #0e849e;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>관리자 페이지 목록</h1>
+    <p class="intro">관리자 HTML 페이지를 선택하세요.</p>
+    <ul>
+      <li><a href="admin_login.html">admin_login.html</a></li>
+      <li><a href="basicmember.html">basicmember.html</a></li>
+      <li><a href="board.html">board.html</a></li>
+      <li><a href="dashboard.html">dashboard.html</a></li>
+      <li><a href="lockdown.html">lockdown.html</a></li>
+      <li><a href="member.html">member.html</a></li>
+      <li><a href="ministry_log.html">ministry_log.html</a></li>
+      <li><a href="newcomer.html">newcomer.html</a></li>
+      <li><a href="notice_mgmt.html">notice_mgmt.html</a></li>
+      <li><a href="setting.html">setting.html</a></li>
+      <li><a href="setting_history.html">setting_history.html</a></li>
+      <li><a href="smallgroup_detail.html">smallgroup_detail.html</a></li>
+      <li><a href="smallgroup_make.html">smallgroup_make.html</a></li>
+      <li><a href="smallgroup_modal.html">smallgroup_modal.html</a></li>
+      <li><a href="video_mgmt.html">video_mgmt.html</a></li>
+      <li><a href="weekly_mgmt.html">weekly_mgmt.html</a></li>
+    </ul>
+  </main>
+</body>
+</html>
